@@ -1,16 +1,27 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
+import { Syne, Outfit, DM_Sans } from "next/font/google";
+import {SmoothScrollbar} from "./components/view/smoothscrollable";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const outfit = Outfit({
+  display: "swap",
+  variable: "--font-outfit",
+  subsets: ["latin"],
+  weight: ["700", "600", "500", "400"],
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const syne = Syne({
+  display: "swap",
+  variable: "--font-syne",
+  subsets: ["latin"],
+  weight: ["700", "600", "500", "400"],
+});
+
+const dsans = DM_Sans({
+  display: "swap",
+  variable: "--font-syne",
+  subsets: ["latin"],
+  weight: ["700", "600", "500", "400"],
 });
 
 export const metadata: Metadata = {
@@ -26,9 +37,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${syne.variable} ${outfit.variable} antialiased ${dsans.variable}`}
       >
-        {children}
+        <SmoothScrollbar>{children}</SmoothScrollbar>
       </body>
     </html>
   );

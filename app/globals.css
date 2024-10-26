@@ -16,8 +16,9 @@
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: #12141d;
   font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
 }
 
 @layer utilities {
@@ -25,3 +26,128 @@ body {
     text-wrap: balance;
   }
 }
+
+.bgs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background: rgba(255, 255, 255, 0.17);
+  box-shadow: 0px 20.238px 14px 3px rgba(255, 255, 255, 0.12) inset;
+}
+
+
+.gd1 {
+  background: radial-gradient(50% 50% at 50% 50%, #fff 0%, #cbcbcb 50.5%, #999 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background 0.4s ease-in-out;
+  
+}
+
+.text-wrapper, .herotextwrapper{
+  position:relative;
+   display: inline-block;
+  overflow: hidden; 
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:rgb(18, 20, 29, 0.8);
+  z-index: 20;
+}
+
+
+.gd1:hover {
+  background: radial-gradient(50% 50% at 50% 50%, #333 0%, #666 50.5%, #999 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ 
+}
+
+
+.abg {
+  color: #2f80ed;
+}
+
+.rectangle, .rectangle1 {
+  background: linear-gradient(
+    90deg,
+    #12141d 0%,
+    rgba(18, 20, 29, 0.65) 59%,
+    rgba(18, 20, 29, 0) 95%
+  );
+  width: 80.978px;
+  height: 64px;
+}
+
+.rectangle1 {
+  background: linear-gradient(
+    90deg,
+    #12141d 0%,
+    rgba(18, 20, 29, 0.65) 59%,
+    rgba(18, 20, 29, 0) 95%
+  );
+   transform: rotateY(180deg);
+}
+
+.video-section {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 131px;
+}
+
+.video-section video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-copy {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #12141d;
+    user-select: none;
+    mix-blend-mode: multiply;
+    font-size: 136.421px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130.737px; 
+    letter-spacing: -2.732px;
+    text-align: center;
+}
+
+.hover-item {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s ease-in-out;
+}
+
+.hover-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transition: left 0.4s ease-in-out;
+  z-index: -1;
+}
+
+.hover-item:hover::before {
+  left: 0;
+}
+
+
+
