@@ -51,7 +51,7 @@ export const Nav = () => {
     <div className="fixed top-0 left-0 w-full z-[999]">
       <Container>
         <div className="flex items-center justify-between h-[103px] pt-[30px]">
-          <div className="flex gap-[56px] items-center">
+          <div className="flex gap-[46px] items-center">
             <div className="w-[56px] h-[56px] rounded-full border-[2px] border-[rgba(255,255,255,0.1)] flex text-white items-center justify-center hover-item hover:text-black transition-colors duration-75">
               <MenuSvg />
             </div>

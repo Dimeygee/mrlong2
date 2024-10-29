@@ -18,7 +18,7 @@ const TextWrapper = ({
   });
 
  
-  const x = useTransform(scrollYProgress, [0, 1], ["0", "100%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0", "170%"]);
 
   return (
     <motion.div className={`text-wrapper ${className}`} ref={ref}>

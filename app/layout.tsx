@@ -10,14 +10,16 @@ const outfit = Outfit({
   weight: ["700", "600", "500", "400"],
 });
 
-const syne = Syne({
+
+
+const dsans = DM_Sans({
   display: "swap",
   variable: "--font-syne",
   subsets: ["latin"],
   weight: ["700", "600", "500", "400"],
 });
 
-const dsans = DM_Sans({
+const syne = Syne({
   display: "swap",
   variable: "--font-syne",
   subsets: ["latin"],
@@ -36,9 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${syne.variable} ${outfit.variable} antialiased ${dsans.variable}`}
-      >
+      <body className={`${outfit.variable} ${dsans.variable} ${syne.variable}`}>
         <SmoothScrollbar>{children}</SmoothScrollbar>
       </body>
     </html>

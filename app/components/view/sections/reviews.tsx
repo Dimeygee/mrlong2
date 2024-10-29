@@ -58,7 +58,7 @@ export const Reviews = () => {
   return (
     <>
       <Container>
-        <div className="rounded-[24px] border-[1px] border-white py-[80px] flex relative flex-col items-center justify-center mt-[100px] mb-[78px]">
+        <div className="rounded-[24px] border-[1px] border-white/[0.2] py-[80px] flex relative flex-col items-center justify-center mt-[100px] mb-[78px]">
           <div
             className="absolute left-[20px] top-[50%] bgs w-[56px] h-[56px] translate-y-[-50%] cursor-pointer"
             onClick={handlePrev}

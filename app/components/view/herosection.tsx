@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-"use client"
+"use client";
 import Image from "next/image";
 import { useState } from "react";
 import HeroTextWrapper from "./herotextwrapper";
@@ -7,7 +7,11 @@ import HeroTextWrapper from "./herotextwrapper";
 export const HeroSection = () => {
   const [transform, setTransform] = useState("rotateZ(0deg)");
 
-  const handleMouseMove = (event: { currentTarget?: any; clientX?: any; clientY?: any; }) => {
+  const handleMouseMove = (event: {
+    currentTarget?: any;
+    clientX?: any;
+    clientY?: any;
+  }) => {
     const { clientX, clientY } = event;
     const element = event.currentTarget;
     const { left, top, width, height } = element.getBoundingClientRect();
@@ -19,12 +23,12 @@ export const HeroSection = () => {
     const centerY = height / 2;
 
     const deltaX = (x - centerX) / centerX;
-    const deltaY = (y - centerY) / centerY; 
-    const rotateX = deltaY * 30; 
-    const rotateY = -deltaX * 30; 
-    const translateZ = deltaY * 20; 
-    const translateX = deltaX * 30; 
-    const translateY = deltaY * 30; 
+    const deltaY = (y - centerY) / centerY;
+    const rotateX = deltaY * 30;
+    const rotateY = -deltaX * 30;
+    const translateZ = deltaY * 20;
+    const translateX = deltaX * 30;
+    const translateY = deltaY * 30;
 
     setTransform(
       `translateX(${translateX}px) translateY(${translateY}px) translateZ(${translateZ}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`
@@ -40,13 +44,13 @@ export const HeroSection = () => {
   };
 
   return (
-    <div className="flex flex-col items-center pt-[104px]">
-      <div
-        className="w-[391px] h-[401px] relative cursor-pointer"
-        onMouseMove={handleMouseMove}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
+    <div
+      className="flex flex-col items-center pt-[104px]"
+      onMouseMove={handleMouseMove}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <div className="w-[391px] h-[401px] relative cursor-pointer">
         <Image
           src="/assets/mrlong.png"
           alt="mrlong"
@@ -72,13 +76,15 @@ export const HeroSection = () => {
       <div className="flex flex-col mt-[18px] mb-[24px] text-lg tracking-[-0.36px] font-outfit text-white/[0.5] items-center">
         <span className="">
           <HeroTextWrapper transitionDelay={1}>
-          Do you have a billion-dollar idea and are looking for a product
-          designer to help bring it to life? If so, you
+            Do you have a billion-dollar idea and are looking for a product
+            designer to help bring it to life? If so, you
           </HeroTextWrapper>
         </span>
         <span className="">
-          <HeroTextWrapper transitionDelay={1}>would definitely need to speak with me.</HeroTextWrapper>
-          </span>
+          <HeroTextWrapper transitionDelay={1}>
+            would definitely need to speak with me.
+          </HeroTextWrapper>
+        </span>
       </div>
     </div>
   );

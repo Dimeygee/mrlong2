@@ -9,7 +9,7 @@ export const Footer = () => {
           <Container>
             <div className="flex flex-col gap-[27px]">
               <div className="flex justify-between">
-                <span className="inline-flex px-[55px] h-[138px] tracking-[-1.442px] text-[32px] rounded-[400px] border-[1px] border-white font-syne font-bold  items-center gd1 uppercase">
+                <span className="hover-item inline-flex px-[55px] h-[138px] tracking-[-1.442px] text-[32px] rounded-[400px] border-[1px] border-white font-syne font-bold  items-center gd1 uppercase">
                   Contact
                 </span>
                 <div className="min-h-[142px] pl-[41px] backdrop-blur-[22.5px] rounded-[25px] bg-white/[0.05] w-[670px] flex gap-[24px] items-center">
@@ -29,7 +29,7 @@ export const Footer = () => {
               <div className="video-section">
                 <video src="/assets/mvid.mp4" loop autoPlay muted></video>
                 <div className="video-copy">
-                  <h1 className="font-syne font-bold">Let’s talk design!</h1>
+                  <h1 className="font-syne font-bold tracking-[3px]">Let{"'"}s talk design!</h1>
                 </div>
               </div>
             </div>
