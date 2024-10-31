@@ -98,7 +98,6 @@ body {
 }
 
 .video-section {
-    overflow: hidden;
     position: relative;
     width: 100%;
     height: 131px;
@@ -108,15 +107,13 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: absolute;
+    z-index:0;
 }
 
 .video-copy {
+    width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #12141d;
     user-select: none;
     mix-blend-mode: multiply;
     font-size: 136.421px;
@@ -125,6 +122,14 @@ body {
     line-height: 130.737px; 
     letter-spacing: -2.732px;
     text-align: center;
+    z-index:10;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.video-copy h1{
+  background: #12141d;
 }
 
 .hover-item {

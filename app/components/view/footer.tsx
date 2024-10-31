@@ -1,5 +1,5 @@
 
-import { Envelope, LogoRound } from "@/app/icon";
+import { Envelope, LogoRound, Dribble, Behance, Linkedin } from "@/app/icon";
 import {Container} from "./container"
 
 export const Footer = () => {
@@ -46,9 +46,15 @@ export const Footer = () => {
                   </span>
                 </div>
                 <div className="flex items-center gap-[40px]">
-                  <div className="w-[56px] h-[56px] rounded-full bgs"></div>
-                  <div className="w-[56px] h-[56px] rounded-full bgs"></div>
-                  <div className="w-[56px] h-[56px] rounded-full bgs"></div>
+                  <div className="w-[56px] h-[56px] rounded-full bgs">
+                    <Dribble />
+                  </div>
+                  <div className="w-[56px] h-[56px] rounded-full bgs">
+                    <Behance />
+                  </div>
+                  <div className="w-[56px] h-[56px] rounded-full bgs">
+                    <Linkedin />
+                  </div>
                 </div>
                 <span className="text-base font-outfit tracking-[-0.356px]  leading-[26px] text-white/[0.3]">
                   © mrlong 2024 Freelancer
