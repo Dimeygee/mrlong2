@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { useState } from "react";
 import HeroTextWrapper from "./herotextwrapper";
+import {Button} from "../button"
+import { ArrowDown } from "../arrowdown";
 
 export const HeroSection = () => {
   const [transform, setTransform] = useState("rotateZ(0deg)");
@@ -73,8 +75,8 @@ export const HeroSection = () => {
           </span>
         </HeroTextWrapper>
       </h1>
-      <div className="flex flex-col mt-[18px] mb-[24px] text-lg tracking-[-0.36px] font-outfit text-white/[0.5] items-center">
-        <span className="">
+      <div className="flex flex-col mt-[18px] mb-[24px] text-lg tracking-[-0.36px] leading-[25.1px] font-outfit text-white/[0.5] items-center">
+        <span className="leading-[1]">
           <HeroTextWrapper transitionDelay={1}>
             Do you have a billion-dollar idea and are looking for a product
             designer to help bring it to life? If so, you
@@ -85,6 +87,12 @@ export const HeroSection = () => {
             would definitely need to speak with me.
           </HeroTextWrapper>
         </span>
+      </div>
+      <div className="flex justify-center">
+        <Button text="Open to work" />
+      </div>
+      <div className="flex justify-center mt-[48px]">
+        <ArrowDown />
       </div>
     </div>
   );

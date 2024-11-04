@@ -29,7 +29,9 @@ export const Footer = () => {
               <div className="video-section">
                 <video src="/assets/mvid.mp4" loop autoPlay muted></video>
                 <div className="video-copy">
-                  <h1 className="font-syne font-bold tracking-[3px]">Let{"'"}s talk design!</h1>
+                  <h1 className="font-syne font-bold tracking-[3px]">
+                    Let{"'"}s talk design!
+                  </h1>
                 </div>
               </div>
             </div>
@@ -39,7 +41,7 @@ export const Footer = () => {
           <Container>
             <div className="flex flex-col gap-[32px]">
               <div className="min-h-[166px] flex w-full items-center justify-between border-y-[1px] border-y-white/[0.3]">
-                <div className="flex items-center gap-[8px]">
+                <div className="flex items-center gap-[8px] basis-[300px] justify-start">
                   <LogoRound />
                   <span className="text-lg font-syne text-white font-bold leading-[26px] tracking-[-0.356px]">
                     mrlong
@@ -56,7 +58,7 @@ export const Footer = () => {
                     <Linkedin />
                   </div>
                 </div>
-                <span className="text-base font-outfit tracking-[-0.356px]  leading-[26px] text-white/[0.3]">
+                <span className="flex basis-[300px] justify-end text-base font-outfit tracking-[-0.356px]  leading-[26px] text-white/[0.3]">
                   © mrlong 2024 Freelancer
                 </span>
               </div>

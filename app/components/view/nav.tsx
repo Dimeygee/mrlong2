@@ -48,9 +48,10 @@ export const Nav = () => {
   }, [activeIndex, logos.length]);
 
   return (
-    <div className="fixed top-0 left-0 w-full z-[999]">
+    <div className=" fixed top-0 left-0 w-full z-[999]">
+      <div className="bg-[#12141d]/[0.1] backdrop-blur-[10px] flex justify-center items-center">
       <Container>
-        <div className="flex items-center justify-between h-[103px] pt-[30px]">
+        <div className="flex items-center justify-between h-[103px] ">
           <div className="flex gap-[46px] items-center">
             <div className="w-[56px] h-[56px] rounded-full border-[2px] border-[rgba(255,255,255,0.1)] flex text-white items-center justify-center hover-item hover:text-black transition-colors duration-75">
               <MenuSvg />
@@ -85,6 +86,7 @@ export const Nav = () => {
           </div>
         </div>
       </Container>
+    </div>
     </div>
   );
 };

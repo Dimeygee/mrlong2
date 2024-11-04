@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Marquee from "./marquee";
 import TextWrapper from "./textwrapper";
+import { Button } from "../button";
 
 export const FootPrint = () => {
   return (
@@ -62,6 +63,9 @@ export const FootPrint = () => {
             </TextWrapper>
           </h5>
         </div>
+        <span>
+          <Button text="My footprint" />
+        </span>
       </div>
     </>
   );

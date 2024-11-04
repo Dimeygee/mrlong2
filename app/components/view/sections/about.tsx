@@ -3,7 +3,7 @@ import TextWrapper from "../textwrapper"
 
 export const About = () => {
   return (
-    <div className="mb-[103px]">
+    <div id="about" className="mb-[103px]">
       <Container>
         <div className="flex gap-16">
           <div className="w-[226px] shrink-0 flex flex-col font-bold tracking-[-1.442px] font-syne text-5xl border-r-[1px] border-r-white/[0.4]">
