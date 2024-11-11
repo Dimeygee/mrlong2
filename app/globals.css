@@ -19,6 +19,7 @@ body {
   background: #12141d;
   font-family: Arial, Helvetica, sans-serif;
   height: 100vh;
+  cursor:none;
 }
 
 @layer utilities {
@@ -182,6 +183,10 @@ body {
   to {
     transform: translate(-50%, -50%) rotateZ(360deg);
   }
+}
+
+.cursor{
+  pointer-events: none;
 }
 
 

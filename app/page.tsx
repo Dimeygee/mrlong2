@@ -8,10 +8,18 @@ import { Footer } from "./components/view/footer";
 import { FootPrint } from "./components/view/footprint";
 import { Reviews } from "./components/view/sections/reviews";
 
+import { GlobalProvider } from "./context/globalcontext";
+import CustomCursor from "./components/customcusor";
+ 
+
 export default function Home() {
+
+ 
   return (
     <>
-      <Nav />
+      <GlobalProvider>
+        <CustomCursor />
+      <Nav  />
       <HeroSection />
       <ProjectSection />
       <About />
@@ -20,6 +28,7 @@ export default function Home() {
       <ThingsIDo />
       <Reviews />
       <Footer />
+      </GlobalProvider>
     </>
   );
 }

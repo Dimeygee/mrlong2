@@ -3,6 +3,8 @@ import "./globals.css";
 import { Syne, Outfit, DM_Sans } from "next/font/google";
 import {SmoothScrollbar} from "./components/view/smoothscrollable";
 
+
+
 const outfit = Outfit({
   display: "swap",
   variable: "--font-outfit",
@@ -39,7 +41,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${outfit.variable} ${dsans.variable} ${syne.variable}`}>
-        <SmoothScrollbar>{children}</SmoothScrollbar>
+        <SmoothScrollbar>
+            {children}
+         </SmoothScrollbar>
       </body>
     </html>
   );
