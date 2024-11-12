@@ -24,7 +24,7 @@ const HeroTextWrapper = ({
   return (
     <motion.div className={`herotextwrapper ${className}`}>
       <motion.div
-        className="overlay"
+        className="overlay "
         initial={{ x: "0%" }}
         animate={controls}
       />

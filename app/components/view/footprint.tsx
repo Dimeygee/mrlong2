@@ -7,7 +7,7 @@ export const FootPrint = () => {
   return (
     <>
       <div className="flex items-center flex-col p-[66px]">
-        <div className="flex relative md:w-[876px] overflow-hidden">
+        <div className="flex relative w-full md:w-[876px] overflow-hidden">
           <div className="absolute rectangle left-0 top-0 z-10 rotate-[360deg]"></div>
           <div className="absolute rectangle1 right-0 top-0 z-10"></div>
           <div className="flex gap-[24px] z-0">

@@ -130,6 +130,18 @@ body {
     position: absolute;
 }
 
+@media screen and (max-width:540px){
+  .video-copy{
+    font-size:48px;
+  }
+
+  .video-section {
+    position: relative;
+    width: 100%;
+    height: 80px;
+}
+}
+
 .video-copy h1{
   background: #12141d;
 }

@@ -14,31 +14,31 @@ export const ThingsIDo = () => {
             </TextWrapper>
 
             <div className="grid grid-cols-12 gap-[18px] uppercase items-center">
-              <span className="hover-item inline-flex justify-center px-[55px] h-[200px] tracking-[-1.442px] text-[32px] rounded-[400px] border-[1px] border-white font-syne font-bold items-center gd1 col-span-3">
+              <span className="hover-item inline-flex justify-center px-[10px] md:px-[55px] md:h-[200px] h-[150px]  tracking-[-1.442px] text-xl md:text-[32px] rounded-[400px] border-[1px] border-white font-syne font-bold items-center gd1 md:col-span-3 col-span-6">
                 UI design
               </span>
-              <div className="col-span-2 h-[200px] rounded-full border-[1px] border-white hover-item"></div>
-              <span className="hover-item inline-flex justify-center px-[55px] h-[200px] tracking-[-1.442px] text-[32px] rounded-[400px] border-[1px] border-white font-syne font-bold items-center gd1 col-span-5">
+              <div className="md:col-span-2 col-span-5 md:h-[200px] h-[150px]  rounded-full border-[1px] border-white hover-item"></div>
+              <span className="hover-item inline-flex justify-center px-[10px] md:px-[55px] md:h-[200px] h-[150px]  tracking-[-1.442px] text-xl md:text-[32px] rounded-[400px] border-[1px] border-white font-syne font-bold items-center gd1 md:col-span-5 col-span-10">
                 rapid prototyping
               </span>
-              <div className="col-span-2  h-[200px] rounded-full border-[1px] border-white hover-item"></div>
+              <div className="md:col-span-2 col-span-4 md:flex hidden  md:h-[200px] h-[150px]  rounded-full border-[1px] border-white hover-item"></div>
             </div>
             <div className="grid grid-cols-12 gap-[18px] uppercase items-center">
-              <div className="h-[200px] rounded-full border-[1px] border-white hover-item col-span-2"></div>
-              <span className="hover-item inline-flex justify-center px-[55px] h-[200px] tracking-[-1.442px] text-[32px] rounded-[400px] border-[1px] border-white font-syne font-bold items-center gd1 col-span-3">
+              <div className="md:h-[200px] h-[150px]  rounded-full border-[1px] border-white hover-item md:col-span-2 col-span-5"></div>
+              <span className="hover-item inline-flex justify-center px-[10px] md:px-[55px] md:h-[200px] h-[150px]  tracking-[-1.442px] text-xl md:text-[32px] rounded-[400px] border-[1px] border-white font-syne font-bold items-center gd1 md:col-span-3 col-span-5">
                 ux design
               </span>
-              <div className="h-[200px] rounded-full border-[1px] border-white hover-item col-span-2"></div>
-              <span className="hover-item inline-flex justify-center px-[55px] h-[200px] tracking-[-1.442px] text-[32px] rounded-[400px] border-[1px] border-white font-syne font-bold items-center gd1 col-span-5">
+              <div className="md:h-[200px] h-[150px]  rounded-full border-[1px] border-white hover-item md:flex hidden md:col-span-2 col-span-5"></div>
+              <span className="hover-item inline-flex justify-center px-[10px] md:px-[55px] md:h-[200px] h-[150px]  tracking-[-1.442px] text-xl md:text-[32px] rounded-[400px] border-[1px] border-white font-syne font-bold items-center gd1 md:col-span-5 col-span-10">
                 no-code development
               </span>
             </div>
             <div className=" gap-[18px] grid grid-cols-12 uppercase items-center">
-              <span className="hover-item inline-flex justify-center px-[55px] h-[200px] tracking-[-1.442px] text-[32px] rounded-[400px] border-[1px] border-white font-syne col-span-5 font-bold items-center gd1">
+              <span className="hover-item inline-flex justify-center px-[10px] md:px-[55px] md:h-[200px] h-[150px]  tracking-[-1.442px] text-xl md:text-[32px] rounded-[400px] border-[1px] border-white font-syne md:col-span-5 col-span-7 font-bold items-center gd1">
                 Interaction design
               </span>
-              <div className="h-[200px] rounded-full border-[1px] border-white hover-item col-span-2"></div>
-              <span className="hover-item inline-flex justify-center px-[55px] h-[200px] tracking-[-1.442px] text-[32px] rounded-[400px] border-[1px] border-white font-syne font-bold items-center gd1 col-span-5">
+              <div className="md:h-[200px] h-[150px]  rounded-full border-[1px] border-white hover-item md:col-span-2 col-span-5"></div>
+              <span className="hover-item inline-flex justify-center px-[10px] md:px-[55px] md:h-[200px] h-[150px]  tracking-[-1.442px] text-xl md:text-[32px] rounded-[400px] border-[1px] border-white font-syne font-bold items-center gd1 md:col-span-5 col-span-10">
                 Wireframing
               </span>
             </div>

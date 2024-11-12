@@ -58,7 +58,7 @@ export const Reviews = () => {
   return (
     <>
       <Container>
-        <div className="rounded-[24px] border-[1px] border-white/[0.2] py-[80px] flex relative flex-col items-center justify-center mt-[100px] mb-[78px]">
+        <div className="rounded-[24px] border-[1px] border-white/[0.2] py-[20px] md:py-[80px] flex relative flex-col items-center justify-center mt-[100px] mb-[78px]">
           <div
             className="absolute left-[20px] top-[50%] bgs w-[56px] h-[56px] translate-y-[-50%] cursor-pointer"
             onClick={handlePrev}
@@ -82,7 +82,7 @@ export const Reviews = () => {
               transition={{ duration: 0.5 }}
               className="mb-[64px] mt-[32px]"
             >
-              <h3 className="flex flex-col items-center font-outfit tracking-[-0.8px] font-bold text-[24px] leading-[34px]">
+              <h3 className="flex flex-col items-center font-outfit tracking-[-0.8px] font-bold text-center text-base md:text-[24px] leading-[34px]">
                 {reviews[currentIndex].review.map((line, index) => (
                   <span key={index} className="gd1">
                     {line}
@@ -101,7 +101,7 @@ export const Reviews = () => {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center"
             >
-              <div className="w-[65px] h-[65px] rounded-full relative overflow-hidden">
+              <div className="md:w-[65px] w-[25px] h-[25px] md:h-[65px] rounded-full relative overflow-hidden">
                 <Image
                   src={reviews[currentIndex].image}
                   alt=""
@@ -110,7 +110,7 @@ export const Reviews = () => {
                 />
               </div>
               <div className="mt-[24px] mb-[8px]">
-                <span className="font-dsans text-[22px] font-bold text-white tracking-[-0.4px] leading-[32px]">
+                <span className="font-dsans text-b-xl md:text-[22px] font-bold text-white tracking-[-0.4px] leading-[32px]">
                   {reviews[currentIndex].name}
                 </span>
               </div>

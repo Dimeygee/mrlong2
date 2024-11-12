@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import HeroTextWrapper from "./herotextwrapper";
-import {Button} from "../button"
+import { Button } from "../button";
 import { ArrowDown } from "../arrowdown";
 
 export const HeroSection = () => {
@@ -64,27 +64,36 @@ export const HeroSection = () => {
           }}
         />
       </div>
-      <h1 className="flex flex-col text-[46px] tracking-[-1.442px] font-bold font-syne items-center leading-[1]">
+      <h1 className="flex flex-col text-[46px] tracking-[-1.442px] font-bold font-syne items-center leading-[1] text-center">
         <HeroTextWrapper>
           <span className="gd1">Digital Product Designer</span>
         </HeroTextWrapper>
         <HeroTextWrapper transitionDelay={1}>
           <span>
-            <span className="gd1">Crafting</span> &quot;
-            <span className="abg">Magic</span>&quot;
+            <span className="gd1 text-center">Crafting</span> &quot;
+            <span className="abg text-center">Magic</span>&quot;
           </span>
         </HeroTextWrapper>
       </h1>
-      <div className="flex flex-col mt-[18px] mb-[24px] text-lg tracking-[-0.36px] leading-[25.1px] font-outfit text-white/[0.5] items-center">
-        <span className="leading-[1]">
+      <div className="flex-col mt-[18px] mb-[24px] text-lg tracking-[-0.36px] leading-[25.1px] font-outfit text-white/[0.5] items-center px-[20px] hidden md:flex">
+        <span className="leading-[1] text-center">
           <HeroTextWrapper transitionDelay={1}>
             Do you have a billion-dollar idea and are looking for a product
             designer to help bring it to life? If so, you
           </HeroTextWrapper>
         </span>
-        <span className="">
+        <span className="hidden md:flex">
           <HeroTextWrapper transitionDelay={1}>
             would definitely need to speak with me.
+          </HeroTextWrapper>
+        </span>
+      </div>
+      <div className="flex-col mt-[18px] mb-[24px] text-lg tracking-[-0.36px] leading-[25.1px] font-outfit text-white/[0.5] items-center px-[20px] md:hidden flex">
+        <span className="leading-[1] text-center">
+          <HeroTextWrapper transitionDelay={1}>
+            Do you have a billion-dollar idea and are looking for a product
+            designer to help bring it to life? If so, you would definitely need
+            to speak with me.
           </HeroTextWrapper>
         </span>
       </div>

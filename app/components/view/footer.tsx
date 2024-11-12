@@ -8,19 +8,19 @@ export const Footer = () => {
         <div className="py-[74px]">
           <Container>
             <div className="flex flex-col gap-[27px]">
-              <div className="flex justify-between">
-                <span className="hover-item inline-flex px-[55px] h-[138px] tracking-[-1.442px] text-[32px] rounded-[400px] border-[1px] border-white font-syne font-bold  items-center gd1 uppercase">
+              <div className="flex justify-between md:flex-row  flex-col md:gap-0 gap-5">
+                <span className="hover-item inline-flex px-[55px] h-[138px] tracking-[-1.442px] text-[32px] rounded-[400px] border-[1px] border-white font-syne font-bold  items-center gd1 uppercase  text-center">
                   Contact
                 </span>
-                <div className="min-h-[142px] pl-[41px] backdrop-blur-[22.5px] rounded-[25px] bg-white/[0.05] w-[670px] flex gap-[24px] items-center">
-                  <div className="w-[72px] h-[72px] rounded-full bgs">
+                <div className="min-h-[142px] pl-[41px] backdrop-blur-[22.5px] rounded-[25px] bg-white/[0.05] md:w-[670px] flex md:flex-row flex-col gap-[24px] items-center">
+                  <div className="w-[72px] h-[72px] shrink-0 rounded-full bgs">
                     <Envelope />
                   </div>
                   <div className="flex flex-col gap-[10px] ">
                     <span className="tracking-[-0.36px] leading-[25.2px] font-outfit text-lg text-white/[0.5]">
                       Shoot me a mail
                     </span>
-                    <h4 className="gd1 tracking-[-1.442px] font-bold font-syne text-[32px]">
+                    <h4 className="gd1 tracking-[-1.442px] font-bold font-syne text-xl md:text-[32px]">
                       odebiyiridwan@gmail.com
                     </h4>
                   </div>

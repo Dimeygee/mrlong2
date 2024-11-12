@@ -13,7 +13,7 @@ export const SelectedWork = () => {
             <span className="text-lg font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5]">
               Discover from my
             </span>
-            <h3 className="flex flex-col items-center uppercase text-[72px] tracking-[-1.442px] leading-[69px] font-bold">
+            <h3 className="flex flex-col items-center uppercase md:text-[72px] text-[58px] tracking-[-1.442px] leading-[69px] font-bold">
               <TextWrapper>
                 <span className="gd1 font-syne">Selected</span>
               </TextWrapper>
