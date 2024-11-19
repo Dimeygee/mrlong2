@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Syne, Outfit, DM_Sans } from "next/font/google";
 import {SmoothScrollbar} from "./components/view/smoothscrollable";
-
+import { GlobalProvider } from "./context/globalcontext";
+import { Nav } from "./components/view/nav";
+import { Footer } from "./components/view/footer";
+import CustomCursor from "./components/customcusor";
 
 
 const outfit = Outfit({
@@ -42,7 +45,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${outfit.variable} ${dsans.variable} ${syne.variable}`}>
         <SmoothScrollbar>
-            {children}
+            <GlobalProvider >
+              <CustomCursor />
+              <Nav  />
+              {children}
+              <Footer />
+            </GlobalProvider>
+            
          </SmoothScrollbar>
       </body>
     </html>
