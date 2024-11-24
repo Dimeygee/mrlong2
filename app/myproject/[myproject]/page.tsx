@@ -2,6 +2,9 @@ import { Container } from "@/app/components/view/container";
 import HeroTextWrapper from "@/app/components/view/herotextwrapper";
 import Image from "next/image";
 import TextWrapper from "@/app/components/view/textwrapper";
+import { KeyFeatures } from "@/app/components/myproject/keyfeatures";
+import { OtherProjects } from "@/app/components/myproject/otherproject";
+
 
 export default function MyProject() {
   return (
@@ -290,14 +293,8 @@ export default function MyProject() {
           <Image src="/assets/valormockup.png" sizes="100vw" alt="" fill />
         </div>
         <Container>
-          <div className="pt-[50px] flex flex-col items-center">
-            <TextWrapper>
-              <span className="gd1 font-bold tracking-[-1.442px] text-[42px] font-syne">
-                Key Features of ValorExchange:
-              </span>
-            </TextWrapper>
-          </div>
-          <div className="mt-[10px] py-[54px] flex gap-[10px] flex-col">
+          <KeyFeatures />
+          <div className="mt-[60px] py-[54px] flex gap-[10px] flex-col">
             <div className="flex flex-col">
               <TextWrapper>
                 <span className="gd1 font-bold tracking-[-1.442px] text-[42px] font-syne">
@@ -329,6 +326,7 @@ export default function MyProject() {
             </span>
           </div>
         </Container>
+        <OtherProjects />
       </div>
     </>
   );
