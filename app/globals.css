@@ -43,7 +43,7 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: background 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   
 }
 
@@ -65,7 +65,7 @@ body {
 
 
 .gd1:hover {
-  background: radial-gradient(50% 50% at 50% 50%, #333 0%, #666 50.5%, #999 100%);
+  
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
