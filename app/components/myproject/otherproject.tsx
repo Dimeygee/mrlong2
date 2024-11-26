@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import { SlideArrowLeft, SlideArrowRight } from "@/app/icon";
 import TextWrapper from "../view/textwrapper";
-import { Container } from "@/app/components/view/container";
+import { Container , SwiperContainer} from "@/app/components/view/container";
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { useGlobalStateContext } from "@/app/context/globalcontext";
@@ -85,7 +85,7 @@ export const OtherProjects = () => {
             </div>
           </div>
         </Container>
-        <Container>
+        <SwiperContainer>
           <div className="relative h-[208px]">
             <Swiper
               slidesPerView={"auto"}
@@ -104,9 +104,8 @@ export const OtherProjects = () => {
                 position: "absolute",
                 top: 0,
                 left: 0,
-                width: "250%",
-                paddingLeft: hoveredIndex === 0 ? "70px" : "0px",
-                transform:"all 1s ease-in"
+                width: "300%",
+                paddingLeft: "70px",
               }}
             >
               {Projects.map((project, index) => (
@@ -166,7 +165,7 @@ export const OtherProjects = () => {
               ))}
             </Swiper>
           </div>
-        </Container>
+        </SwiperContainer>
       </div>
     </>
   );
