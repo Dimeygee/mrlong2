@@ -38,7 +38,7 @@ const generateRandomGradient = () => {
 };
 
 export const OtherProjects = () => {
-    const { onCursor } = useGlobalStateContext();
+  const { onCursor } = useGlobalStateContext();
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const gradients = useMemo(
@@ -53,7 +53,9 @@ export const OtherProjects = () => {
 
   return (
     <>
-      <div className="flex flex-col gap-[32px] overflow-hidden">
+      <div
+        className={`flex flex-col gap-[32px] overflow-hidden transition-all duration-300 `}
+      >
         <Container>
           <div className="flex items-center justify-between mx-auto px-5">
             <TextWrapper>
@@ -85,78 +87,85 @@ export const OtherProjects = () => {
         </Container>
         <Container>
           <div className="relative h-[208px]">
-        <Swiper
-          slidesPerView={"auto"}
-          spaceBetween={35}
-          navigation={{
-            nextEl: ".swiper-button-left",
-            prevEl: ".swiper-button-right",
-          }}
-          pagination={{
-            clickable: true,
-            el: ".swiper-pagination",
-          }}
-          modules={[Navigation, Pagination]}
-          className="flex font-outfit container self-end"
-          style={{ position:"absolute", top:0, left:0, width:"250%"  }}
-        >
-          {Projects.map((project, index) => (
-            <SwiperSlide
-              key={project.name}
-              style={{
-                width: "476px",
-                height: "208px",
-                display: "flex",
-                position: "relative",
-                perspective: "1000px",
-                background: "#12141d",
+            <Swiper
+              slidesPerView={"auto"}
+              spaceBetween={35}
+              navigation={{
+                nextEl: ".swiper-button-left",
+                prevEl: ".swiper-button-right",
               }}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
+              pagination={{
+                clickable: true,
+                el: ".swiper-pagination",
+              }}
+              modules={[Navigation, Pagination]}
+              className="flex font-outfit container self-end"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "250%",
+                paddingLeft: hoveredIndex === 0 ? "70px" : "0px",
+                transform:"all 1s ease-in"
+              }}
             >
-              <motion.div
-                initial={{ rotateX: 0, transformOrigin: "50% 100%" }}
-                animate={{ rotateX: hoveredIndex === index ? -45 : 0 }}
-                transition={{ duration: 0.3 }}
-                className="px-[59px] flex flex-col justify-center gap-[40px] rounded-[25px] w-full h-full z-[100] relative bg-[#12141d] border-white/[0.14] border-[1px]"
-              >
-                <div className="text-xl text-white/[0.5] leading-[25.2px] tracking-[-0.36px]">
-                  <span>{project.id}</span>
-                </div>
-                <div className="flex flex-col gap-[8px]">
-                  <span className="text-[32px] tracking-[-1.442px] uppercase font-bold font-syne">
-                    {project.name}
-                  </span>
-                  <span className="text-xl  text-white/[0.5] leading-[25.2px] tracking-[-0.36px]">
-                    {project.type}
-                  </span>
-                </div>
-              </motion.div>
-              <motion.div
-                className="absolute top-0 left-0 w-full h-full z-[85] rounded-[25px]"
-                style={{ background: gradients[index].gradient1 }}
-                initial={{ rotateX: 0, transformOrigin: "50% 100%" }}
-                animate={{ rotateX: hoveredIndex === index ? -35 : 0 }}
-                transition={{ duration: 0.3 }}
-              />
-              <motion.div
-                className="absolute top-0 left-0 w-full h-full z-[80] rounded-[25px]"
-                style={{ background: gradients[index].gradient2 }}
-                initial={{ rotateX: 0, transformOrigin: "50% 100%" }}
-                animate={{ rotateX: hoveredIndex === index ? -25 : 0 }}
-                transition={{ duration: 0.3 }}
-              />
-              <motion.div
-                className="absolute top-0 left-0 w-full h-full z-[75] rounded-[25px]"
-                style={{ background: gradients[index].gradient3 }}
-                initial={{ rotateX: 0, transformOrigin: "50% 100%" }}
-                animate={{ rotateX: hoveredIndex === index ? -15 : 0 }}
-                transition={{ duration: 0.3 }}
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-        </div>
+              {Projects.map((project, index) => (
+                <SwiperSlide
+                  key={project.name}
+                  style={{
+                    width: "476px",
+                    height: "208px",
+                    display: "flex",
+                    position: "relative",
+                    perspective: "1000px",
+                    background: "#12141d",
+                  }}
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                >
+                  <motion.div
+                    initial={{ rotateX: 0, transformOrigin: "50% 100%" }}
+                    animate={{ rotateX: hoveredIndex === index ? -45 : 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="px-[59px] flex flex-col justify-center gap-[40px] rounded-[25px] w-full h-full z-[100] relative bg-[#12141d] border-white/[0.14] border-[1px]"
+                  >
+                    <div className="text-xl text-white/[0.5] leading-[25.2px] tracking-[-0.36px]">
+                      <span>{project.id}</span>
+                    </div>
+                    <div className="flex flex-col gap-[8px]">
+                      <span className="text-[32px] tracking-[-1.442px] uppercase font-bold font-syne">
+                        {project.name}
+                      </span>
+                      <span className="text-xl  text-white/[0.5] leading-[25.2px] tracking-[-0.36px]">
+                        {project.type}
+                      </span>
+                    </div>
+                  </motion.div>
+                  <motion.div
+                    className="absolute top-0 left-0 w-full h-full z-[85] rounded-[25px]"
+                    style={{ background: gradients[index].gradient1 }}
+                    initial={{ rotateX: 0, transformOrigin: "50% 100%" }}
+                    animate={{ rotateX: hoveredIndex === index ? -35 : 0 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                  <motion.div
+                    className="absolute top-0 left-0 w-full h-full z-[80] rounded-[25px]"
+                    style={{ background: gradients[index].gradient2 }}
+                    initial={{ rotateX: 0, transformOrigin: "50% 100%" }}
+                    animate={{ rotateX: hoveredIndex === index ? -25 : 0 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                  <motion.div
+                    className="absolute top-0 left-0 w-full h-full z-[75] rounded-[25px]"
+                    style={{ background: gradients[index].gradient3 }}
+                    initial={{ rotateX: 0, transformOrigin: "50% 100%" }}
+                    animate={{ rotateX: hoveredIndex === index ? -15 : 0 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </Container>
       </div>
     </>
