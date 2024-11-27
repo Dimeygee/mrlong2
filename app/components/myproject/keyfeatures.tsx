@@ -12,7 +12,7 @@ export const KeyFeatures = () => {
   const [opacities, setOpacities] = useState<number[]>([1, 1, 1]);
   const [scrollProgress, setScrollProgress] = useState<number>(0);
 
-  console.log(scrollProgress)
+  console.log(scrollProgress);
 
   useEffect(() => {
     const parentOffset = parentRef.current?.offsetTop || 0;
@@ -28,8 +28,8 @@ export const KeyFeatures = () => {
       const container = containerRef.current;
       if (!container) return;
 
-      const containerOffsetTop = container.offsetTop + 200;
-      const containerHeight = container.offsetHeight - 200;
+      const containerOffsetTop = container.offsetTop + 395;
+      const containerHeight = container.offsetHeight - 395;
       const scrollStart = containerOffsetTop;
       const scrollEnd =
         containerOffsetTop + containerHeight - window.innerHeight;
@@ -45,11 +45,11 @@ export const KeyFeatures = () => {
       }
 
       const newOpacities = [1, 1, 1];
-      if (positions[1] && scrollTop >= positions[1] - 200) {
+      if (positions[1] && scrollTop >= positions[1] - 395) {
         newOpacities[0] = 0.7;
       }
 
-      if (positions[2] && scrollTop >= positions[2] - 200) {
+      if (positions[2] && scrollTop >= positions[2] - 395) {
         newOpacities[1] = 0.7;
         newOpacities[0] = 0.7;
       }
@@ -64,6 +64,9 @@ export const KeyFeatures = () => {
     };
   }, [positions]);
 
+
+  console.log(scrollProgress)
+
   return (
     <>
       <div ref={parentRef} className="pt-[50px] flex flex-col items-center">
@@ -76,15 +79,52 @@ export const KeyFeatures = () => {
           ref={containerRef}
           className="flex justify-between w-full mt-[68px] relative"
         >
-          <div className="h-[395px] left-0 top-[268px] sticky w-[1px] bg-white/[0.1] flex justify-center">
-            <div
-              className="w-[3px] h-[120px] rounded-[5px] bg-white"
-              style={{
-                transform: `translateY(calc(${scrollProgress}% * 2.56))`,
-                transition: "transform 0.1s ease",
-              }}
-            ></div>
+          <div className="sticky left-0 top-[268px] h-[395px] flex gap-[32px]">
+            <div className="h-[395px] left-0 top-[268px] sticky w-[1px] bg-white/[0.1] flex justify-center">
+              <div
+                className="w-[3px] h-[120px] rounded-[5px] bg-white"
+                style={{
+                  transform: `translateY(calc(${scrollProgress}%))`,
+                  transition: "transform 0.1s ease",
+                }}
+              ></div>
+            </div>
+            <div className="flex relative flex-col py-[15px] justify-between">
+              <div className="textcontainer flex flex-col gap-[7px]">
+                <h4 className="tracking-[-1.442px] font-bold text-xl font-syne text-white">
+                  Intuitive Trading Interface
+                </h4>
+                <span className="w-[476px] text-sm tracking-[-0.36px] font-outfit text-white/[0.5]">
+                  The core trading interface allows users to execute buy, sell,
+                  or exchange transactions with just a few clicks, using
+                  straightforward language and guiding tooltips.
+                </span>
+              </div>
+              <div className="textcontainer flex flex-col gap-[7px]">
+                <h4 className="tracking-[-1.442px] font-bold text-xl font-syne text-white">
+                  Simplified Dashboard
+                </h4>
+                <span className="w-[476px] text-sm tracking-[-0.36px] font-outfit text-white/[0.5]">
+                  Users have access to a dashboard that displays only the most
+                  crucial information, minimizing clutter while providing
+                  essential details on holdings, transaction history, and market
+                  trends.
+                </span>
+              </div>
+              <div className="textcontainer flex flex-col gap-[7px]">
+                <h4 className="tracking-[-1.442px] font-bold text-xl font-syne text-white">
+                  Enhanced Security Measures
+                </h4>
+                <span className="w-[476px] text-sm tracking-[-0.36px] font-outfit text-white/[0.5]">
+                  ValorExchange incorporates advanced security features, such as
+                  two-factor authentication and automated transaction
+                  verification, ensuring security without disrupting the user
+                  experience.
+                </span>
+              </div>
+            </div>
           </div>
+
           <div className="w-full flex flex-col gap-[200px]">
             {[1, 2, 3].map((_, index) => (
               <div
@@ -99,16 +139,7 @@ export const KeyFeatures = () => {
                   className={`pl-[32px] pt-[60px] flex flex-col ${
                     index === 1 && "justify-center"
                   } ${index === 2 && "justify-end"}`}
-                >
-                  <div className="textcontainer flex flex-col gap-[7px]">
-                    <h4 className="tracking-[-1.442px] font-bold text-xl font-syne text-white">
-                      {TextContainer[index].title}
-                    </h4>
-                    <span className="w-[476px] text-sm tracking-[-0.36px] font-outfit text-white/[0.5]">
-                      {TextContainer[index].content}
-                    </span>
-                  </div>
-                </div>
+                ></div>
                 <div
                   className={
                     index === 2
@@ -131,22 +162,3 @@ export const KeyFeatures = () => {
     </>
   );
 };
-
-
-const TextContainer = [
-  {
-    title: "Intuitive Trading Interface",
-    content:
-      "The core trading interface allows users to execute buy, sell, or exchange transactions with just a few clicks, using straightforward language and guiding tooltips.",
-  },
-  {
-    title: "Simplified Dashboard",
-    content:
-      "Users have access to a dashboard that displays only the most crucial information, minimizing clutter while providing essential details on holdings, transaction history, and market trends.",
-  },
-  {
-    title: "Enhanced Security Measures",
-    content:
-      "ValorExchange incorporates advanced security features, such as two-factor authentication and automated transaction verification, ensuring security without disrupting the user experience.",
-  },
-];

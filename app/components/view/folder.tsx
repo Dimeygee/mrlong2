@@ -22,7 +22,7 @@ const generateRandomGradient = () => {
   return `linear-gradient(135deg, ${randomColor1}, ${randomColor2})`;
 };
 
-export const WorkFolder = ({ work, key }: { work: any; key: number }) => {
+export const WorkFolder = ({ work, key }: { work: any; key?: number }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const gradients = useMemo(

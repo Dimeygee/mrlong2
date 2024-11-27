@@ -1,3 +1,5 @@
+
+
 import { Container } from "@/app/components/view/container";
 import HeroTextWrapper from "@/app/components/view/herotextwrapper";
 import Image from "next/image";
@@ -6,7 +8,7 @@ import { KeyFeatures } from "@/app/components/myproject/keyfeatures";
 import { OtherProjects } from "@/app/components/myproject/otherproject";
 
 
-export default function MyProject() {
+export default function ValorExchange() {
   return (
     <>
       <div className="md:pt-[184px]">
@@ -331,3 +333,6 @@ export default function MyProject() {
     </>
   );
 }
+
+
+

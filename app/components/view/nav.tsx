@@ -4,13 +4,14 @@ import { Envelope, MenuSvg, LogoSvg } from "../../icon";
 import { Container } from "./container";
 import { useEffect, useState, useRef } from "react";
 import { useGlobalStateContext } from "@/app/context/globalcontext";
+import Link from "next/link"
 
 export const Nav = () => {
 
   const { onCursor } = useGlobalStateContext();
   const [activeIndex, setActiveIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(true);
-  const carouselRef = useRef<HTMLDivElement>(null);
+  const carouselRef = useRef<HTMLAnchorElement>(null);
   const logos = [
     <span className="text-white flex h-[100%] w-full">
       <LogoSvg />
@@ -63,7 +64,8 @@ export const Nav = () => {
               >
                 <MenuSvg />
               </div>
-              <div
+              <Link 
+                href="/"
                 className="relative w-[100px] h-[27px] overflow-hidden"
                 ref={carouselRef}
               >
@@ -83,7 +85,7 @@ export const Nav = () => {
                     </div>
                   ))}
                 </div>
-              </div>
+              </Link>
             </div>
             <div className="flex gap-[32px]">
               <div

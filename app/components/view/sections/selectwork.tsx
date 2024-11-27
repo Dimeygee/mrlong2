@@ -2,6 +2,7 @@
 import { Container } from "../container";
 import { WorkFolder } from "../folder";
 import TextWrapper from "../textwrapper";
+import Link from "next/link";
 
 export const SelectedWork = () => {
 
@@ -26,7 +27,9 @@ export const SelectedWork = () => {
           <div className="pt-[75px] w-full">
             <div className="flex flex-col gap-[35px]">
               {Works.map((work, index) => (
-                <WorkFolder key={index} work={work} />
+                <Link href={work.to} key={index}>
+                  <WorkFolder  work={work} />
+                </Link>
               ))}
             </div>
           </div>
@@ -44,6 +47,7 @@ const Works = [
     platform: "/assets/athlerse.png",
     width: "203px",
     height: "52px",
+    to:"/valorexchange"
   },
   {
     id: "#2024",
@@ -52,6 +56,7 @@ const Works = [
     platform: "/assets/athlerse.png",
     width: "203px",
     height: "52px",
+    to:"#"
   },
   {
     id: "#2024",
@@ -60,6 +65,7 @@ const Works = [
     platform: "/assets/rapilo.png",
     width: "158px",
     height: "39px",
+    to:"#"
   },
   {
     id: "#2024",
@@ -68,6 +74,7 @@ const Works = [
     platform: "/assets/dartpay.png",
     width: "208px",
     height: "60px",
+    to:"#"
   },
   {
     id: "#2023",
@@ -76,6 +83,7 @@ const Works = [
     platform: "/assets/athlerse.png",
     width: "203px",
     height: "52px",
+    to:"#"
   },
   {
     id: "#2024",
@@ -84,5 +92,6 @@ const Works = [
     platform: "/assets/progenius.png",
     width: "264px",
     height: "47px",
+    to:"progenius"
   },
 ];
