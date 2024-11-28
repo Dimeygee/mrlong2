@@ -276,10 +276,10 @@ export default function Progenius() {
           </div>
         </Container>
         <div className="flex gap-[60px]">
-          <div className="relative grow h-[500px] overflow-hidden rounded-tr-[40px]">
+          <div className="relative grow h-[400px] overflow-hidden rounded-tr-[40px]">
             <Image src="/assets/progenius/left.png" sizes="100vw" alt="" fill />
           </div>
-          <div className="relative grow h-[500px] rounded-tl-[40px] overflow-hidden">
+          <div className="relative grow h-[400px] rounded-tl-[40px] overflow-hidden">
             <Image
               src="/assets/progenius/right.png"
               sizes="100vw"
@@ -289,7 +289,12 @@ export default function Progenius() {
           </div>
         </div>
         <div className="w-full h-[1024px] relative">
-          <Image src="/assets/progenius/promockup.png" sizes="100vw" alt="" fill />
+          <Image
+            src="/assets/progenius/promockup.png"
+            sizes="100vw"
+            alt=""
+            fill
+          />
         </div>
         <Container>
           <KeyFeatures />
