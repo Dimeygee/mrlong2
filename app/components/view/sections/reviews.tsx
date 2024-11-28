@@ -1,10 +1,8 @@
-"use client"
+/* eslint-disable @typescript-eslint/no-explicit-any */
+"use client";
 
-import { ArrowLeftReview, ArrowRightReview, Quotes } from "@/app/icon";
-import { Container } from "../container";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import Marquee from "../marquee";
 
 const reviews = [
   {
@@ -14,9 +12,9 @@ const reviews = [
     review: [
       "CaLan saves us a huge amount of time.",
       "It's helping us achieve the most pixel perfect & fast websites, thanks to",
-      "full control over asset export."
+      "full control over asset export.",
     ],
-    image: "/assets/Avatar.png"
+    image: "/assets/Avatar.png",
   },
   {
     id: 2,
@@ -25,9 +23,9 @@ const reviews = [
     review: [
       "This tool is a game changer for web development.",
       "The features and ease of use are unparalleled.",
-      "Highly recommend to anyone in the industry."
+      "Highly recommend to anyone in the industry.",
     ],
-    image: "/path/to/image2.jpg"
+    image: "/assets/Avatar.png",
   },
   {
     id: 3,
@@ -36,91 +34,87 @@ const reviews = [
     review: [
       "Excellent service and product quality.",
       "I have never seen such attention to detail.",
-      "CaLan's capabilities are outstanding."
+      "CaLan's capabilities are outstanding.",
     ],
-    image: "/path/to/image3.jpg"
-  }
+    image: "/assets/Avatar.png",
+  },
 ];
 
 export const Reviews = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % reviews.length);
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? reviews.length - 1 : prevIndex - 1
-    );
-  };
-
   return (
     <>
-      <Container>
-        <div className="rounded-[24px] border-[1px] border-white/[0.2] py-[20px] md:py-[80px] flex relative flex-col items-center justify-center mt-[100px] mb-[78px]">
-          <div
-            className="absolute left-[20px] top-[50%] bgs w-[56px] h-[56px] translate-y-[-50%] cursor-pointer"
-            onClick={handlePrev}
-          >
-            <ArrowLeftReview />
-          </div>
-          <div
-            className="absolute right-[20px] top-[50%] bgs w-[56px] h-[56px] translate-y-[-50%] cursor-pointer"
-            onClick={handleNext}
-          >
-            <ArrowRightReview />
-          </div>
-          <Quotes />
-
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={reviews[currentIndex].id}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-              className="mb-[64px] mt-[32px]"
-            >
-              <h3 className="flex flex-col items-center font-outfit tracking-[-0.8px] font-bold text-center text-base md:text-[24px] leading-[34px]">
-                {reviews[currentIndex].review.map((line, index) => (
-                  <span key={index} className="gd1">
-                    {line}
-                  </span>
-                ))}
-              </h3>
-            </motion.div>
-          </AnimatePresence>
-
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={reviews[currentIndex].name}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 20 }}
-              transition={{ duration: 0.5 }}
-              className="flex flex-col items-center"
-            >
-              <div className="md:w-[65px] w-[25px] h-[25px] md:h-[65px] rounded-full relative overflow-hidden">
-                <Image
-                  src={reviews[currentIndex].image}
-                  alt=""
-                  fill
-                  sizes="100vw"
-                />
+      <div className="overflow-hidden">
+        <div className="flex">
+          <div className="flex items-center gap-[24px]">
+            <Marquee duration={30}>
+              <div className="gap-[24px] flex">
+                {reviews.map((review: any, index: number) => {
+                  return (
+                    <div
+                      className="w-[605px] shrink-0 pl-[65px] min-h-[298px] justify-center rounded-[32px] flex flex-col border-[2px] border-white/[0.1] py-[58px] gap-[32px] pr-[46px]"
+                      key={index}
+                    >
+                      <div className="flex gap-[32px] text-white tracking-[-0.4px] font-bold text-xl font-syne leading-[28px]">
+                        <span>{review.review}</span>
+                      </div>
+                      <div className="flex gap-[32px] items-center">
+                        <div className="w-[65px] h-[65px] rounded-full relative overflow-hidden">
+                          <Image
+                            src={`${review.image}`}
+                            fill
+                            sizes="100vw"
+                            alt=""
+                          />
+                        </div>
+                        <div className="flex flex-col gap-[4px]">
+                          <span className="text-[24px] font-bold uppercase text-sm text-white/[0.5] font-outfit">
+                            Linh Nguyen
+                          </span>
+                          <span className="font-bold uppercase text-[12px] text-white/[0.5] font-outfit">Linh Nguyen</span>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
-              <div className="mt-[24px] mb-[8px]">
-                <span className="font-dsans text-b-xl md:text-[22px] font-bold text-white tracking-[-0.4px] leading-[32px]">
-                  {reviews[currentIndex].name}
-                </span>
+            </Marquee>
+            <Marquee duration={30}>
+              <div className="gap-[24px] flex">
+                {reviews.map((review: any, index: number) => {
+                  return (
+                    <div
+                      className="w-[605px] shrink-0 pl-[65px] min-h-[298px] justify-center rounded-[32px] flex flex-col border-[2px] border-white/[0.1] py-[58px] gap-[32px] pr-[46px]"
+                      key={index}
+                    >
+                      <div className="flex gap-[32px] text-white tracking-[-0.4px] font-bold text-xl font-syne leading-[28px]">
+                        <span>{review.review}</span>
+                      </div>
+                      <div className="flex gap-[32px] items-center">
+                        <div className="w-[65px] h-[65px] rounded-full relative overflow-hidden">
+                          <Image
+                            src={`${review.image}`}
+                            fill
+                            sizes="100vw"
+                            alt=""
+                          />
+                        </div>
+                        <div className="flex flex-col gap-[4px]">
+                          <span className="text-[24px] font-bold uppercase text-sm text-white/[0.5] font-outfit">
+                            Linh Nguyen
+                          </span>
+                          <span className="font-bold uppercase text-[12px] text-white/[0.5] font-outfit">
+                            Linh Nguyen
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
-              <span className="text-sm leading-[24px] tracking-[-0.3px] font-dsans text-white/[0.3]">
-                {reviews[currentIndex].position}
-              </span>
-            </motion.div>
-          </AnimatePresence>
+            </Marquee>
+          </div>
         </div>
-      </Container>
+      </div>
     </>
   );
 };

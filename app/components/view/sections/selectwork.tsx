@@ -56,7 +56,7 @@ const Works = [
     platform: "/assets/athlerse.png",
     width: "203px",
     height: "52px",
-    to:"#"
+    to:"/athlerse"
   },
   {
     id: "#2024",

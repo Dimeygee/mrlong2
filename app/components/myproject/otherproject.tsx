@@ -54,10 +54,10 @@ export const OtherProjects = () => {
   return (
     <>
       <div
-        className={`flex flex-col gap-[32px] overflow-hidden transition-all duration-300 `}
+        className={`flex flex-col gap-[32px] overflow-hidden transition-all duration-300 py-[82px]`}
       >
         <Container>
-          <div className="flex items-center justify-between mx-auto px-5">
+          <div className="flex items-center justify-between mx-auto px-5 ">
             <TextWrapper>
               <span className="gd1 font-bold tracking-[-1.442px] text-[42px] font-syne">
                 View other projects
@@ -86,7 +86,7 @@ export const OtherProjects = () => {
           </div>
         </Container>
         <SwiperContainer>
-          <div className="relative h-[208px]">
+          <div className="relative h-[208px] ">
             <Swiper
               slidesPerView={"auto"}
               spaceBetween={35}
