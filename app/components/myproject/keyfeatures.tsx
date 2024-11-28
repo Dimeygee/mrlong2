@@ -14,6 +14,8 @@ export const KeyFeatures = () => {
 
   console.log(scrollProgress);
 
+  
+
   useEffect(() => {
     const parentOffset = parentRef.current?.offsetTop || 0;
     const elementOffsets = refs.current.map(
@@ -65,7 +67,7 @@ export const KeyFeatures = () => {
   }, [positions]);
 
 
-  console.log(scrollProgress)
+  return null;
 
   return (
     <>

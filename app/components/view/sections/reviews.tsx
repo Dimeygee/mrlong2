@@ -70,7 +70,9 @@ export const Reviews = () => {
                           <span className="text-[24px] font-bold uppercase text-sm text-white/[0.5] font-outfit">
                             Linh Nguyen
                           </span>
-                          <span className="font-bold uppercase text-[12px] text-white/[0.5] font-outfit">Linh Nguyen</span>
+                          <span className="font-bold uppercase text-[12px] text-white/[0.5] font-outfit">
+                            Linh Nguyen
+                          </span>
                         </div>
                       </div>
                     </div>
