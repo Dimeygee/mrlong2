@@ -265,7 +265,7 @@ export default function Athlerse() {
               </div>
             </div>
             <div className="flex pt-[60px] relative">
-              <div className="w-full h-[1024px] relative mx-auto rounded-[40px] overflow-hidden flex gap-[80px]">
+              <div className="w-full h-[1154px] relative mx-auto rounded-[40px] overflow-hidden flex gap-[80px]">
                 <div className="grow flex items-center">
                   <div className="relative w-full h-[716px]">
                     <Image
@@ -293,7 +293,6 @@ export default function Athlerse() {
                       fill
                     />
                   </div>
-                  <div className="grow relative"></div>
                 </div>
                 <div className="grow flex items-center">
                   <div className="relative w-full h-[716px]">

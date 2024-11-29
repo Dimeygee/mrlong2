@@ -51,13 +51,13 @@ export const WorkFolder = ({ work, key }: { work: any; key?: number }) => {
         <span className="absolute top-[20px] text-lg text-white/[0.5] font-outfit tracking-[-0.36px] leading-[25.2px]">
           {work.id}
         </span>
-        <div className="flex md:flex-row flex-col justify-between items-center w-full gap-4 md:mt-0 mt-[30px]">
+        <div className="flex md:flex-row flex-col justify-between items-center w-full gap-4 md:mt-0 mt-[30px] relative">
           <TextWrapper>
             <h4 className="uppercase tracking-[-1.442px] font-bold text-[32px] font-syne bg1">
               {work.name}
             </h4>
           </TextWrapper>
-          <span className="text-lg font-outfit text-white/[0.5] tracking-[-0.36px] leading-[25.2px]">
+          <span className="text-lg font-outfit text-white/[0.5] tracking-[-0.36px] leading-[25.2px] absolute top-[50%] translate-y-[-50%] translate-x-[-50%] left-[50%]">
             {work.type}
           </span>
           <div

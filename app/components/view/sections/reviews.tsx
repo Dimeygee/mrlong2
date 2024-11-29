@@ -3,6 +3,7 @@
 
 import Image from "next/image";
 import Marquee from "../marquee";
+import { Button } from "../../button";
 
 const reviews = [
   {
@@ -43,7 +44,8 @@ const reviews = [
 export const Reviews = () => {
   return (
     <>
-      <div className="overflow-hidden">
+      <div className="overflow-hidden  pt-[30px] pb-[60px]">
+        <div className="flex justify-center mb-[50px]"><Button text="Recommendations" /></div>
         <div className="flex">
           <div className="flex items-center gap-[24px]">
             <Marquee duration={30}>
