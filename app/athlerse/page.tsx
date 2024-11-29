@@ -308,7 +308,7 @@ export default function Athlerse() {
             </div>
           </div>
         </Container>
-        <div className="w-full h-[1024px] relative">
+        <div className="w-full h-[1200px] relative">
           <Image src="/assets/athlerse/mockup2.png" sizes="100vw" alt="" fill />
         </div>
         <Container>
