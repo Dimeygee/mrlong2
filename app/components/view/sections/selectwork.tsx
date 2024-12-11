@@ -65,7 +65,7 @@ const Works = [
     platform: "/assets/rapilo.png",
     width: "158px",
     height: "39px",
-    to:"#"
+    to:"/rapilo"
   },
   {
     id: "#2024",
@@ -74,7 +74,7 @@ const Works = [
     platform: "/assets/dartpay.png",
     width: "208px",
     height: "60px",
-    to:"#"
+    to:"/dartspay"
   },
   {
     id: "#2023",
@@ -83,7 +83,7 @@ const Works = [
     platform: "/assets/athlerse.png",
     width: "203px",
     height: "52px",
-    to:"#"
+    to:"/rocketmarketing"
   },
   {
     id: "#2024",
