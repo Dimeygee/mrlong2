@@ -2,7 +2,7 @@ import { Container } from "@/app/components/view/container";
 import HeroTextWrapper from "@/app/components/view/herotextwrapper";
 import Image from "next/image";
 import TextWrapper from "@/app/components/view/textwrapper";
-import { KeyFeatures } from "@/app/components/myproject/keyfeatures";
+//import { KeyFeatures } from "@/app/components/myproject/keyfeatures";
 import { OtherProjects } from "@/app/components/myproject/otherproject";
 
 export default function Ralipo() {
@@ -247,9 +247,7 @@ export default function Ralipo() {
           </div>
         </div>
         <Container>
-          <div className="hidden">
-            <KeyFeatures />
-          </div>
+          
           <div className="mt-[60px] py-[54px] flex gap-[10px] flex-col">
             <div className="flex flex-col">
               <TextWrapper>

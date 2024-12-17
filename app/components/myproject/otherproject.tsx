@@ -91,8 +91,8 @@ export const OtherProjects = () => {
               slidesPerView={"auto"}
               spaceBetween={35}
               navigation={{
-                nextEl: ".swiper-button-left",
-                prevEl: ".swiper-button-right",
+                nextEl: ".swiper-button-right",
+                prevEl: ".swiper-button-left",
               }}
               pagination={{
                 clickable: true,

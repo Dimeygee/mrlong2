@@ -1,17 +1,19 @@
+
+
 "use client";
 
 import Image from "next/image";
-import TextWrapper from "../view/textwrapper";
+import TextWrapper from "../../view/textwrapper";
 import { useState, useEffect, useRef, useCallback } from "react";
 
-export const KeyFeatures = () => {
+export const ProgeniusKeyFeatures = () => {
   const refs = useRef<(HTMLDivElement | null)[]>([null, null, null]);
-  const textRefs = useRef<(HTMLDivElement | null)[]>([null, null, null]); // Refs for text containers
+  const textRefs = useRef<(HTMLDivElement | null)[]>([null, null, null, null]); // Refs for text containers
   const parentRef = useRef<HTMLDivElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [positions, setPositions] = useState<number[]>([]);
-  const [opacities, setOpacities] = useState<number[]>([1, 1, 1]); // Initial opacity for images
-  const [textOpacities, setTextOpacities] = useState<number[]>([1, 0, 0]); // First text container always visible initially
+  const [opacities, setOpacities] = useState<number[]>([1, 1, 1, 1]); // Initial opacity for images
+  const [textOpacities, setTextOpacities] = useState<number[]>([1, 0, 0, 0]); // First text container always visible initially
   const [scrollProgress, setScrollProgress] = useState<number>(0);
 
   useEffect(() => {
@@ -97,7 +99,7 @@ export const KeyFeatures = () => {
 
   return (
     <>
-      <div ref={parentRef} className="pt-[50px] flex flex-col items-center">
+      <div ref={parentRef} className="pt-[80px] flex flex-col items-center">
         <TextWrapper>
           <span className="gd1 font-bold tracking-[-1.442px] text-[42px] font-syne">
             Key Features of ValorExchange:
@@ -107,13 +109,13 @@ export const KeyFeatures = () => {
           ref={containerRef}
           className="flex justify-between w-full mt-[68px] relative"
         >
-          <div className="sticky left-0 top-[268px] h-[395px] flex gap-[32px]">
+          <div className="sticky left-0 top-[268px] h-[397px] flex gap-[32px]">
             <div className="h-[395px] left-0 top-[268px] sticky w-[1px] bg-white/[0.1] flex justify-center custom-scroll">
               <div
                 className="w-[3px] h-[120px] scroll-bar rounded-[5px] bg-white"
                 style={{
                   transform: `translateY(${
-                    ((395 - 120) * scrollProgress) / 100
+                    ((397 - 120) * scrollProgress) / 100
                   }px)`,
                   transition: "transform 0.1s ease",
                 }}
@@ -130,12 +132,12 @@ export const KeyFeatures = () => {
                 }}
               >
                 <h4 className="tracking-[-1.442px] font-bold text-xl font-syne text-white">
-                  Intuitive Trading Interface
+                  Simplified Deal Creation
                 </h4>
                 <span className="w-[476px] text-sm tracking-[-0.36px] font-outfit text-white/[0.5]">
-                  The core trading interface allows users to execute buy, sell,
-                  or exchange transactions with just a few clicks, using
-                  straightforward language and guiding tooltips.
+                  Admin can effortlessly set up fundraising deals with guided
+                  steps, reducing the learning curve and speeding up the
+                  process.
                 </span>
               </div>
               {/* Second text container */}
@@ -148,10 +150,10 @@ export const KeyFeatures = () => {
                 }}
               >
                 <h4 className="tracking-[-1.442px] font-bold text-xl font-syne text-white">
-                  Simplified Dashboard
+                  Comprehensive Investment Tracking
                 </h4>
                 <span className="w-[476px] text-sm tracking-[-0.36px] font-outfit text-white/[0.5]">
-                  Users have access to a dashboard that displays only the most
+                  Admin have access to a dashboard that displays only the most
                   crucial information, minimizing clutter while providing
                   essential details on holdings, transaction history, and market
                   trends.
@@ -167,20 +169,36 @@ export const KeyFeatures = () => {
                 }}
               >
                 <h4 className="tracking-[-1.442px] font-bold text-xl font-syne text-white">
-                  Enhanced Security Measures
+                  Investor Management Tools
                 </h4>
                 <span className="w-[476px] text-sm tracking-[-0.36px] font-outfit text-white/[0.5]">
-                  ValorExchange incorporates advanced security features, such as
-                  two-factor authentication and automated transaction
-                  verification, ensuring security without disrupting the user
-                  experience.
+                  Admin can manage investor profiles, track engagement, and
+                  maintain transparency, building stronger relationships within
+                  the community.
+                </span>
+              </div>
+              <div
+                ref={setTextRef(3)} // Using the callback ref
+                className="thisisthetextcontainer flex flex-col gap-[7px] pb-[20px]"
+                style={{
+                  opacity: textOpacities[3],
+                  transition: "opacity 0.5s ease-in-out", // Smooth opacity transition
+                }}
+              >
+                <h4 className="tracking-[-1.442px] font-bold text-xl font-syne text-white">
+                  Clean and Modern Interface
+                </h4>
+                <span className="w-[476px] text-sm tracking-[-0.36px] font-outfit text-white/[0.5]">
+                  A visually appealing and intuitive design ensures that users,
+                  regardless of their technical background, can navigate the
+                  platform with ease.
                 </span>
               </div>
             </div>
           </div>
 
           <div className="w-full flex flex-col gap-[200px]">
-            {[1, 2, 3].map((_, index) => (
+            {[1, 2, 3, 4].map((_, index) => (
               <div
                 key={index}
                 ref={(el) => {
@@ -205,7 +223,7 @@ export const KeyFeatures = () => {
                   }
                 >
                   <Image
-                    src={`/assets/pyd${index + 1}.png`}
+                    src={`/assets/progenius/key${index + 1}.png`}
                     alt=""
                     fill
                     sizes="100vw"

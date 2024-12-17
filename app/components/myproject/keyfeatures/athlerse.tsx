@@ -1,17 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import TextWrapper from "../view/textwrapper";
+import TextWrapper from "../../view/textwrapper";
 import { useState, useEffect, useRef, useCallback } from "react";
 
-export const KeyFeatures = () => {
-  const refs = useRef<(HTMLDivElement | null)[]>([null, null, null]);
-  const textRefs = useRef<(HTMLDivElement | null)[]>([null, null, null]); // Refs for text containers
+export const AthlerseKeyFeatures = () => {
+  const refs = useRef<(HTMLDivElement | null)[]>([null, null, null, null]);
+  const textRefs = useRef<(HTMLDivElement | null)[]>([null, null, null, null]); // Refs for text containers
   const parentRef = useRef<HTMLDivElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [positions, setPositions] = useState<number[]>([]);
-  const [opacities, setOpacities] = useState<number[]>([1, 1, 1]); // Initial opacity for images
-  const [textOpacities, setTextOpacities] = useState<number[]>([1, 0, 0]); // First text container always visible initially
+  const [opacities, setOpacities] = useState<number[]>([1, 1, 1, 1]); // Initial opacity for images
+  const [textOpacities, setTextOpacities] = useState<number[]>([1, 0, 0, 0]); // Initial opacity for text containers (first one is 1)
   const [scrollProgress, setScrollProgress] = useState<number>(0);
 
   useEffect(() => {
@@ -45,12 +45,14 @@ export const KeyFeatures = () => {
       const newOpacities = positions.map((pos, index) => {
         const nextPos = positions[index + 1] || Infinity;
 
+        // If the scrollTop is near the current image's position (in the viewport)
         if (scrollTop >= pos && scrollTop < nextPos) {
           return 1; // Current image in view
         }
 
+        // If it's past the image, make it 0.5
         if (scrollTop >= pos) {
-          return 0.5; // Previous image faded out
+          return 0.5; // Previous image
         }
 
         return 1; // Default opacity for future images
@@ -120,7 +122,6 @@ export const KeyFeatures = () => {
               ></div>
             </div>
             <div className="flex relative flex-col py-[15px] justify-between">
-              {/* First text container */}
               <div
                 ref={setTextRef(0)} // Using the callback ref
                 className="thisisthetextcontainer flex flex-col gap-[7px]"
@@ -130,15 +131,14 @@ export const KeyFeatures = () => {
                 }}
               >
                 <h4 className="tracking-[-1.442px] font-bold text-xl font-syne text-white">
-                  Intuitive Trading Interface
+                  Progress Tracking
                 </h4>
                 <span className="w-[476px] text-sm tracking-[-0.36px] font-outfit text-white/[0.5]">
-                  The core trading interface allows users to execute buy, sell,
-                  or exchange transactions with just a few clicks, using
-                  straightforward language and guiding tooltips.
+                  A comprehensive dashboard provides insights into user
+                  progress, helping them visualize milestones and stay
+                  motivated.
                 </span>
               </div>
-              {/* Second text container */}
               <div
                 ref={setTextRef(1)} // Using the callback ref
                 className="thisisthetextcontainer flex flex-col gap-[7px]"
@@ -148,16 +148,14 @@ export const KeyFeatures = () => {
                 }}
               >
                 <h4 className="tracking-[-1.442px] font-bold text-xl font-syne text-white">
-                  Simplified Dashboard
+                  Community Engagement
                 </h4>
                 <span className="w-[476px] text-sm tracking-[-0.36px] font-outfit text-white/[0.5]">
-                  Users have access to a dashboard that displays only the most
-                  crucial information, minimizing clutter while providing
-                  essential details on holdings, transaction history, and market
-                  trends.
+                  A built-in social platform allows users to connect with
+                  others, join challenges, and celebrate achievements, fostering
+                  a sense of belonging.
                 </span>
               </div>
-              {/* Third text container */}
               <div
                 ref={setTextRef(2)} // Using the callback ref
                 className="thisisthetextcontainer flex flex-col gap-[7px]"
@@ -167,26 +165,43 @@ export const KeyFeatures = () => {
                 }}
               >
                 <h4 className="tracking-[-1.442px] font-bold text-xl font-syne text-white">
-                  Enhanced Security Measures
+                  Blockchain Rewards
                 </h4>
                 <span className="w-[476px] text-sm tracking-[-0.36px] font-outfit text-white/[0.5]">
-                  ValorExchange incorporates advanced security features, such as
-                  two-factor authentication and automated transaction
-                  verification, ensuring security without disrupting the user
-                  experience.
+                  By integrating blockchain technology, Athlerse offers users
+                  tangible incentives, including tradable digital assets, for
+                  their fitness efforts.
+                </span>
+              </div>
+              <div
+                ref={setTextRef(3)} // Using the callback ref
+                className="thisisthetextcontainer flex flex-col gap-[7px]"
+                style={{
+                  opacity: textOpacities[3],
+                  transition: "opacity 0.5s ease-in-out", // Smooth opacity transition
+                }}
+              >
+                <h4 className="tracking-[-1.442px] font-bold text-xl font-syne text-white">
+                  Shop Feature
+                </h4>
+                <span className="w-[476px] text-sm tracking-[-0.36px] font-outfit text-white/[0.5]">
+                  Users can spend the GYM tokens they’ve earned from working out
+                  to purchase a variety of items in the app’s shop. From fitness
+                  gear to digital assets and exclusive rewards, the shop adds an
+                  exciting layer of motivation and utility to the platform.
                 </span>
               </div>
             </div>
           </div>
 
           <div className="w-full flex flex-col gap-[200px]">
-            {[1, 2, 3].map((_, index) => (
+            {[1, 2, 3, 4].map((_, index) => (
               <div
                 key={index}
                 ref={(el) => {
                   refs.current[index] = el;
                 }}
-                className="w-full flex justify-between sticky top-[200px] transition-opacity duration-500 ease-in-out"
+                className="w-full flex justify-center sticky top-[200px] transition-opacity duration-500 ease-in-out"
                 style={{
                   opacity: opacities[index],
                   transition: "opacity 0.5s ease-in-out", // Smooth opacity transition
@@ -200,12 +215,12 @@ export const KeyFeatures = () => {
                 <div
                   className={
                     index === 2
-                      ? "h-[441px] w-[648px] border-white/[0.14] rounded-[21px] relative"
-                      : `h-[481px] w-[678px] border-white/[0.14] rounded-[21px] relative`
+                      ? "h-[510px] w-[259px] border-white/[0.14] rounded-[21px] relative"
+                      : `h-[510px] w-[319px] border-white/[0.14] rounded-[21px] relative`
                   }
                 >
                   <Image
-                    src={`/assets/pyd${index + 1}.png`}
+                    src={`/assets/athlerse/key${index + 1}.png`}
                     alt=""
                     fill
                     sizes="100vw"

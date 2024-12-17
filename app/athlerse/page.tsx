@@ -2,7 +2,7 @@ import { Container } from "@/app/components/view/container";
 import HeroTextWrapper from "@/app/components/view/herotextwrapper";
 import Image from "next/image";
 import TextWrapper from "@/app/components/view/textwrapper";
-import { KeyFeatures } from "@/app/components/myproject/keyfeatures";
+import { AthlerseKeyFeatures } from "@/app/components/myproject/keyfeatures/athlerse";
 import { OtherProjects } from "@/app/components/myproject/otherproject";
 
 export default function Athlerse() {
@@ -312,9 +312,7 @@ export default function Athlerse() {
           <Image src="/assets/athlerse/mockup2.png" sizes="100vw" alt="" fill />
         </div>
         <Container>
-          <div className="hidden">
-            <KeyFeatures />
-          </div>
+          <AthlerseKeyFeatures />
           <div className="mt-[60px] py-[54px] flex gap-[10px] flex-col">
             <div className="flex flex-col">
               <TextWrapper>
