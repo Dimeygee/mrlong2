@@ -7,10 +7,12 @@ import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import { SlideArrowLeft, SlideArrowRight } from "@/app/icon";
 import TextWrapper from "../view/textwrapper";
-import { Container , SwiperContainer} from "@/app/components/view/container";
+import { Container, SwiperContainer } from "@/app/components/view/container";
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { useGlobalStateContext } from "@/app/context/globalcontext";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const Projects = [
   { id: "#2022", name: "Athlerse", type: "Product Design" },
@@ -40,6 +42,7 @@ const generateRandomGradient = () => {
 export const OtherProjects = () => {
   const { onCursor } = useGlobalStateContext();
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const pathname = usePathname(); // Retrieve the current pathname
 
   const gradients = useMemo(
     () =>
@@ -51,13 +54,21 @@ export const OtherProjects = () => {
     []
   );
 
+  // Filter out the project with a name matching the current pathname
+  const filteredProjects = useMemo(() => {
+    const currentPageName = pathname?.split("/").pop()?.toLowerCase() || ""; // Get the last segment of the pathname and convert to lowercase
+    return Projects.filter(
+      (project) => project.name.toLowerCase() !== currentPageName
+    );
+  }, [pathname]);
+
   return (
     <>
       <div
         className={`flex flex-col gap-[32px] overflow-hidden transition-all duration-300 py-[82px]`}
       >
         <Container>
-          <div className="flex items-center justify-between mx-auto px-5 ">
+          <div className="flex items-center justify-between mx-auto px-5">
             <TextWrapper>
               <span className="gd1 font-bold tracking-[-1.442px] text-[42px] font-syne">
                 View other projects
@@ -86,7 +97,7 @@ export const OtherProjects = () => {
           </div>
         </Container>
         <SwiperContainer>
-          <div className="relative h-[208px] ">
+          <div className="relative h-[208px]">
             <Swiper
               slidesPerView={"auto"}
               spaceBetween={35}
@@ -108,7 +119,7 @@ export const OtherProjects = () => {
                 paddingLeft: "70px",
               }}
             >
-              {Projects.map((project, index) => (
+              {filteredProjects.map((project, index) => (
                 <SwiperSlide
                   key={project.name}
                   style={{
@@ -122,6 +133,7 @@ export const OtherProjects = () => {
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
+                  <Link href={`/${project.name.toLowerCase()}`} className="absolute w-full h-full top-0 left-0 z-[999]"></Link>
                   <motion.div
                     initial={{ rotateX: 0, transformOrigin: "50% 100%" }}
                     animate={{ rotateX: hoveredIndex === index ? -45 : 0 }}
@@ -135,7 +147,7 @@ export const OtherProjects = () => {
                       <span className="text-[32px] tracking-[-1.442px] uppercase font-bold font-syne">
                         {project.name}
                       </span>
-                      <span className="text-xl  text-white/[0.5] leading-[25.2px] tracking-[-0.36px]">
+                      <span className="text-xl text-white/[0.5] leading-[25.2px] tracking-[-0.36px]">
                         {project.type}
                       </span>
                     </div>

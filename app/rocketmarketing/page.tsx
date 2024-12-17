@@ -4,6 +4,7 @@ import Image from "next/image";
 import TextWrapper from "@/app/components/view/textwrapper";
 //import { KeyFeatures } from "@/app/components/myproject/keyfeatures";
 import { OtherProjects } from "@/app/components/myproject/otherproject";
+import { ArrowRightIcon, NetIcon, ArrowleftIcon } from "../icon";
 
 export default function RocketMarketing() {
   return (
@@ -250,24 +251,24 @@ export default function RocketMarketing() {
           </div>
         </div>
         <Container>
-          
           <div className="mt-[60px] py-[54px] flex gap-[10px] flex-col">
             <div className="flex flex-col">
               <TextWrapper>
                 <span className="gd1 font-bold tracking-[-1.442px] text-[42px] font-syne">
-                  Final Outcome
+                  Results
                 </span>
               </TextWrapper>
             </div>
             <div className="flex flex-col">
               <TextWrapper>
                 <span className="gd1 font-medium tracking-[-0.36px] text-xl font-outfit">
-                  ValorExchange effectively bridges the gap between the
-                  complexity of cryptocurrency trading and the need for an
-                  accessible, intuitive platform. With its user-friendly design
-                  and enhanced security features, ValorExchange empowers users
-                  to trade confidently, free from the usual barriers, and boosts
-                  their overall experience in the digital currency market.
+                  After launching the redesigned landing page, Rocket Marketing
+                  experienced significant improvements. Lead generation
+                  increased by 45% as a result of clearer CTAs and streamlined
+                  navigation. Average session duration rose by 30%, indicating
+                  that visitors were engaging more deeply with the content.
+                  Mobile bounce rates dropped by 25%, thanks to enhanced
+                  responsiveness and mobile-first optimizations.
                 </span>
               </TextWrapper>
             </div>
@@ -275,12 +276,37 @@ export default function RocketMarketing() {
           <div className="py-[43px] flex flex-col gap-2 items-center">
             <TextWrapper>
               <span className="gd1 font-medium tracking-[-0.36px]  text-[42px] font-syne">
-                Figma Design
+                Live website
               </span>
             </TextWrapper>
             <span className="whitespace-pre-line text-xl font-light font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5]">
               Click the icon below to view the figma design for ValorExchange
             </span>
+            <div className="flex items-center gap-[28px] mt-4">
+              <div className="flex items-center gap-[8px]">
+                <ArrowRightIcon />
+                <ArrowRightIcon />
+                <ArrowRightIcon />
+                <ArrowRightIcon />
+                <ArrowRightIcon />
+              </div>
+              <div
+                className="bgs w-[56px] h-[56px] text-white hover-item hover:text-black transition-colors duration-75 flex justify-center text-2xl font-bold items-center relative swiper-button-right group"
+                //onMouseEnter={() => onCursor("hovered")}
+                //onMouseLeave={() => onCursor("")}
+              >
+                <span className="group-hover:text-black">
+                  <NetIcon />
+                </span>
+              </div>
+              <div className="flex items-center gap-[8px]">
+                <ArrowleftIcon />
+                <ArrowleftIcon />
+                <ArrowleftIcon />
+                <ArrowleftIcon />
+                <ArrowleftIcon />
+              </div>
+            </div>
           </div>
         </Container>
         <OtherProjects />
