@@ -2,6 +2,7 @@
 
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
+import { useLoading } from "@/app/context/loadingcontext";
 
 const HeroTextWrapper = ({
   className,
@@ -12,19 +13,26 @@ const HeroTextWrapper = ({
   children: React.ReactNode;
   transitionDelay?: number;
 }) => {
+  const { isLoading } = useLoading();
   const controls = useAnimation();
 
   useEffect(() => {
-    controls.start({
-      x: "100%",
-      transition: { duration: 1.5, ease: "easeInOut", delay: transitionDelay },
-    });
-  }, [controls, transitionDelay]);
+    if (!isLoading) {
+      controls.start({
+        x: "100%",
+        transition: {
+          duration: 1.5,
+          ease: "easeInOut",
+          delay: transitionDelay,
+        },
+      });
+    }
+  }, [controls, transitionDelay, isLoading]);
 
   return (
     <motion.div className={`herotextwrapper ${className}`}>
       <motion.div
-        className="overlay "
+        className="overlay"
         initial={{ x: "0%" }}
         animate={controls}
       />

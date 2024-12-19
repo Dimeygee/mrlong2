@@ -1,10 +1,12 @@
+"use client";
 
 import { Container } from "../container";
 import { WorkFolder } from "../folder";
 import TextWrapper from "../textwrapper";
-import Link from "next/link";
+import { useLoading } from "@/app/context/loadingcontext";
 
-export const SelectedWork = () => {
+export const SelectedWork: React.FC = () => {
+  const { navigateWithLoader } = useLoading();
 
   return (
     <div className="pt-[75px] pb-[150px]">
@@ -19,17 +21,22 @@ export const SelectedWork = () => {
                 <span className="gd1 font-syne">Selected</span>
               </TextWrapper>
               <TextWrapper>
-                 <span className="abg font-syne">Work</span>
+                <span className="abg font-syne">Work</span>
               </TextWrapper>
-             
             </h3>
           </div>
           <div className="pt-[75px] w-full">
             <div className="flex flex-col gap-[35px]">
               {Works.map((work, index) => (
-                <Link href={work.to} key={index}>
-                  <WorkFolder  work={work} />
-                </Link>
+                <div
+                  key={index}
+                  onClick={() => {
+                    navigateWithLoader(work.to, work.name);
+                  }}
+                  className="cursor-pointer"
+                >
+                  <WorkFolder work={work} />
+                </div>
               ))}
             </div>
           </div>
@@ -47,7 +54,7 @@ const Works = [
     platform: "/assets/athlerse.png",
     width: "203px",
     height: "52px",
-    to:"/valorexchange"
+    to: "/valorexchange",
   },
   {
     id: "#2024",
@@ -56,7 +63,7 @@ const Works = [
     platform: "/assets/athlerse.png",
     width: "203px",
     height: "52px",
-    to:"/athlerse"
+    to: "/athlerse",
   },
   {
     id: "#2024",
@@ -65,7 +72,7 @@ const Works = [
     platform: "/assets/rapilo.png",
     width: "158px",
     height: "39px",
-    to:"/rapilo"
+    to: "/rapilo",
   },
   {
     id: "#2024",
@@ -74,7 +81,7 @@ const Works = [
     platform: "/assets/dartpay.png",
     width: "208px",
     height: "60px",
-    to:"/dartspay"
+    to: "/dartspay",
   },
   {
     id: "#2023",
@@ -83,7 +90,7 @@ const Works = [
     platform: "/assets/athlerse.png",
     width: "203px",
     height: "52px",
-    to:"/rocketmarketing"
+    to: "/rocketmarketing",
   },
   {
     id: "#2024",
@@ -92,6 +99,6 @@ const Works = [
     platform: "/assets/progenius.png",
     width: "264px",
     height: "47px",
-    to:"progenius"
+    to: "/progenius",
   },
 ];

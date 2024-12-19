@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Syne, Outfit, DM_Sans } from "next/font/google";
-import {SmoothScrollbar} from "./components/view/smoothscrollable";
+import { SmoothScrollbar } from "./components/view/smoothscrollable";
 import { GlobalProvider } from "./context/globalcontext";
 import { Nav } from "./components/view/nav";
 import { Footer } from "./components/view/footer";
 import CustomCursor from "./components/customcusor";
-
+import { Loader } from "./components/view/loader";
+import { LoadingProvider } from "./context/loadingcontext";
+import {Overlay} from "./components/view/overlay"
 
 const outfit = Outfit({
   display: "swap",
@@ -14,8 +16,6 @@ const outfit = Outfit({
   subsets: ["latin"],
   weight: ["700", "600", "500", "400"],
 });
-
-
 
 const dsans = DM_Sans({
   display: "swap",
@@ -45,14 +45,17 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${outfit.variable} ${dsans.variable} ${syne.variable}`}>
         <SmoothScrollbar>
-            <GlobalProvider >
+          <LoadingProvider>
+            <GlobalProvider>
+              <Loader />
+              <Overlay />
               <CustomCursor />
-              <Nav  />
+              <Nav />
               {children}
               <Footer />
             </GlobalProvider>
-            
-         </SmoothScrollbar>
+          </LoadingProvider>
+        </SmoothScrollbar>
       </body>
     </html>
   );

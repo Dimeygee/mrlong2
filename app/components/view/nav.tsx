@@ -52,7 +52,7 @@ export const Nav = () => {
   }, [activeIndex, logos.length]);
 
   return (
-    <div className="fixed top-0 left-0 w-full z-[999]">
+    <div className="fixed top-0 left-0 w-full z-[888]">
       <div className="bg-[#12141d]/[0.1] backdrop-blur-[10px] flex justify-center items-center">
         <Container>
           <div className="flex items-center justify-between h-[103px] ">
