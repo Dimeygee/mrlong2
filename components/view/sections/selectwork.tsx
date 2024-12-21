@@ -3,11 +3,9 @@
 import { Container } from "../container";
 import { WorkFolder } from "../folder";
 import TextWrapper from "../textwrapper";
-import { useLoading } from "@/app/context/loadingcontext";
+import Link from "next/link"; // Importing Link from next/link
 
 export const SelectedWork: React.FC = () => {
-  const { navigateWithLoader } = useLoading();
-
   return (
     <div className="pt-[75px] pb-[150px]">
       <Container>
@@ -28,14 +26,12 @@ export const SelectedWork: React.FC = () => {
           <div className="pt-[75px] w-full">
             <div className="flex flex-col gap-[35px]">
               {Works.map((work, index) => (
-                <div
-                  key={index}
-                  onClick={() => {
-                    navigateWithLoader(work.to, work.name);
-                  }}
-                  className="cursor-pointer"
-                >
-                  <WorkFolder work={work} />
+                <div key={index} className="cursor-pointer">
+                  
+                  <Link href={work.to}>
+                      <WorkFolder work={work} />
+                  
+                  </Link>
                 </div>
               ))}
             </div>

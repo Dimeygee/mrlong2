@@ -1,11 +1,12 @@
-import { Container } from "@/app/components/view/container";
-import HeroTextWrapper from "@/app/components/view/herotextwrapper";
+import { Container } from "@/components/view/container";
+import HeroTextWrapper from "@/components/view/herotextwrapper";
 import Image from "next/image";
-import TextWrapper from "@/app/components/view/textwrapper";
-import { AthlerseKeyFeatures } from "@/app/components/myproject/keyfeatures/athlerse";
-import { OtherProjects } from "@/app/components/myproject/otherproject";
+import TextWrapper from "@/components/view/textwrapper";
+import { KeyFeatures } from "@/components/myproject/keyfeatures";
+import { OtherProjects } from "@/components/myproject/otherproject";
 
-export default function Athlerse() {
+
+export default function ValorExchange() {
   return (
     <>
       <div className="md:pt-[184px]">
@@ -15,33 +16,41 @@ export default function Athlerse() {
               <div className="flex gap-[47px] justify-between items-center">
                 <div className="flex flex-col grow-[1] shrink-0">
                   <span className="text-xl font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5]">
-                    2024
+                    2022
                   </span>
                   <div className="my-[10px] h-[1px] bg-white/[0.4] w-full"></div>
 
                   <div className="text-[32px] font-bold tracking-[-1.442px] font-syne leading-[1]">
                     <HeroTextWrapper>
-                      <h3 className="gd1">Athelrse: Gamifying Fitness for a</h3>
-                      <h3 className="gd1">Connected, Motivated Community</h3>
+                      <h3 className="gd1">
+                        ValorExchange: Creating a Seamless{" "}
+                      </h3>
+                      <h3 className="gd1">User Experience for Effortless </h3>
+                      <h3 className="gd1">Cryptocurrency Trading</h3>
                     </HeroTextWrapper>
                   </div>
                 </div>
                 <div className="text-xl tracking-[-0.36px] leading-[25.2px] font-outfit grow-[1]">
+                  <span>
+                    <span className="text-white font-medium ">
+                      ValorExchange
+                    </span>{" "}
+                    -{" "}
+                  </span>
                   <span className="text-white/[0.5] font-light">
-                    Fitness is more than just a journey; it’s a lifestyle, but
-                    staying committed can often feel like an uphill battle.
-                    Despite the rise of fitness apps, many fail to provide the
-                    engagement and incentives needed to keep users motivated.
+                    A revolutionary platform designed to provide a smooth,
+                    intuitive experience for cryptocurrency users to buy, sell,
+                    or exchange tokens without the typical barriers and
+                    complexities that deter or frustrate many users.
+                    ValorExchange prioritizes simplicity, accessibility, and
+                    ease of use, empowering users to participate in crypto
+                    trading with confidence, regardless of their experience
+                    level.
                   </span>
                 </div>
               </div>
               <div className="w-full h-[542px] relative">
-                <Image
-                  src="/assets/athlerse/hero.png"
-                  fill
-                  sizes="100vw"
-                  alt=""
-                />
+                <Image src="/assets/valor.png" fill sizes="100vw" alt="" />
               </div>
             </div>
             <div className="mt-[10px] py-[54px] flex gap-[10px] flex-col">
@@ -55,17 +64,14 @@ export default function Athlerse() {
               <div className="flex flex-col">
                 <TextWrapper>
                   <span className="gd1 font-medium tracking-[-0.36px] text-xl font-outfit">
-                    Fitness transcends being merely a journey; it embodies a
-                    lifestyle, yet maintaining commitment can frequently
-                    resemble an uphill struggle. Although fitness apps have
-                    proliferated, many do not offer the engagement and
-                    incentives necessary to sustain user motivation. Athlerse
-                    seeks to alter this dynamic. By integrating gamification,
-                    community involvement, and blockchain rewards, Athlerse
-                    redefines fitness as a gratifying and social endeavor. It
-                    serves as a platform where every workout matters—not only
-                    for your health but also for fostering a sense of
-                    accomplishment and community.
+                    ValorExchange is designed to simplify the world of
+                    cryptocurrency trading, empowering users to buy, sell, and
+                    exchange tokens without facing the typical complexities and
+                    barriers that deter many individuals from fully engaging
+                    with digital assets. With an emphasis on user-centered
+                    design, ValorExchange prioritizes ease, security, and
+                    intuitive functionality, making it accessible to crypto
+                    novices and seasoned traders alike.
                   </span>
                 </TextWrapper>
               </div>
@@ -81,7 +87,8 @@ export default function Athlerse() {
               </div>
               <div className="grow">
                 <p className="tracking-[-0.36px] text-lg leading-[25.2px] font-outfit text-white/[0.5] whitespace-pre-line">
-                  {`Despite the growing interest in health and fitness, many individuals find it challenging to stay motivated and consistent with their wellness goals. Traditional fitness apps often miss the mark, failing to provide engaging tools or meaningful incentives that encourage long-term commitment. Athlerse addresses this issue by creating a hybrid platform where fitness meets rewards, combining workouts with gamification and community-building to make fitness a sustainable and fulfilling journey.
+                  {`The cryptocurrency trading environment is often complex, laden with technical jargon and unintuitive processes that overwhelm both new and experienced users. Common barriers include confusing interfaces, fragmented workflows, and a lack of clear guidance on transactions. These challenges deter potential investors and frustrate experienced traders, limiting adoption in the digital currency market.
+                ValorExchange aims to address these issues by creating a platform that facilitates effortless and secure trading of cryptocurrency tokens. By focusing on clarity and intuitive design, ValorExchange allows users to engage in crypto transactions seamlessly, while providing essential tools to manage their assets securely.
                 `}
                 </p>
               </div>
@@ -89,20 +96,10 @@ export default function Athlerse() {
             <div className="flex gap-8">
               <div className="grow flex gap-3 items-center">
                 <div className="w-[289px] h-[138px] relative">
-                  <Image
-                    src="/assets/athlerse/bitcoin.png"
-                    fill
-                    sizes="100vw"
-                    alt=""
-                  />
+                  <Image src="/assets/bitcoin.png" fill sizes="100vw" alt="" />
                 </div>
                 <div className="w-[142px] h-[138px] relative">
-                  <Image
-                    src="/assets/athlerse/data.png"
-                    fill
-                    sizes="100vw"
-                    alt=""
-                  />
+                  <Image src="/assets/data.png" fill sizes="100vw" alt="" />
                 </div>
               </div>
               <div className="grow">
@@ -117,12 +114,10 @@ export default function Athlerse() {
                   <div className="flex flex-col">
                     <TextWrapper>
                       <span className="font-medium tracking-[-0.36px] text-xl font-outfit text-white/[0.5]">
-                        Athlerse is designed for fitness enthusiasts who seek
-                        motivation, community, and tangible rewards for their
-                        efforts. From beginners trying to kickstart their
-                        wellness journey to seasoned athletes looking for
-                        innovative ways to stay engaged, Athlerse caters to a
-                        broad spectrum of fitness lovers.
+                        Crypto individuals: Users with varying levels of
+                        experience in cryptocurrency trading, ranging from
+                        beginners who seek simplicity and guidance to advanced
+                        traders who prioritize efficiency and functionality.
                       </span>
                     </TextWrapper>
                   </div>
@@ -152,23 +147,18 @@ export default function Athlerse() {
                     </div>
                     <div>
                       <span className="whitespace-pre-line text-xl font-medium font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5]">
-                        {`I began by exploring the barriers that hinder users from staying consistent with fitness apps. Through surveys and user interviews, I uncovered three key challenges:
-                        Lack of meaningful rewards for effort.
-                        Absence of a supportive and interactive community.
-                        Limited motivation from traditional goal-tracking mechanisms.
-                        These insights shaped the foundation of Athlerse’s unique approach—focusing on gamification, tangible rewards, and community-driven engagement.
+                        {`To ensure ValorExchange would address user pain points effectively, I conducted detailed user research, including surveys and interviews. This research brought forward several key insights:
+                            Complexity: Many platforms offer advanced functionality at the cost of usability, especially for newcomers.
+                            User Frustration: Users find it difficult to navigate trading options, leading to confusion and sometimes costly mistakes.
+                            Security Concerns: While most platforms emphasize security, the measures in place often disrupt the user experience, leaving users frustrated or deterred from trading.
+                    These insights informed my approach to the platform, ensuring that usability and security were core to the design.
                         `}
                       </span>
                     </div>
                   </div>
                 </div>
-                <div className="w-[505px] h-[395px] shrink-0 relative">
-                  <Image
-                    src="/assets/athlerse/research.png"
-                    fill
-                    sizes="100vw"
-                    alt=""
-                  />
+                <div className="w-[571px] h-[219px] shrink-0 relative">
+                  <Image src="/assets/research.png" fill sizes="100vw" alt="" />
                 </div>
               </div>
               <div className="w-full flex gap-6 items-center">
@@ -186,23 +176,24 @@ export default function Athlerse() {
                     </div>
                     <div className="max-w-[620px]">
                       <span className="whitespace-pre-line text-xl font-medium font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5]">
-                        With these insights in hand, I brainstormed innovative
-                        features to address user pain points. Core ideas
-                        included integrating blockchain technology for digital
-                        rewards, creating a gamified workout experience, and
-                        fostering a global community through challenges and
-                        social features.
+                        Building on the research, I began the ideation phase
+                        with a central question: How can I make cryptocurrency
+                        trading as seamless and intuitive as possible?
+                        Brainstorming sessions generated potential features and
+                        design approaches, such as streamlined navigation and a
+                        minimalist interface, which would make the platform both
+                        functional and approachable. I also explored
+                        customizable options, enabling users to switch between a
+                        basic view for quick trades and an advanced view for
+                        detailed analysis. This modular approach helps
+                        ValorExchange cater to both beginners and more
+                        experienced users.e to the design.
                       </span>
                     </div>
                   </div>
                 </div>
-                <div className="w-[480px] h-[365px] shrink-0 relative">
-                  <Image
-                    src="/assets/athlerse/ideation.png"
-                    fill
-                    sizes="100vw"
-                    alt=""
-                  />
+                <div className="w-[346px] h-[322px] shrink-0 relative">
+                  <Image src="/assets/ideation.png" fill sizes="100vw" alt="" />
                 </div>
               </div>
               <div className="w-full flex gap-[84px] items-center">
@@ -220,18 +211,21 @@ export default function Athlerse() {
                     </div>
                     <div>
                       <span className="whitespace-pre-line text-xl font-medium font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5]">
-                        I sketched out low-fidelity wireframes to map user flows
-                        and interactions. Key screens included the user
-                        dashboard, workout tracking interface, community
-                        leaderboard, and rewards store. Feedback during this
-                        phase helped refine the design for better usability.
+                        In the wireframing phase, I created low-fidelity
+                        wireframes to define the layout, navigation flow, and
+                        core functionality of the platform. The primary focus
+                        here was to ensure an intuitive user journey, from
+                        signing up to completing a transaction. I also
+                        identified specific pain points in the user journey that
+                        could be simplified or restructured to improve flow and
+                        reduce confusion.
                       </span>
                     </div>
                   </div>
                 </div>
                 <div className="w-[296px] h-[296px] shrink-0 relative">
                   <Image
-                    src="/assets/athlerse/wireframe.png"
+                    src="/assets/wireframes.png"
                     fill
                     sizes="100vw"
                     alt=""
@@ -253,66 +247,53 @@ export default function Athlerse() {
                     </div>
                     <div>
                       <span className="whitespace-pre-line text-xl font-medium font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5]  text-center inline-block">
-                        Once the structure was finalized, I developed
-                        high-fidelity prototypes, focusing on a clean, modern
-                        interface that conveys energy and motivation. Colors,
-                        typography, and visual elements were carefully chosen to
-                        evoke a sense of excitement and community.
+                        With feedback from the wireframes, I moved to
+                        high-fidelity prototypes, incorporating final branding,
+                        typography, and color schemes. The interface was
+                        designed to be visually appealing yet highly functional,
+                        using clean lines, intuitive icons, and concise
+                        language. I focused on clear call-to-action buttons,
+                        streamlined navigation, and an unobtrusive yet strong
+                        security layer to ensure a secure trading experience.
                       </span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="flex pt-[60px] relative">
-              <div className="w-full h-[1154px] relative mx-auto rounded-[40px] overflow-hidden flex gap-[80px]">
-                <div className="grow flex items-center">
-                  <div className="relative w-full h-[716px]">
-                    <Image
-                      src="/assets/athlerse/getfit.png"
-                      sizes="100vw"
-                      alt=""
-                      fill
-                    />
-                  </div>
+            <div className="flex pt-[60px] relative h-[960px]">
+              <div className="absolute z-20 bottom-0 left-[100px]">
+                <div>
+                  <Image
+                    src="/assets/firstpage.png"
+                    sizes="100vw"
+                    alt=""
+                    className=""
+                    width={667}
+                    height={889}
+                  />
                 </div>
-                <div className="grow flex flex-col gap-[80px]">
-                  <div className="h-[50%] relative">
-                    <Image
-                      src="/assets/athlerse/unleash.png"
-                      sizes="100vw"
-                      alt=""
-                      fill
-                    />
-                  </div>
-                  <div className="h-[50%] relative">
-                    <Image
-                      src="/assets/athlerse/activities.png"
-                      sizes="100vw"
-                      alt=""
-                      fill
-                    />
-                  </div>
-                </div>
-                <div className="grow flex items-center">
-                  <div className="relative w-full h-[716px]">
-                    <Image
-                      src="/assets/athlerse/createaccount.png"
-                      sizes="100vw"
-                      alt=""
-                      fill
-                    />
-                  </div>
+              </div>
+              <div className="absolute bottom-0 right-[100px]">
+                <div>
+                  <Image
+                    src="/assets/secondpage.png"
+                    sizes="100vw"
+                    alt=""
+                    className=""
+                    width={573}
+                    height={777}
+                  />
                 </div>
               </div>
             </div>
           </div>
         </Container>
-        <div className="w-full h-[1200px] relative">
-          <Image src="/assets/athlerse/mockup2.png" sizes="100vw" alt="" fill />
+        <div className="w-full h-[1024px] relative">
+          <Image src="/assets/valormockup.png" sizes="100vw" alt="" fill />
         </div>
         <Container>
-          <AthlerseKeyFeatures />
+          <KeyFeatures />
           <div className="mt-[60px] py-[54px] flex gap-[10px] flex-col">
             <div className="flex flex-col">
               <TextWrapper>

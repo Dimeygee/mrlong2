@@ -1,14 +1,11 @@
-
-
-import { Container } from "@/app/components/view/container";
-import HeroTextWrapper from "@/app/components/view/herotextwrapper";
+import { Container } from "@/components/view/container";
+import HeroTextWrapper from "@/components/view/herotextwrapper";
 import Image from "next/image";
-import TextWrapper from "@/app/components/view/textwrapper";
-import { KeyFeatures } from "@/app/components/myproject/keyfeatures";
-import { OtherProjects } from "@/app/components/myproject/otherproject";
+import TextWrapper from "@/components/view/textwrapper";
+import { ProgeniusKeyFeatures } from "@/components/myproject/keyfeatures/progenius";
+import { OtherProjects } from "@/components/myproject/otherproject";
 
-
-export default function ValorExchange() {
+export default function Progenius() {
   return (
     <>
       <div className="md:pt-[184px]">
@@ -18,41 +15,35 @@ export default function ValorExchange() {
               <div className="flex gap-[47px] justify-between items-center">
                 <div className="flex flex-col grow-[1] shrink-0">
                   <span className="text-xl font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5]">
-                    2022
+                    2024
                   </span>
                   <div className="my-[10px] h-[1px] bg-white/[0.4] w-full"></div>
 
                   <div className="text-[32px] font-bold tracking-[-1.442px] font-syne leading-[1]">
                     <HeroTextWrapper>
-                      <h3 className="gd1">
-                        ValorExchange: Creating a Seamless{" "}
-                      </h3>
-                      <h3 className="gd1">User Experience for Effortless </h3>
-                      <h3 className="gd1">Cryptocurrency Trading</h3>
+                      <h3 className="gd1">Progenius: Revolutionizing Crypto</h3>
+                      <h3 className="gd1">Fundraising Management</h3>
                     </HeroTextWrapper>
                   </div>
                 </div>
                 <div className="text-xl tracking-[-0.36px] leading-[25.2px] font-outfit grow-[1]">
-                  <span>
-                    <span className="text-white font-medium ">
-                      ValorExchange
-                    </span>{" "}
-                    -{" "}
-                  </span>
                   <span className="text-white/[0.5] font-light">
-                    A revolutionary platform designed to provide a smooth,
-                    intuitive experience for cryptocurrency users to buy, sell,
-                    or exchange tokens without the typical barriers and
-                    complexities that deter or frustrate many users.
-                    ValorExchange prioritizes simplicity, accessibility, and
-                    ease of use, empowering users to participate in crypto
-                    trading with confidence, regardless of their experience
-                    level.
+                    Managing crypto fundraising deals can be complex and
+                    overwhelming. Progenius simplifies the process with a
+                    user-friendly platform designed for crypto enthusiasts and
+                    investors, streamlining deal creation, investment tracking,
+                    and ROI calculations to help users focus on achieving
+                    success in the crypto world.
                   </span>
                 </div>
               </div>
               <div className="w-full h-[542px] relative">
-                <Image src="/assets/valor.png" fill sizes="100vw" alt="" />
+                <Image
+                  src="/assets/progenius/hero.png"
+                  fill
+                  sizes="100vw"
+                  alt=""
+                />
               </div>
             </div>
             <div className="mt-[10px] py-[54px] flex gap-[10px] flex-col">
@@ -66,14 +57,15 @@ export default function ValorExchange() {
               <div className="flex flex-col">
                 <TextWrapper>
                   <span className="gd1 font-medium tracking-[-0.36px] text-xl font-outfit">
-                    ValorExchange is designed to simplify the world of
-                    cryptocurrency trading, empowering users to buy, sell, and
-                    exchange tokens without facing the typical complexities and
-                    barriers that deter many individuals from fully engaging
-                    with digital assets. With an emphasis on user-centered
-                    design, ValorExchange prioritizes ease, security, and
-                    intuitive functionality, making it accessible to crypto
-                    novices and seasoned traders alike.
+                    The world of cryptocurrency is fast-paced and full of
+                    potential, but managing fundraising deals and investments
+                    can often feel like navigating a maze. As someone passionate
+                    about solving real-world challenges through design, I set
+                    out to create Progenius—a solution to streamline and
+                    simplify crypto fundraising. This project is close to my
+                    heart as it aims to empower crypto enthusiasts and investors
+                    by giving them the tools they need to take control of their
+                    investments effortlessly.
                   </span>
                 </TextWrapper>
               </div>
@@ -89,8 +81,7 @@ export default function ValorExchange() {
               </div>
               <div className="grow">
                 <p className="tracking-[-0.36px] text-lg leading-[25.2px] font-outfit text-white/[0.5] whitespace-pre-line">
-                  {`The cryptocurrency trading environment is often complex, laden with technical jargon and unintuitive processes that overwhelm both new and experienced users. Common barriers include confusing interfaces, fragmented workflows, and a lack of clear guidance on transactions. These challenges deter potential investors and frustrate experienced traders, limiting adoption in the digital currency market.
-                ValorExchange aims to address these issues by creating a platform that facilitates effortless and secure trading of cryptocurrency tokens. By focusing on clarity and intuitive design, ValorExchange allows users to engage in crypto transactions seamlessly, while providing essential tools to manage their assets securely.
+                  {`Managing crypto fundraising deals is often riddled with inefficiencies, making it harder for investors and project managers to focus on their goals. From creating deals to tracking investments and calculating returns, the process can be overwhelming. Progenius solves this by providing an intuitive platform that simplifies deal creation, tracks investments, and calculates ROI seamlessly, helping users make informed decisions and save valuable time.
                 `}
                 </p>
               </div>
@@ -98,10 +89,20 @@ export default function ValorExchange() {
             <div className="flex gap-8">
               <div className="grow flex gap-3 items-center">
                 <div className="w-[289px] h-[138px] relative">
-                  <Image src="/assets/bitcoin.png" fill sizes="100vw" alt="" />
+                  <Image
+                    src="/assets/progenius/bitcoin.png"
+                    fill
+                    sizes="100vw"
+                    alt=""
+                  />
                 </div>
                 <div className="w-[142px] h-[138px] relative">
-                  <Image src="/assets/data.png" fill sizes="100vw" alt="" />
+                  <Image
+                    src="/assets/progenius/data.png"
+                    fill
+                    sizes="100vw"
+                    alt=""
+                  />
                 </div>
               </div>
               <div className="grow">
@@ -116,10 +117,12 @@ export default function ValorExchange() {
                   <div className="flex flex-col">
                     <TextWrapper>
                       <span className="font-medium tracking-[-0.36px] text-xl font-outfit text-white/[0.5]">
-                        Crypto individuals: Users with varying levels of
-                        experience in cryptocurrency trading, ranging from
-                        beginners who seek simplicity and guidance to advanced
-                        traders who prioritize efficiency and functionality.
+                        Progenius is designed for individuals actively
+                        participating in the cryptocurrency space—whether
+                        seasoned investors or newcomers. These are people
+                        looking for a transparent, efficient way to manage
+                        crypto deals without needing extensive technical
+                        expertise.
                       </span>
                     </TextWrapper>
                   </div>
@@ -149,18 +152,19 @@ export default function ValorExchange() {
                     </div>
                     <div>
                       <span className="whitespace-pre-line text-xl font-medium font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5]">
-                        {`To ensure ValorExchange would address user pain points effectively, I conducted detailed user research, including surveys and interviews. This research brought forward several key insights:
-                            Complexity: Many platforms offer advanced functionality at the cost of usability, especially for newcomers.
-                            User Frustration: Users find it difficult to navigate trading options, leading to confusion and sometimes costly mistakes.
-                            Security Concerns: While most platforms emphasize security, the measures in place often disrupt the user experience, leaving users frustrated or deterred from trading.
-                    These insights informed my approach to the platform, ensuring that usability and security were core to the design.
+                        {`I started with in-depth research, speaking with crypto investors and project managers to uncover the common hurdles they face. Their stories revealed a consistent need for simplicity and transparency, which became the backbone of my design. I also studied existing tools to identify gaps in user experiences and functionality, ensuring Progenius would stand out as a user-friendly solution.
                         `}
                       </span>
                     </div>
                   </div>
                 </div>
-                <div className="w-[571px] h-[219px] shrink-0 relative">
-                  <Image src="/assets/research.png" fill sizes="100vw" alt="" />
+                <div className="w-[505px] h-[395px] shrink-0 relative">
+                  <Image
+                    src="/assets/progenius/research.png"
+                    fill
+                    sizes="100vw"
+                    alt=""
+                  />
                 </div>
               </div>
               <div className="w-full flex gap-6 items-center">
@@ -178,24 +182,23 @@ export default function ValorExchange() {
                     </div>
                     <div className="max-w-[620px]">
                       <span className="whitespace-pre-line text-xl font-medium font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5]">
-                        Building on the research, I began the ideation phase
-                        with a central question: How can I make cryptocurrency
-                        trading as seamless and intuitive as possible?
-                        Brainstorming sessions generated potential features and
-                        design approaches, such as streamlined navigation and a
-                        minimalist interface, which would make the platform both
-                        functional and approachable. I also explored
-                        customizable options, enabling users to switch between a
-                        basic view for quick trades and an advanced view for
-                        detailed analysis. This modular approach helps
-                        ValorExchange cater to both beginners and more
-                        experienced users.e to the design.
+                        Armed with insights, I brainstormed ways to address pain
+                        points while keeping the user experience at the
+                        forefront. I explored features that could make deal
+                        management intuitive, from user dashboards to automated
+                        ROI calculations. These ideas began to form the
+                        foundation of Progenius.
                       </span>
                     </div>
                   </div>
                 </div>
-                <div className="w-[346px] h-[322px] shrink-0 relative">
-                  <Image src="/assets/ideation.png" fill sizes="100vw" alt="" />
+                <div className="w-[480px] h-[365px] shrink-0 relative">
+                  <Image
+                    src="/assets/progenius/ideation.png"
+                    fill
+                    sizes="100vw"
+                    alt=""
+                  />
                 </div>
               </div>
               <div className="w-full flex gap-[84px] items-center">
@@ -213,14 +216,10 @@ export default function ValorExchange() {
                     </div>
                     <div>
                       <span className="whitespace-pre-line text-xl font-medium font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5]">
-                        In the wireframing phase, I created low-fidelity
-                        wireframes to define the layout, navigation flow, and
-                        core functionality of the platform. The primary focus
-                        here was to ensure an intuitive user journey, from
-                        signing up to completing a transaction. I also
-                        identified specific pain points in the user journey that
-                        could be simplified or restructured to improve flow and
-                        reduce confusion.
+                        To bring my ideas to life, I created low-fidelity
+                        wireframes focusing on core user flows. This stage
+                        helped me visualize the user journey, ensuring seamless
+                        navigation and clarity across all touchpoints.
                       </span>
                     </div>
                   </div>
@@ -249,53 +248,53 @@ export default function ValorExchange() {
                     </div>
                     <div>
                       <span className="whitespace-pre-line text-xl font-medium font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5]  text-center inline-block">
-                        With feedback from the wireframes, I moved to
-                        high-fidelity prototypes, incorporating final branding,
-                        typography, and color schemes. The interface was
-                        designed to be visually appealing yet highly functional,
-                        using clean lines, intuitive icons, and concise
-                        language. I focused on clear call-to-action buttons,
-                        streamlined navigation, and an unobtrusive yet strong
-                        security layer to ensure a secure trading experience.
+                        Once the structure was solidified, I crafted
+                        high-fidelity designs, prioritizing a sleek, modern
+                        aesthetic that complements the innovative nature of
+                        crypto technology. Special attention was given to color
+                        schemes and typography to build trust and enhance
+                        usability.
                       </span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="flex pt-[60px] relative h-[960px]">
-              <div className="absolute z-20 bottom-0 left-[100px]">
-                <div>
-                  <Image
-                    src="/assets/firstpage.png"
-                    sizes="100vw"
-                    alt=""
-                    className=""
-                    width={667}
-                    height={889}
-                  />
-                </div>
-              </div>
-              <div className="absolute bottom-0 right-[100px]">
-                <div>
-                  <Image
-                    src="/assets/secondpage.png"
-                    sizes="100vw"
-                    alt=""
-                    className=""
-                    width={573}
-                    height={777}
-                  />
-                </div>
+            <div className="flex py-[60px] relative">
+              <div className="w-[880px] h-[540px] relative mx-auto rounded-[40px] overflow-hidden">
+                <Image
+                  src="/assets/progenius/mockup1.png"
+                  sizes="100vw"
+                  alt=""
+                  fill
+                />
               </div>
             </div>
           </div>
         </Container>
+        <div className="flex gap-[60px]">
+          <div className="relative grow h-[400px] overflow-hidden rounded-tr-[40px]">
+            <Image src="/assets/progenius/left.png" sizes="100vw" alt="" fill />
+          </div>
+          <div className="relative grow h-[400px] rounded-tl-[40px] overflow-hidden">
+            <Image
+              src="/assets/progenius/right.png"
+              sizes="100vw"
+              alt=""
+              fill
+            />
+          </div>
+        </div>
         <div className="w-full h-[1024px] relative">
-          <Image src="/assets/valormockup.png" sizes="100vw" alt="" fill />
+          <Image
+            src="/assets/progenius/promockup.png"
+            sizes="100vw"
+            alt=""
+            fill
+          />
         </div>
         <Container>
-          <KeyFeatures />
+          <ProgeniusKeyFeatures />
           <div className="mt-[60px] py-[54px] flex gap-[10px] flex-col">
             <div className="flex flex-col">
               <TextWrapper>
@@ -333,6 +332,3 @@ export default function ValorExchange() {
     </>
   );
 }
-
-
-

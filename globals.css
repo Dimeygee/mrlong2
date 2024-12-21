@@ -1,0 +1,223 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: #12141d;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  cursor:none;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.bgs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background: rgba(255, 255, 255, 0.17);
+  box-shadow: 0px 20.238px 14px 3px rgba(255, 255, 255, 0.12) inset;
+}
+
+
+.gd1 {
+  background: radial-gradient(50% 50% at 50% 50%, #fff 0%, #cbcbcb 50.5%, #999 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.4s ease-in-out;
+  
+}
+
+.text-wrapper, .herotextwrapper{
+  position:relative;
+   display: inline-block;
+  overflow: hidden; 
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:rgb(18, 20, 29, 0.8);
+  z-index: 20;
+}
+
+
+.gd1:hover {
+  
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ 
+}
+
+
+.abg {
+  color: #2f80ed;
+}
+
+.rectangle, .rectangle1 {
+  background: linear-gradient(
+    90deg,
+    #12141d 0%,
+    rgba(18, 20, 29, 0.65) 59%,
+    rgba(18, 20, 29, 0) 95%
+  );
+  width: 80.978px;
+  height: 64px;
+}
+
+.rectangle1 {
+  background: linear-gradient(
+    90deg,
+    #12141d 0%,
+    rgba(18, 20, 29, 0.65) 59%,
+    rgba(18, 20, 29, 0) 95%
+  );
+   transform: rotateY(180deg);
+}
+
+.video-section {
+    position: relative;
+    width: 100%;
+    height: 131px;
+}
+
+.video-section video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index:0;
+}
+
+
+.video-copy {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    mix-blend-mode: multiply;
+    font-size: 136.421px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130.737px; 
+    letter-spacing: -2.732px;
+    text-align: center;
+    z-index:10;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.swiper {
+  margin-right:0 !important;
+}
+.swiper-button-left, .swiper-button-right{
+  position:relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background: rgba(255, 255, 255, 0.17);
+  box-shadow: 0px 20.238px 14px 3px rgba(255, 255, 255, 0.12) inset;
+  width:56px;
+  height:56px;
+}
+
+@media screen and (max-width:540px){
+  .video-copy{
+    font-size:48px;
+  }
+
+  .video-section {
+    position: relative;
+    width: 100%;
+    height: 80px;
+}
+}
+
+.video-copy h1{
+  background: #12141d;
+}
+
+.hover-item {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s ease-in-out;
+}
+
+.hover-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transition: left 0.4s ease-in-out;
+  z-index: -1;
+}
+
+.hover-item:hover::before {
+  left: 0;
+}
+
+
+.rotateanimation {
+  background-image: linear-gradient(
+    121deg,
+    #1b1b1b 38%,
+    #f0f0f0 50%,
+    #1b1b1b 61%
+  );
+  min-width: 190px;
+  min-height: 250px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  animation: rotate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+
+.cursor{
+  pointer-events: none;
+}
+.transition-overlay {
+  position: fixed;
+  inset: 0;
+  background: black;
+  z-index: 50;
+}

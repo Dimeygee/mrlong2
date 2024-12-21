@@ -5,12 +5,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
-import { SlideArrowLeft, SlideArrowRight } from "@/app/icon";
+import { SlideArrowLeft, SlideArrowRight } from "@/icon";
 import TextWrapper from "../view/textwrapper";
-import { Container, SwiperContainer } from "@/app/components/view/container";
+import { Container, SwiperContainer } from "@/components/view/container";
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
-import { useGlobalStateContext } from "@/app/context/globalcontext";
+import { useGlobalStateContext } from "@/context/globalcontext";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 

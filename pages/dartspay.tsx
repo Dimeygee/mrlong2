@@ -1,12 +1,12 @@
-import { Container } from "@/app/components/view/container";
-import HeroTextWrapper from "@/app/components/view/herotextwrapper";
+import { Container } from "@/components/view/container";
+import HeroTextWrapper from "@/components/view/herotextwrapper";
 import Image from "next/image";
-import TextWrapper from "@/app/components/view/textwrapper";
-//import { KeyFeatures } from "@/app/components/myproject/keyfeatures";
-import { OtherProjects } from "@/app/components/myproject/otherproject";
+import TextWrapper from "@/components/view/textwrapper";
+//import { KeyFeatures } from "@/components/myproject/keyfeatures";
+import { OtherProjects } from "@/components/myproject/otherproject";
 import { ArrowRightIcon, NetIcon, ArrowleftIcon } from "../icon";
 
-export default function RocketMarketing() {
+export default function Ralipo() {
   return (
     <>
       <div className="md:pt-[184px]">
@@ -22,25 +22,24 @@ export default function RocketMarketing() {
 
                   <div className="text-[32px] font-bold tracking-[-1.442px] font-syne leading-[1]">
                     <HeroTextWrapper>
-                      <h3 className="gd1">
-                        Rocketmarketing Landing Page Redesign
-                      </h3>
+                      <h3 className="gd1">Dartspay Landing Page Redesign</h3>
                     </HeroTextWrapper>
                   </div>
                 </div>
                 <div className="text-xl tracking-[-0.36px] leading-[25.2px] font-outfit grow-[1]">
                   <span className="text-white/[0.5] font-light">
-                    The landing page redesign for Rocket Marketing aimed to
-                    create a visually compelling, highly functional interface
-                    that clearly communicated the agency’s services, showcased
-                    its success stories, and optimized the user experience to
-                    convert visitors into leads.
+                    Dartspay required a comprehensive redesign of its landing
+                    page to address usability challenges and align with its
+                    mission of delivering innovative payment solutions. The
+                    redesign aimed to create a visually appealing, user-friendly
+                    page that not only attracted visitors but also converted
+                    them into active users.
                   </span>
                 </div>
               </div>
               <div className="w-full h-[542px] relative">
                 <Image
-                  src="/assets/rocketmarketing/hero.png"
+                  src="/assets/dartspay/hero.png"
                   fill
                   sizes="100vw"
                   alt=""
@@ -58,15 +57,15 @@ export default function RocketMarketing() {
               <div className="flex flex-col">
                 <TextWrapper>
                   <span className="gd1 font-medium tracking-[-0.36px] text-xl font-outfit">
-                    Rocket Marketing is a digital marketing agency specializing
-                    in helping businesses accelerate their online presence
-                    through data-driven strategies, creative campaigns, and
-                    innovative solutions. With expertise in SEO, social media
-                    marketing, and PPC advertising, Rocket Marketing empowers
-                    clients to achieve measurable results and sustainable
-                    growth. To stay competitive and improve lead generation, the
-                    company sought a redesign of its landing page to better
-                    represent its capabilities and drive conversions.
+                    Dartspay is a cutting-edge payment solutions platform
+                    designed to simplify digital transactions for businesses and
+                    individuals. With a focus on security, efficiency, and
+                    user-friendliness, Dartspay empowers its users with tools
+                    for seamless money transfers, subscription management, and
+                    real-time payment tracking. As a growing platform in a
+                    competitive space, Dartspay recognized the need for a
+                    landing page redesign to better communicate its value and
+                    enhance user engagement.
                   </span>
                 </TextWrapper>
               </div>
@@ -82,7 +81,7 @@ export default function RocketMarketing() {
               </div>
               <div className="grow">
                 <p className="tracking-[-0.36px] text-lg leading-[25.2px] font-outfit text-white/[0.5] whitespace-pre-line">
-                  {`The original Rocket Marketing landing page struggled to engage visitors effectively. The design lacked a clear structure, making it difficult for users to understand the agency’s services and offerings. Call-to-action (CTA) elements were buried or lacked emphasis, resulting in lower-than-expected lead generation. Additionally, the page didn’t highlight client success stories or case studies prominently, which are critical for building trust in a competitive digital marketing landscape.
+                  {`The original Dartspay landing page presented several usability and design challenges. Visitors found the page's structure cluttered, with scattered information and a lack of clear navigation. The call-to-action (CTA) buttons were not prominent enough, resulting in low conversion rates. Additionally, the page lacked a cohesive brand identity and was not optimized for mobile users, leading to high bounce rates.
                 `}
                 </p>
               </div>
@@ -95,7 +94,7 @@ export default function RocketMarketing() {
               </TextWrapper>
             </div>
             <div className="flex flex-col gap-[94px]">
-              <div className="w-full flex gap-[87px] items-center">
+              <div className="w-full flex gap-[47px] items-center">
                 <div className="grow flex justify-start">
                   <div className="flex flex-col gap-3">
                     <div className="flex gap-4 items-center">
@@ -110,15 +109,15 @@ export default function RocketMarketing() {
                     </div>
                     <div>
                       <span className="whitespace-pre-line text-xl font-medium font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5]">
-                        {`To kick off the project, I reviewed the analytics data from Rocket Marketing’s existing landing page to identify high drop-off points and low-engagement sections. I also conducted stakeholder interviews to align on the business goals and target audience. Competitive research revealed the importance of showcasing case studies, testimonials, and transparent service breakdowns to differentiate the agency and instill trust.
+                        {`The original Dartspay landing page presented several usability and design challenges. Visitors found the page's structure cluttered, with scattered information and a lack of clear navigation. The call-to-action (CTA) buttons were not prominent enough, resulting in low conversion rates. Additionally, the page lacked a cohesive brand identity and was not optimized for mobile users, leading to high bounce rates.
                         `}
                       </span>
                     </div>
                   </div>
                 </div>
-                <div className="w-[553px] h-[300px] shrink-0 relative">
+                <div className="w-[553px] h-[261px] shrink-0 relative">
                   <Image
-                    src="/assets/rocketmarketing/research.png"
+                    src="/assets/dartspay/research.png"
                     fill
                     sizes="100vw"
                     alt=""
@@ -140,7 +139,7 @@ export default function RocketMarketing() {
                     </div>
                     <div className="max-w-[620px]">
                       <span className="whitespace-pre-line text-xl font-medium font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5]">
-                        During ideation, I collaborated with rocketmarketing’s
+                        During ideation, I collaborated with Dartspay’s
                         stakeholders to define clear goals for the redesign. I
                         brainstormed potential solutions, sketching different
                         layouts to explore ideas for a clean, visually
@@ -152,9 +151,9 @@ export default function RocketMarketing() {
                     </div>
                   </div>
                 </div>
-                <div className="w-[511px] h-[300px] shrink-0 relative">
+                <div className="w-[472px] h-[300px] shrink-0 relative">
                   <Image
-                    src="/assets/rocketmarketing/ideation.png"
+                    src="/assets/dartspay/ideation.png"
                     fill
                     sizes="100vw"
                     alt=""
@@ -176,21 +175,21 @@ export default function RocketMarketing() {
                     </div>
                     <div>
                       <span className="whitespace-pre-line text-xl font-medium font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5]">
-                        I created low-fidelity wireframes to test various
-                        layouts, focusing on structuring the content in a way
-                        that maintained user engagement. After stakeholder
-                        feedback, I moved to high-fidelity prototypes that
-                        incorporated Rocket Marketing’s branding elements,
-                        including its color palette, fonts, and visual style.
-                        Interactive prototypes allowed for user testing and
-                        refinement based on usability feedback.
+                        After finalizing the layout concepts, I created
+                        low-fidelity wireframes to establish the framework for
+                        the redesign. Once approved, these wireframes evolved
+                        into high-fidelity prototypes that incorporated
+                        Dartspay’s branding elements, such as its signature
+                        color palette and iconography. Usability tests with
+                        sample users provided feedback, which informed iterative
+                        refinements.
                       </span>
                     </div>
                   </div>
                 </div>
                 <div className="w-[412px] h-[296px] shrink-0 relative">
                   <Image
-                    src="/assets/rocketmarketing/wireframe.png"
+                    src="/assets/dartspay/wireframe.png"
                     fill
                     sizes="100vw"
                     alt=""
@@ -212,18 +211,16 @@ export default function RocketMarketing() {
                     </div>
                     <div>
                       <span className="whitespace-pre-line text-xl font-medium font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5]  text-center inline-block">
-                        The final design emphasized clarity and visual appeal. A
-                        prominent headline above the fold communicated Rocket
-                        Marketing’s unique selling proposition, while the
-                        navigation was simplified to enhance usability. CTAs,
-                        such as “Get n touch” were strategically placed and
-                        designed to stand out with bold colors and hover
-                        effects. The page featured a dedicated section for
-                        client success stories, complete with metrics and
-                        testimonials, and included trust signals like client
-                        logos and certifications. The design was fully optimized
-                        for mobile responsiveness, ensuring a seamless
-                        experience on all devices.
+                        In the Hi-fidelity phase, I prioritized a clean and
+                        modern aesthetic. Key features included a prominent
+                        headline above the fold that clearly communicated
+                        Dartspay’s unique selling proposition, strategically
+                        placed CTAs like “Get Started” or “Explore Pricing,” and
+                        a streamlined benefits section. The page was optimized
+                        for mobile responsiveness, ensuring seamless navigation
+                        and interaction across all devices. Trust-building
+                        elements such as client logos, testimonials, and
+                        security assurances were added to establish credibility.
                       </span>
                     </div>
                   </div>
@@ -235,7 +232,7 @@ export default function RocketMarketing() {
         <div className="w-full relative flex items-end mt-[100px] justify-center">
           <div className="w-[667px] h-[1448px] relative z-10">
             <Image
-              src="/assets/rocketmarketing/mockup1.png"
+              src="/assets/dartspay/mockup1.png"
               alt=""
               sizes="100vw"
               fill
@@ -243,7 +240,7 @@ export default function RocketMarketing() {
           </div>
           <div className="w-[573px] h-[1266px] ml-[-183px] relative z-0">
             <Image
-              src="/assets/rocketmarketing/mockup2.png"
+              src="/assets/dartspay/mockup2.png"
               alt=""
               sizes="100vw"
               fill
@@ -262,13 +259,13 @@ export default function RocketMarketing() {
             <div className="flex flex-col">
               <TextWrapper>
                 <span className="gd1 font-medium tracking-[-0.36px] text-xl font-outfit">
-                  After launching the redesigned landing page, Rocket Marketing
-                  experienced significant improvements. Lead generation
-                  increased by 45% as a result of clearer CTAs and streamlined
-                  navigation. Average session duration rose by 30%, indicating
-                  that visitors were engaging more deeply with the content.
-                  Mobile bounce rates dropped by 25%, thanks to enhanced
-                  responsiveness and mobile-first optimizations.
+                  The redesigned landing page, now live on Dartspay, delivered
+                  impressive results. User engagement increased by 40%, as
+                  reflected in longer session durations. The conversion rate for
+                  sign-ups improved from 5% to 18%, thanks to the strategic
+                  placement of CTAs and clear communication of benefits. Mobile
+                  bounce rates dropped by 25% due to enhanced responsiveness and
+                  usability.
                 </span>
               </TextWrapper>
             </div>

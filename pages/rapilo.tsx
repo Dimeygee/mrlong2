@@ -1,14 +1,12 @@
-
-
-import { Container } from "@/app/components/view/container";
-import HeroTextWrapper from "@/app/components/view/herotextwrapper";
+import { Container } from "@/components/view/container";
+import HeroTextWrapper from "@/components/view/herotextwrapper";
 import Image from "next/image";
-import TextWrapper from "@/app/components/view/textwrapper";
-import { ProgeniusKeyFeatures } from "@/app/components/myproject/keyfeatures/progenius";
-import { OtherProjects } from "@/app/components/myproject/otherproject";
+import TextWrapper from "@/components/view/textwrapper";
+//import { KeyFeatures } from "@/components/myproject/keyfeatures";
+import { OtherProjects } from "@/components/myproject/otherproject";
+import { ArrowRightIcon, ArrowleftIcon, NetIcon } from "../icon";
 
-
-export default function Progenius() {
+export default function Ralipo() {
   return (
     <>
       <div className="md:pt-[184px]">
@@ -24,25 +22,22 @@ export default function Progenius() {
 
                   <div className="text-[32px] font-bold tracking-[-1.442px] font-syne leading-[1]">
                     <HeroTextWrapper>
-                      <h3 className="gd1">Progenius: Revolutionizing Crypto</h3>
-                      <h3 className="gd1">Fundraising Management</h3>
+                      <h3 className="gd1">Ralipo Landing Page Redesign</h3>
                     </HeroTextWrapper>
                   </div>
                 </div>
                 <div className="text-xl tracking-[-0.36px] leading-[25.2px] font-outfit grow-[1]">
                   <span className="text-white/[0.5] font-light">
-                    Managing crypto fundraising deals can be complex and
-                    overwhelming. Progenius simplifies the process with a
-                    user-friendly platform designed for crypto enthusiasts and
-                    investors, streamlining deal creation, investment tracking,
-                    and ROI calculations to help users focus on achieving
-                    success in the crypto world.
+                    Ralipo, a platform focused on user engagement and feedback
+                    collection, needed a modern, user-friendly redesign of its
+                    landing page to better communicate its offerings and improve
+                    conversions.
                   </span>
                 </div>
               </div>
               <div className="w-full h-[542px] relative">
                 <Image
-                  src="/assets/progenius/hero.png"
+                  src="/assets/rapilo/hero.png"
                   fill
                   sizes="100vw"
                   alt=""
@@ -60,15 +55,12 @@ export default function Progenius() {
               <div className="flex flex-col">
                 <TextWrapper>
                   <span className="gd1 font-medium tracking-[-0.36px] text-xl font-outfit">
-                    The world of cryptocurrency is fast-paced and full of
-                    potential, but managing fundraising deals and investments
-                    can often feel like navigating a maze. As someone passionate
-                    about solving real-world challenges through design, I set
-                    out to create Progenius—a solution to streamline and
-                    simplify crypto fundraising. This project is close to my
-                    heart as it aims to empower crypto enthusiasts and investors
-                    by giving them the tools they need to take control of their
-                    investments effortlessly.
+                    Ralipo, a platform focused on user engagement and feedback
+                    collection, needed a modern, user-friendly redesign of its
+                    landing page to better communicate its offerings and improve
+                    conversions. My goal was to create a seamless, visually
+                    appealing design that would align with Ralipo’s brand
+                    identity while addressing usability challenges.
                   </span>
                 </TextWrapper>
               </div>
@@ -84,52 +76,9 @@ export default function Progenius() {
               </div>
               <div className="grow">
                 <p className="tracking-[-0.36px] text-lg leading-[25.2px] font-outfit text-white/[0.5] whitespace-pre-line">
-                  {`Managing crypto fundraising deals is often riddled with inefficiencies, making it harder for investors and project managers to focus on their goals. From creating deals to tracking investments and calculating returns, the process can be overwhelming. Progenius solves this by providing an intuitive platform that simplifies deal creation, tracks investments, and calculates ROI seamlessly, helping users make informed decisions and save valuable time.
+                  {`The previous iteration of the landing page presented several challenges. It did not clearly convey Ralipo’s core value, leaving users uncertain about its offerings. Furthermore, the layout was cluttered and lacked a clear hierarchy, making navigation cumbersome. The page was also poorly optimized for mobile devices, which led to a decline in engagement from mobile users and a reduced overall conversion rate.
                 `}
                 </p>
-              </div>
-            </div>
-            <div className="flex gap-8">
-              <div className="grow flex gap-3 items-center">
-                <div className="w-[289px] h-[138px] relative">
-                  <Image
-                    src="/assets/progenius/bitcoin.png"
-                    fill
-                    sizes="100vw"
-                    alt=""
-                  />
-                </div>
-                <div className="w-[142px] h-[138px] relative">
-                  <Image
-                    src="/assets/progenius/data.png"
-                    fill
-                    sizes="100vw"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div className="grow">
-                <div className="py-[54px] flex gap-[10px] flex-col">
-                  <div className="flex flex-col">
-                    <TextWrapper>
-                      <span className="gd1 font-bold tracking-[-1.442px] text-[42px] font-syne">
-                        Target audience
-                      </span>
-                    </TextWrapper>
-                  </div>
-                  <div className="flex flex-col">
-                    <TextWrapper>
-                      <span className="font-medium tracking-[-0.36px] text-xl font-outfit text-white/[0.5]">
-                        Progenius is designed for individuals actively
-                        participating in the cryptocurrency space—whether
-                        seasoned investors or newcomers. These are people
-                        looking for a transparent, efficient way to manage
-                        crypto deals without needing extensive technical
-                        expertise.
-                      </span>
-                    </TextWrapper>
-                  </div>
-                </div>
               </div>
             </div>
             <div className="py-[54px] flex flex-col items-center">
@@ -140,7 +89,7 @@ export default function Progenius() {
               </TextWrapper>
             </div>
             <div className="flex flex-col gap-[94px]">
-              <div className="w-full flex gap-6 items-center">
+              <div className="w-full flex gap-[172px] items-center">
                 <div className="grow flex justify-start">
                   <div className="flex flex-col gap-3">
                     <div className="flex gap-4 items-center">
@@ -155,15 +104,15 @@ export default function Progenius() {
                     </div>
                     <div>
                       <span className="whitespace-pre-line text-xl font-medium font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5]">
-                        {`I started with in-depth research, speaking with crypto investors and project managers to uncover the common hurdles they face. Their stories revealed a consistent need for simplicity and transparency, which became the backbone of my design. I also studied existing tools to identify gaps in user experiences and functionality, ensuring Progenius would stand out as a user-friendly solution.
+                        {`To begin, I conducted user interviews and surveys to understand the frustrations and needs of existing users. This was complemented by a thorough competitive analysis, where I reviewed other platforms to identify best practices and opportunities for Ralipo to stand out. Finally, I analyzed user behavior through heatmaps and website analytics, identifying high-exit zones and areas where users struggled the most.
                         `}
                       </span>
                     </div>
                   </div>
                 </div>
-                <div className="w-[505px] h-[395px] shrink-0 relative">
+                <div className="w-[461px] h-[331px] shrink-0 relative">
                   <Image
-                    src="/assets/progenius/research.png"
+                    src="/assets/rapilo/research.png"
                     fill
                     sizes="100vw"
                     alt=""
@@ -185,19 +134,24 @@ export default function Progenius() {
                     </div>
                     <div className="max-w-[620px]">
                       <span className="whitespace-pre-line text-xl font-medium font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5]">
-                        Armed with insights, I brainstormed ways to address pain
-                        points while keeping the user experience at the
-                        forefront. I explored features that could make deal
-                        management intuitive, from user dashboards to automated
-                        ROI calculations. These ideas began to form the
-                        foundation of Progenius.
+                        The ideation phase involved a series of brainstorming
+                        sessions with the Ralipo team to align on the project
+                        {"'"}s goals and feature priorities. I created quick
+                        sketches and explored multiple layout options to ensure
+                        clarity and usability. A mind map was used to visualize
+                        how content elements like testimonials, CTAs, and
+                        product features could flow cohesively. To ensure
+                        feasibility, I organized a collaborative design workshop
+                        with stakeholders, where ideas were evaluated and
+                        shortlisted based on their potential impact and
+                        implementation viability.
                       </span>
                     </div>
                   </div>
                 </div>
-                <div className="w-[480px] h-[365px] shrink-0 relative">
+                <div className="w-[539px] h-[365px] shrink-0 relative">
                   <Image
-                    src="/assets/progenius/ideation.png"
+                    src="/assets/rapilo/ideation.png"
                     fill
                     sizes="100vw"
                     alt=""
@@ -219,17 +173,21 @@ export default function Progenius() {
                     </div>
                     <div>
                       <span className="whitespace-pre-line text-xl font-medium font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5]">
-                        To bring my ideas to life, I created low-fidelity
-                        wireframes focusing on core user flows. This stage
-                        helped me visualize the user journey, ensuring seamless
-                        navigation and clarity across all touchpoints.
+                        Following ideation, I developed low-fidelity wireframes
+                        to establish a strong structural foundation. These
+                        wireframes were refined into high-fidelity prototypes
+                        that incorporated Ralipo’s branding elements. The
+                        prototypes were tested with users, and the feedback was
+                        used to iterate and make improvements. This iterative
+                        cycle ensured that the final design would align with
+                        user needs and expectations.
                       </span>
                     </div>
                   </div>
                 </div>
-                <div className="w-[296px] h-[296px] shrink-0 relative">
+                <div className="w-[412px] h-[296px] shrink-0 relative">
                   <Image
-                    src="/assets/wireframes.png"
+                    src="/assets/rapilo/wireframe.png"
                     fill
                     sizes="100vw"
                     alt=""
@@ -251,70 +209,52 @@ export default function Progenius() {
                     </div>
                     <div>
                       <span className="whitespace-pre-line text-xl font-medium font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5]  text-center inline-block">
-                        Once the structure was solidified, I crafted
-                        high-fidelity designs, prioritizing a sleek, modern
-                        aesthetic that complements the innovative nature of
-                        crypto technology. Special attention was given to color
-                        schemes and typography to build trust and enhance
-                        usability.
+                        In the Hi-fidelity phase, the landing page was refined
+                        to emphasize a clear visual hierarchy. Key features such
+                        as campaign creation tools and analytics integrations
+                        were prominently displayed, making the page easier to
+                        navigate. Calls-to-action were strategically placed and
+                        visually emphasized to increase user engagement, while
+                        the design was optimized for mobile-first responsiveness
+                        to ensure seamless usability across devices. Trust
+                        elements, including customer testimonials and
+                        recognizable partner logos, were added to build
+                        credibility and foster user confidence.
                       </span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="flex py-[60px] relative">
-              <div className="w-[880px] h-[540px] relative mx-auto rounded-[40px] overflow-hidden">
-                <Image
-                  src="/assets/progenius/mockup1.png"
-                  sizes="100vw"
-                  alt=""
-                  fill
-                />
-              </div>
-            </div>
           </div>
         </Container>
-        <div className="flex gap-[60px]">
-          <div className="relative grow h-[400px] overflow-hidden rounded-tr-[40px]">
-            <Image src="/assets/progenius/left.png" sizes="100vw" alt="" fill />
+        <div className="w-full relative flex items-end mt-[100px] justify-center">
+          <div className="w-[667px] h-[1448px] relative z-10">
+            <Image src="/assets/rapilo/mockup1.png" alt="" sizes="100vw" fill />
           </div>
-          <div className="relative grow h-[400px] rounded-tl-[40px] overflow-hidden">
-            <Image
-              src="/assets/progenius/right.png"
-              sizes="100vw"
-              alt=""
-              fill
-            />
+          <div className="w-[573px] h-[1266px] ml-[-183px] relative z-0">
+            <Image src="/assets/rapilo/mockup2.png" alt="" sizes="100vw" fill />
           </div>
-        </div>
-        <div className="w-full h-[1024px] relative">
-          <Image
-            src="/assets/progenius/promockup.png"
-            sizes="100vw"
-            alt=""
-            fill
-          />
         </div>
         <Container>
-          <ProgeniusKeyFeatures />
           <div className="mt-[60px] py-[54px] flex gap-[10px] flex-col">
             <div className="flex flex-col">
               <TextWrapper>
                 <span className="gd1 font-bold tracking-[-1.442px] text-[42px] font-syne">
-                  Final Outcome
+                  Results
                 </span>
               </TextWrapper>
             </div>
             <div className="flex flex-col">
               <TextWrapper>
                 <span className="gd1 font-medium tracking-[-0.36px] text-xl font-outfit">
-                  ValorExchange effectively bridges the gap between the
-                  complexity of cryptocurrency trading and the need for an
-                  accessible, intuitive platform. With its user-friendly design
-                  and enhanced security features, ValorExchange empowers users
-                  to trade confidently, free from the usual barriers, and boosts
-                  their overall experience in the digital currency market.
+                  The redesigned landing page, now live on Ralipo{"'"}s website,
+                  achieved significant improvements in performance. User
+                  engagement increased by 35%, as measured by the average time
+                  spent on the page. Conversion rates saw a dramatic rise from
+                  4% to 16% within the first three months post-launch. Mobile
+                  performance also improved significantly, with a 50% increase
+                  in mobile interactions and sign-ups.
                 </span>
               </TextWrapper>
             </div>
@@ -322,12 +262,37 @@ export default function Progenius() {
           <div className="py-[43px] flex flex-col gap-2 items-center">
             <TextWrapper>
               <span className="gd1 font-medium tracking-[-0.36px]  text-[42px] font-syne">
-                Figma Design
+                Live website
               </span>
             </TextWrapper>
             <span className="whitespace-pre-line text-xl font-light font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5]">
               Click the icon below to view the figma design for ValorExchange
             </span>
+            <div className="flex items-center gap-[28px] mt-4">
+              <div className="flex items-center gap-[8px]">
+                <ArrowRightIcon />
+                <ArrowRightIcon />
+                <ArrowRightIcon />
+                <ArrowRightIcon />
+                <ArrowRightIcon />
+              </div>
+              <div
+                className="bgs w-[56px] h-[56px] text-white hover-item hover:text-black transition-colors duration-75 flex justify-center text-2xl font-bold items-center relative swiper-button-right group"
+                //onMouseEnter={() => onCursor("hovered")}
+                //onMouseLeave={() => onCursor("")}
+              >
+                <span className="group-hover:text-black">
+                  <NetIcon />
+                </span>
+              </div>
+              <div className="flex items-center gap-[8px]">
+                <ArrowleftIcon />
+                <ArrowleftIcon />
+                <ArrowleftIcon />
+                <ArrowleftIcon />
+                <ArrowleftIcon />
+              </div>
+            </div>
           </div>
         </Container>
         <OtherProjects />
@@ -335,6 +300,3 @@ export default function Progenius() {
     </>
   );
 }
-
-
-

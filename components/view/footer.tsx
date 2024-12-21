@@ -1,5 +1,5 @@
 
-import { Envelope, LogoRound, Dribble, Behance, Linkedin } from "@/app/icon";
+import { Envelope, LogoRound, Dribble, Behance, Linkedin } from "@/icon";
 import {Container} from "./container"
 
 export const Footer = () => {

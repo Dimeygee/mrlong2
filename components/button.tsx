@@ -1,4 +1,5 @@
-import { MiniCircle } from "../icon";
+
+import { MiniCircle } from "@/icon";
 
 export const Button = ({ text }: { text: string }) => {
   return (

@@ -1,10 +1,12 @@
 /* eslint-disable react/jsx-key */
 "use client";
-import { Envelope, MenuSvg, LogoSvg } from "../../icon";
+
 import { Container } from "./container";
 import { useEffect, useState, useRef } from "react";
-import { useGlobalStateContext } from "@/app/context/globalcontext";
+
 import Link from "next/link"
+import { useGlobalStateContext } from "@/context/globalcontext";
+import { Envelope, MenuSvg, LogoSvg } from "@/icon";
 
 export const Nav = () => {
 
