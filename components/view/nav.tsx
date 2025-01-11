@@ -60,7 +60,7 @@ export const Nav = () => {
           <div className="flex items-center justify-between h-[103px] ">
             <div className="flex gap-[46px] items-center">
               <div
-                className="w-[56px] h-[56px] rounded-full border-[2px] border-[rgba(255,255,255,0.1)] flex text-white items-center justify-center hover-item hover:text-black transition-colors duration-75"
+                className="md:flex hidden w-[56px] h-[56px] rounded-full border-[2px] border-[rgba(255,255,255,0.1)] text-white items-center justify-center hover-item hover:text-black transition-colors duration-75"
                 onMouseEnter={() => onCursor("hovered")}
                 onMouseLeave={() => onCursor("")}
               >
@@ -91,18 +91,25 @@ export const Nav = () => {
             </div>
             <div className="flex gap-[32px]">
               <div
-                className="bgs w-[56px] h-[56px] text-white hover-item hover:text-black transition-colors duration-75 relative"
+                className="bgs w-[56px] h-[56px] text-white hover-item hover:text-black transition-colors duration-75 relative md:flex hidden"
                 onMouseEnter={() => onCursor("hovered")}
                 onMouseLeave={() => onCursor("")}
               >
                 <Envelope />
               </div>
               <div
-                className="rounded-[28px] min-h-[56px] border-[2px] border-[rgba(255,255,255,0.1)] flex items-center justify-center text-base w-[161px] tracking-[-0.36px] font-outfit hover-item hover:text-black transition-colors duration-75"
+                className="rounded-[28px] min-h-[56px] border-[2px] border-[rgba(255,255,255,0.1)] items-center justify-center text-base w-[161px] tracking-[-0.36px] font-outfit hover-item hover:text-black transition-colors duration-75 md:flex hidden"
                 onMouseEnter={() => onCursor("hovered")}
                 onMouseLeave={() => onCursor("")}
               >
                 <span>View resume</span>
+              </div>
+               <div
+                className=" md:hidden flex w-[56px] h-[56px] rounded-full border-[2px] border-[rgba(255,255,255,0.1)] text-white items-center justify-center hover-item hover:text-black transition-colors duration-75"
+                onMouseEnter={() => onCursor("hovered")}
+                onMouseLeave={() => onCursor("")}
+              >
+                <MenuSvg />
               </div>
             </div>
           </div>

@@ -43,7 +43,7 @@ export const WorkFolder = ({ work, key }: { work: any; key?: number }) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <motion.div
-        className="relative flex flex-col h-full justify-center z-[200] bg-[#12141d] px-[50px] rounded-[25px] border-[1px] border-white/[0.3]"
+        className="relative flex flex-col h-full justify-center z-[200] bg-[#12141d] px-[27px] md:px-[50px] rounded-[25px] border-[1px] border-white/[0.3] items-start"
         initial={{ rotateX: 0, transformOrigin: "50% 100%" }}
         animate={{ rotateX: isHovered ? -45 : 0 }}
         transition={{ duration: 0.3 }}
@@ -51,18 +51,29 @@ export const WorkFolder = ({ work, key }: { work: any; key?: number }) => {
         <span className="absolute top-[20px] text-lg text-white/[0.5] font-outfit tracking-[-0.36px] leading-[25.2px]">
           {work.id}
         </span>
-        <div className="flex md:flex-row flex-col justify-between items-center w-full gap-4 md:mt-0 mt-[30px] relative">
+        <div className="flex md:flex-row flex-col justify-between md:items-center w-full gap-4 md:mt-0 mt-[30px] md:relative">
           <TextWrapper>
-            <h4 className="uppercase tracking-[-1.442px] font-bold text-[32px] font-syne bg1">
+            <h4 className="uppercase tracking-[-1.442px] font-bold md:text-[32px] text-[26px] font-syne bg1">
               {work.name}
             </h4>
           </TextWrapper>
-          <span className="text-lg font-outfit text-white/[0.5] tracking-[-0.36px] leading-[25.2px] absolute top-[50%] translate-y-[-50%] translate-x-[-50%] left-[50%]">
+          <span className="text-lg font-outfit text-white/[0.5] tracking-[-0.36px] leading-[25.2px] absolute md:top-[50%] md:translate-y-[-50%] md:translate-x-[-50%] md:left-[50%] md:relative top-[20px] right-[20px]">
             {work.type}
           </span>
           <div
-            className={` relative`}
+            className={` relative md:flex hidden`}
             style={{ width: `${work.width}`, height: `${work.height}` }}
+          >
+            <Image
+              src={`${work.platform}`}
+              alt="workimage"
+              fill
+              sizes="100vw"
+            />
+          </div>
+          <div
+            className={` relative md:hidden flex w-[89px] h-[20px]`}
+            
           >
             <Image
               src={`${work.platform}`}

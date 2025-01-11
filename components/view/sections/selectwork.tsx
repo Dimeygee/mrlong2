@@ -10,11 +10,11 @@ export const SelectedWork: React.FC = () => {
     <div className="pt-[75px] pb-[150px]">
       <Container>
         <div className="flex flex-col items-center">
-          <div className="py-14 flex flex-col gap-[4px] items-center border-y-white/[0.4] border-y-[1px] w-full">
+          <div className="md:py-14 py-[50px] flex flex-col gap-[4px] items-center border-y-white/[0.4] border-y-[1px] w-full">
             <span className="text-lg font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5]">
               Discover from my
             </span>
-            <h3 className="flex flex-col items-center uppercase md:text-[72px] text-[58px] tracking-[-1.442px] leading-[69px] font-bold">
+            <h3 className="flex flex-col items-center uppercase md:text-[72px] text-[42px] tracking-[-1.442px] md:leading-[69px] leading-[1] font-bold">
               <TextWrapper>
                 <span className="gd1 font-syne">Selected</span>
               </TextWrapper>

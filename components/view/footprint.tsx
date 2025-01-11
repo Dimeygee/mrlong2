@@ -6,17 +6,17 @@ import { Button } from "../button";
 export const FootPrint = () => {
   return (
     <>
-      <div className="flex items-center flex-col p-[66px]">
+      <div className="flex items-center flex-col md:p-[66px]">
         <div className="flex relative w-full md:w-[876px] overflow-hidden">
-          <div className="absolute rectangle left-0 top-0 z-10 rotate-[360deg]"></div>
-          <div className="absolute rectangle1 right-0 top-0 z-10"></div>
+          <div className="absolute rectangle left-0 top-0 z-10 rotate-[360deg] md:flex hidden"></div>
+          <div className="absolute rectangle1 md:flex hidden right-0 top-0 z-10"></div>
           <div className="flex gap-[24px] z-0">
             <Marquee duration={30}>
               <div className="flex gap-[24px]">
                 {FootPrints.map((print, index) => {
                   return (
                     <div
-                      className="w-[185px] h-[54px] relative shrink-0"
+                      className="md:w-[185px] md:h-[54px] w-[145px] h-[44px] relative shrink-0"
                       key={index}
                     >
                       <Image
@@ -36,7 +36,7 @@ export const FootPrint = () => {
                 {FootPrints.map((print, index) => {
                   return (
                     <div
-                      className="w-[185px] h-[54px] relative shrink-0"
+                      className="md:w-[185px] md:h-[54px] w-[145px] h-[44px] relative shrink-0"
                       key={index}
                     >
                       <Image

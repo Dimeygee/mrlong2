@@ -19,7 +19,7 @@ body {
   background: #12141d;
   font-family: Arial, Helvetica, sans-serif;
   height: 100vh;
-  cursor:none;
+  cursor: none;
 }
 
 @layer utilities {
@@ -37,47 +37,67 @@ body {
   box-shadow: 0px 20.238px 14px 3px rgba(255, 255, 255, 0.12) inset;
 }
 
+.sbgs {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background: rgba(255, 255, 255, 0.17);
+  box-shadow: 0px 20.238px 14px 3px rgba(255, 255, 255, 0.12) inset;
+}
+
+@media screen and (max-width: 540px) {
+  .bgs {
+    display: none;
+  }
+
+  .sbgs {
+    display: flex;
+  }
+}
 
 .gd1 {
-  background: radial-gradient(50% 50% at 50% 50%, #fff 0%, #cbcbcb 50.5%, #999 100%);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #fff 0%,
+    #cbcbcb 50.5%,
+    #999 100%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.4s ease-in-out;
-  
 }
 
-.text-wrapper, .herotextwrapper{
-  position:relative;
-   display: inline-block;
-  overflow: hidden; 
+.text-wrapper,
+.herotextwrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
 }
 
-.overlay{
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color:rgb(18, 20, 29, 0.8);
+  background-color: rgb(18, 20, 29, 0.8);
   z-index: 20;
 }
 
-
 .gd1:hover {
-  
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
- 
 }
-
 
 .abg {
   color: #2f80ed;
 }
 
-.rectangle, .rectangle1 {
+.rectangle,
+.rectangle1 {
   background: linear-gradient(
     90deg,
     #12141d 0%,
@@ -95,69 +115,76 @@ body {
     rgba(18, 20, 29, 0.65) 59%,
     rgba(18, 20, 29, 0) 95%
   );
-   transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .video-section {
-    position: relative;
-    width: 100%;
-    height: 131px;
+  position: relative;
+  width: 100%;
+  height: 131px;
 }
 
 .video-section video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    z-index:0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: 0;
 }
 
-
 .video-copy {
-    width: 100%;
-    height: 100%;
-    user-select: none;
-    mix-blend-mode: multiply;
-    font-size: 136.421px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 130.737px; 
-    letter-spacing: -2.732px;
-    text-align: center;
-    z-index:10;
-    width: 100%;
-    height: 100%;
-    position: absolute;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  mix-blend-mode: multiply;
+  font-size: 136.421px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130.737px;
+  letter-spacing: -2.732px;
+  text-align: center;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
 .swiper {
-  margin-right:0 !important;
+  margin-right: 0 !important;
 }
-.swiper-button-left, .swiper-button-right{
-  position:relative;
+.swiper-button-left,
+.swiper-button-right {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 100%;
   background: rgba(255, 255, 255, 0.17);
   box-shadow: 0px 20.238px 14px 3px rgba(255, 255, 255, 0.12) inset;
-  width:56px;
-  height:56px;
+  width: 56px;
+  height: 56px;
 }
 
-@media screen and (max-width:540px){
-  .video-copy{
-    font-size:48px;
+@media screen and (max-width: 540px) {
+  .video-copy {
+    font-size: 48px;
   }
 
   .video-section {
     position: relative;
     width: 100%;
-    height: 80px;
-}
+    height: 117px;
+  }
+
+  .video-copy h1 {
+    background: #12141d;
+    font-size: 60px;
+    line-height:1;
+    text-align:left;
+  }
 }
 
-.video-copy h1{
+.video-copy h1 {
   background: #12141d;
 }
 
@@ -168,7 +195,7 @@ body {
 }
 
 .hover-item::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
@@ -182,7 +209,6 @@ body {
 .hover-item:hover::before {
   left: 0;
 }
-
 
 .rotateanimation {
   background-image: linear-gradient(
@@ -212,7 +238,7 @@ body {
   }
 }
 
-.cursor{
+.cursor {
   pointer-events: none;
 }
 .transition-overlay {

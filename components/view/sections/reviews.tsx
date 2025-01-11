@@ -53,14 +53,14 @@ export const Reviews = () => {
                 {reviews.map((review: any, index: number) => {
                   return (
                     <div
-                      className="w-[605px] shrink-0 pl-[65px] min-h-[298px] justify-center rounded-[32px] flex flex-col border-[2px] border-white/[0.1] py-[58px] gap-[32px] pr-[46px]"
+                      className="md:w-[605px] w-[352px] min-h-[194px] shrink-0 pl-[42px] md:pl-[65px] md:min-h-[298px] justify-center rounded-[32px] flex flex-col border-[2px] border-white/[0.1] py-[20px] md:py-[58px] md:gap-[32px] gap-[20px] pr-[46px]"
                       key={index}
                     >
-                      <div className="flex gap-[32px] text-white tracking-[-0.4px] font-bold text-xl font-syne leading-[28px]">
+                      <div className="flex gap-[32px] text-white tracking-[-0.4px] font-bold text-base md:text-xl font-syne leading-[28px]">
                         <span>{review.review}</span>
                       </div>
                       <div className="flex gap-[32px] items-center">
-                        <div className="w-[65px] h-[65px] rounded-full relative overflow-hidden">
+                        <div className="md:w-[65px] md:h-[65px] w-[42px] h-[42px] rounded-full relative overflow-hidden">
                           <Image
                             src={`${review.image}`}
                             fill
@@ -69,10 +69,10 @@ export const Reviews = () => {
                           />
                         </div>
                         <div className="flex flex-col gap-[4px]">
-                          <span className="text-[24px] font-bold uppercase text-sm text-white/[0.5] font-outfit">
+                          <span className="font-bold uppercase text-[10px] md:text-sm text-white/[0.5] font-outfit">
                             Linh Nguyen
                           </span>
-                          <span className="font-bold uppercase text-[12px] text-white/[0.5] font-outfit">
+                          <span className="font-bold uppercase md:text-[12px] text-[8px] text-white/[0.5] font-outfit">
                             Linh Nguyen
                           </span>
                         </div>
@@ -87,14 +87,14 @@ export const Reviews = () => {
                 {reviews.map((review: any, index: number) => {
                   return (
                     <div
-                      className="w-[605px] shrink-0 pl-[65px] min-h-[298px] justify-center rounded-[32px] flex flex-col border-[2px] border-white/[0.1] py-[58px] gap-[32px] pr-[46px]"
+                      className="md:w-[605px] w-[352px] min-h-[194px] shrink-0 pl-[42px] md:pl-[65px] md:min-h-[298px] justify-center rounded-[32px] flex flex-col border-[2px] border-white/[0.1] py-[20px] md:py-[58px] md:gap-[32px] gap-[20px] pr-[46px]"
                       key={index}
                     >
-                      <div className="flex gap-[32px] text-white tracking-[-0.4px] font-bold text-xl font-syne leading-[28px]">
+                      <div className="flex gap-[32px] text-white tracking-[-0.4px] font-bold text-base md:text-xl font-syne leading-[28px]">
                         <span>{review.review}</span>
                       </div>
                       <div className="flex gap-[32px] items-center">
-                        <div className="w-[65px] h-[65px] rounded-full relative overflow-hidden">
+                        <div className="md:w-[65px] md:h-[65px] w-[42px] h-[42px] rounded-full relative overflow-hidden">
                           <Image
                             src={`${review.image}`}
                             fill
@@ -103,10 +103,10 @@ export const Reviews = () => {
                           />
                         </div>
                         <div className="flex flex-col gap-[4px]">
-                          <span className="text-[24px] font-bold uppercase text-sm text-white/[0.5] font-outfit">
+                          <span className="md:text-[24px] font-bold uppercase  text-[10px] text-white/[0.5] font-outfit">
                             Linh Nguyen
                           </span>
-                          <span className="font-bold uppercase text-[12px] text-white/[0.5] font-outfit">
+                          <span className="font-bold uppercase md:text-[12px] text-[8px] text-white/[0.5] font-outfit">
                             Linh Nguyen
                           </span>
                         </div>
