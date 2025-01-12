@@ -124,7 +124,7 @@ body {
   height: 131px;
 }
 
-.video-section video {
+.video-section .textbg {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -166,26 +166,31 @@ body {
 }
 
 @media screen and (max-width: 540px) {
-  .video-copy {
-    font-size: 48px;
-  }
-
+  
   .video-section {
     position: relative;
     width: 100%;
     height: 117px;
   }
 
-  .video-copy h1 {
-    background: #12141d;
-    font-size: 60px;
-    line-height:1;
-    text-align:left;
-  }
+ 
 }
 
-.video-copy h1 {
-  background: #12141d;
+.video-section div {
+  color:transparent;
+  background-clip: text;
+  -webkit-text-fill-color:transparent;
+  -webkit-background-clip: text;
+  background-image:url("/assets/textbg.png");
+  background-size:120%;
+  animation:bg-animation 10s cubic-bezier(0.3,0,0.7,1) infinite;
+  line-height:58.322px;
+}
+
+@keyframes bg-animation{
+  0% { background-position: 0% 0%; }
+  50% {  background-position: 100% 100%;  }
+  100% {  background-position: 0% 0%;  }
 }
 
 .hover-item {

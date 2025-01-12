@@ -1,6 +1,7 @@
 
 import { Envelope, LogoRound, Dribble, Behance, Linkedin } from "@/icon";
 import {Container} from "./container"
+//import Image from "next/image"
 
 export const Footer = () => {
     return (
@@ -30,12 +31,9 @@ export const Footer = () => {
                 </div>
               </div>
               <div className="video-section">
-                <video src="/assets/mvid.mp4" loop autoPlay muted></video>
-                <div className="video-copy">
-                  <h1 className="font-syne font-bold tracking-[3px]">
+                  <div className="font-syne font-bold w-full h-full tracking-[3px] md:text-center md:justify-center text-left flex items-center md:text-[137px] text-[60px]">
                     Let{"'"}s talk design!
-                  </h1>
-                </div>
+                  </div>
               </div>
             </div>
           </Container>
