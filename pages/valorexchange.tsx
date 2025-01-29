@@ -4,29 +4,35 @@ import Image from "next/image";
 import TextWrapper from "@/components/view/textwrapper";
 import { KeyFeatures } from "@/components/myproject/keyfeatures";
 import { OtherProjects } from "@/components/myproject/otherproject";
-
+import { MobileKeyFeatures } from "@/components/myproject/mobilekeyfeatures";
 
 export default function ValorExchange() {
   return (
     <>
-      <div className="md:pt-[184px]">
+      <div className="md:pt-[184px] pt-[140px]">
         <Container>
           <div className="flex flex-col">
             <div className="flex flex-col gap-[50px]">
-              <div className="flex gap-[47px] justify-between items-center">
+              <div className="flex gap-[47px] justify-between items-center md:flex-row flex-col">
                 <div className="flex flex-col grow-[1] shrink-0">
                   <span className="text-xl font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5]">
                     2022
                   </span>
                   <div className="my-[10px] h-[1px] bg-white/[0.4] w-full"></div>
 
-                  <div className="text-[32px] font-bold tracking-[-1.442px] font-syne leading-[1]">
+                  <div className="text-[32px] font-bold tracking-[-1.442px] font-syne leading-[1] md:flex hidden">
                     <HeroTextWrapper>
                       <h3 className="gd1">
                         ValorExchange: Creating a Seamless{" "}
                       </h3>
                       <h3 className="gd1">User Experience for Effortless </h3>
                       <h3 className="gd1">Cryptocurrency Trading</h3>
+                    </HeroTextWrapper>
+                  </div>
+                  <div className="text-[32px] font-bold tracking-[-1.442px] font-syne leading-[1] md:hidden flex">
+                    <HeroTextWrapper>
+                      ValorExchange: Creating a Seamless User Experience for
+                      Effortless Cryptocurrency Trading
                     </HeroTextWrapper>
                   </div>
                 </div>
@@ -49,7 +55,7 @@ export default function ValorExchange() {
                   </span>
                 </div>
               </div>
-              <div className="w-full h-[542px] relative">
+              <div className="w-full md:h-[542px] h-[153px] relative">
                 <Image src="/assets/valor.png" fill sizes="100vw" alt="" />
               </div>
             </div>
@@ -77,13 +83,16 @@ export default function ValorExchange() {
               </div>
             </div>
             <div className="flex gap-16 md:flex-row flex-col py-[56px]">
-              <div className="w-[326px] shrink-0 flex flex-col font-bold tracking-[-1.442px] font-syne text-5xl md:border-r-[1px] md:border-r-white/[0.4] md:border-b-0 md:border-b-transparent border-b-[1px] border-b-white/[0.4]">
+              <div className="w-[326px] shrink-0 hidden md:flex flex-row md:flex-col font-bold tracking-[-1.442px] font-syne md:text-5xl text-[26px] md:border-r-[1px] md:border-r-white/[0.4] md:border-b-0 md:border-b-transparent border-b-[1px] border-b-white/[0.4]">
                 <TextWrapper>
                   <h3 className="gd1">Problem </h3>
                 </TextWrapper>
                 <TextWrapper>
                   <h3 className="gd1">Statement </h3>
                 </TextWrapper>
+              </div>
+              <div className="w-[326px] shrink-0 md:hidden md flex-row md:flex-col font-bold tracking-[-1.442px] font-syne md:text-5xl text-[26px] md:border-r-[1px] md:border-r-white/[0.4] md:border-b-0 md:border-b-transparent border-b-[1px] border-b-white/[0.4]">
+                <h3 className="gd1">Problem Statement </h3>
               </div>
               <div className="grow">
                 <p className="tracking-[-0.36px] text-lg leading-[25.2px] font-outfit text-white/[0.5] whitespace-pre-line">
@@ -93,20 +102,20 @@ export default function ValorExchange() {
                 </p>
               </div>
             </div>
-            <div className="flex gap-8">
-              <div className="grow flex gap-3 items-center">
-                <div className="w-[289px] h-[138px] relative">
+            <div className="flex md:gap-8 md:flex-row flex-col">
+              <div className="md:grow flex gap-3 items-center md:order-0 order-1">
+                <div className="w-[289px] h-[112px] md:h-[138px] relative">
                   <Image src="/assets/bitcoin.png" fill sizes="100vw" alt="" />
                 </div>
-                <div className="w-[142px] h-[138px] relative">
+                <div className="w-[142px] h-[112px] md:h-[138px] relative">
                   <Image src="/assets/data.png" fill sizes="100vw" alt="" />
                 </div>
               </div>
               <div className="grow">
-                <div className="py-[54px] flex gap-[10px] flex-col">
+                <div className="md:py-[54px] py-4 flex gap-[10px] flex-col">
                   <div className="flex flex-col">
                     <TextWrapper>
-                      <span className="gd1 font-bold tracking-[-1.442px] text-[42px] font-syne">
+                      <span className="gd1 font-bold tracking-[-1.442px] text-[26px] md:text-[42px] font-syne">
                         Target audience
                       </span>
                     </TextWrapper>
@@ -124,15 +133,15 @@ export default function ValorExchange() {
                 </div>
               </div>
             </div>
-            <div className="py-[54px] flex flex-col items-center">
+            <div className="py-[54px] flex flex-col md:items-center">
               <TextWrapper>
-                <h2 className="gd1 font-bold tracking-[-1.442px] text-[42px] font-syne">
+                <h2 className="gd1 font-bold tracking-[-1.442px] text-[26px] md:text-[42px] font-syne">
                   Design process
                 </h2>
               </TextWrapper>
             </div>
             <div className="flex flex-col gap-[94px]">
-              <div className="w-full flex gap-6 items-center">
+              <div className="w-full flex md:flex-row flex-col gap-6 items-center">
                 <div className="grow flex justify-start">
                   <div className="flex flex-col gap-3">
                     <div className="flex gap-4 items-center">
@@ -157,11 +166,11 @@ export default function ValorExchange() {
                     </div>
                   </div>
                 </div>
-                <div className="w-[571px] h-[219px] shrink-0 relative">
+                <div className="md:w-[571px] w-full h-[133px] md:h-[219px] shrink-0 relative">
                   <Image src="/assets/research.png" fill sizes="100vw" alt="" />
                 </div>
               </div>
-              <div className="w-full flex gap-6 items-center">
+              <div className="w-full flex gap-6 md:flex-row flex-col items-center">
                 <div className="grow flex justify-start">
                   <div className="flex flex-col gap-3">
                     <div className="flex gap-4 items-center">
@@ -196,7 +205,7 @@ export default function ValorExchange() {
                   <Image src="/assets/ideation.png" fill sizes="100vw" alt="" />
                 </div>
               </div>
-              <div className="w-full flex gap-[84px] items-center">
+              <div className="w-full flex md:flex-row flex-col gap-[32px]  md:gap-[84px] md:items-center">
                 <div className="grow flex justify-start">
                   <div className="flex flex-col gap-3">
                     <div className="flex gap-4 items-center">
@@ -261,7 +270,7 @@ export default function ValorExchange() {
                 </div>
               </div>
             </div>
-            <div className="flex pt-[60px] relative h-[960px]">
+            <div className="flex pt-[60px] relative h-[436px] md:h-[960px]">
               <div className="absolute z-20 bottom-0 left-[100px]">
                 <div>
                   <Image
@@ -289,15 +298,16 @@ export default function ValorExchange() {
             </div>
           </div>
         </Container>
-        <div className="w-full h-[1024px] relative">
+        <div className="w-full md:h-[1024px] h-[303px] relative">
           <Image src="/assets/valormockup.png" sizes="100vw" alt="" fill />
         </div>
         <Container>
           <KeyFeatures />
+          <MobileKeyFeatures slides={slidesData} />
           <div className="mt-[60px] py-[54px] flex gap-[10px] flex-col">
             <div className="flex flex-col">
               <TextWrapper>
-                <span className="gd1 font-bold tracking-[-1.442px] text-[42px] font-syne">
+                <span className="gd1 font-bold tracking-[-1.442px] text-[26px] md:text-[42px] font-syne">
                   Final Outcome
                 </span>
               </TextWrapper>
@@ -315,9 +325,9 @@ export default function ValorExchange() {
               </TextWrapper>
             </div>
           </div>
-          <div className="py-[43px] flex flex-col gap-2 items-center">
+          <div className="py-[43px] flex flex-col gap-2 md:items-center">
             <TextWrapper>
-              <span className="gd1 font-medium tracking-[-0.36px]  text-[42px] font-syne">
+              <span className="gd1 font-medium tracking-[-0.36px]  text-[26px] md:text-[42px] font-syne">
                 Figma Design
               </span>
             </TextWrapper>
@@ -331,3 +341,25 @@ export default function ValorExchange() {
     </>
   );
 }
+
+
+const slidesData = [
+  {
+    title: "Intuitive Trading Interface",
+    description:
+      "The core trading interface allows users to execute buy, sell, or exchange transactions with just a few clicks, using straightforward language and guiding tooltips.",
+    imageSrc: "/assets/pyd1.png",
+  },
+  {
+    title: "Simplified Dashboard",
+    description:
+      "Users have access to a dashboard that displays only the most crucial information, minimizing clutter while providing essential details on holdings, transaction history, and market trends.",
+    imageSrc: "/assets/pyd2.png",
+  },
+  {
+    title: "Enhanced Security Measures",
+    description:
+      "ValorExchange incorporates advanced security features, such as two-factor authentication and automated transaction verification, ensuring security without disrupting the user experience.",
+    imageSrc: "/assets/pyd3.png",
+  },
+];

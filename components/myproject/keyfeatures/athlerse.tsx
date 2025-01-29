@@ -99,7 +99,7 @@ export const AthlerseKeyFeatures = () => {
 
   return (
     <>
-      <div ref={parentRef} className="pt-[50px] flex flex-col items-center">
+      <div ref={parentRef} className="pt-[50px] hidden md:flex flex-col items-center">
         <TextWrapper>
           <span className="gd1 font-bold tracking-[-1.442px] text-[42px] font-syne">
             Key Features of ValorExchange:

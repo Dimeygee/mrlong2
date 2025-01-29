@@ -4,25 +4,32 @@ import Image from "next/image";
 import TextWrapper from "@/components/view/textwrapper";
 import { AthlerseKeyFeatures } from "@/components/myproject/keyfeatures/athlerse";
 import { OtherProjects } from "@/components/myproject/otherproject";
+import { MobileKeyFeatures } from "@/components/myproject/mobilekeyfeatures";
 
 export default function Athlerse() {
   return (
     <>
-      <div className="md:pt-[184px]">
+      <div className="md:pt-[184px] pt-[140px]">
         <Container>
           <div className="flex flex-col">
             <div className="flex flex-col gap-[50px]">
-              <div className="flex gap-[47px] justify-between items-center">
+              <div className="flex gap-[47px] justify-between items-center md:flex-row flex-col">
                 <div className="flex flex-col grow-[1] shrink-0">
                   <span className="text-xl font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5]">
                     2024
                   </span>
                   <div className="my-[10px] h-[1px] bg-white/[0.4] w-full"></div>
 
-                  <div className="text-[32px] font-bold tracking-[-1.442px] font-syne leading-[1]">
+                  <div className="text-[32px] font-bold tracking-[-1.442px] font-syne leading-[1] md:flex hidden">
                     <HeroTextWrapper>
                       <h3 className="gd1">Athelrse: Gamifying Fitness for a</h3>
                       <h3 className="gd1">Connected, Motivated Community</h3>
+                    </HeroTextWrapper>
+                  </div>
+                  <div className="text-[32px] font-bold tracking-[-1.442px] font-syne leading-[1] md:hidden flex">
+                    <HeroTextWrapper>
+                      Athelrse: Gamifying Fitness for a Effortless
+                      Cryptocurrency Trading Connected, Motivated Community
                     </HeroTextWrapper>
                   </div>
                 </div>
@@ -35,7 +42,7 @@ export default function Athlerse() {
                   </span>
                 </div>
               </div>
-              <div className="w-full h-[542px] relative">
+              <div className="w-full md:h-[542px] h-[153px] relative">
                 <Image
                   src="/assets/athlerse/hero.png"
                   fill
@@ -71,13 +78,16 @@ export default function Athlerse() {
               </div>
             </div>
             <div className="flex gap-16 md:flex-row flex-col py-[56px]">
-              <div className="w-[326px] shrink-0 flex flex-col font-bold tracking-[-1.442px] font-syne text-5xl md:border-r-[1px] md:border-r-white/[0.4] md:border-b-0 md:border-b-transparent border-b-[1px] border-b-white/[0.4]">
+              <div className="w-[326px] shrink-0 hidden md:flex flex-row md:flex-col font-bold tracking-[-1.442px] font-syne md:text-5xl text-[26px] md:border-r-[1px] md:border-r-white/[0.4] md:border-b-0 md:border-b-transparent border-b-[1px] border-b-white/[0.4]">
                 <TextWrapper>
                   <h3 className="gd1">Problem </h3>
                 </TextWrapper>
                 <TextWrapper>
                   <h3 className="gd1">Statement </h3>
                 </TextWrapper>
+              </div>
+              <div className="w-[326px] shrink-0 md:hidden md flex-row md:flex-col font-bold tracking-[-1.442px] font-syne md:text-5xl text-[26px] md:border-r-[1px] md:border-r-white/[0.4] md:border-b-0 md:border-b-transparent border-b-[1px] border-b-white/[0.4]">
+                <h3 className="gd1">Problem Statement </h3>
               </div>
               <div className="grow">
                 <p className="tracking-[-0.36px] text-lg leading-[25.2px] font-outfit text-white/[0.5] whitespace-pre-line">
@@ -86,9 +96,9 @@ export default function Athlerse() {
                 </p>
               </div>
             </div>
-            <div className="flex gap-8">
-              <div className="grow flex gap-3 items-center">
-                <div className="w-[289px] h-[138px] relative">
+            <div className="flex md:gap-8 md:flex-row flex-col">
+              <div className="md:grow flex gap-3 items-center md:order-0 order-1">
+                <div className="w-[289px] h-[112px] md:h-[138px] relative">
                   <Image
                     src="/assets/athlerse/bitcoin.png"
                     fill
@@ -96,7 +106,7 @@ export default function Athlerse() {
                     alt=""
                   />
                 </div>
-                <div className="w-[142px] h-[138px] relative">
+                <div className="w-[142px] h-[112px] md:h-[138px] relative">
                   <Image
                     src="/assets/athlerse/data.png"
                     fill
@@ -106,10 +116,10 @@ export default function Athlerse() {
                 </div>
               </div>
               <div className="grow">
-                <div className="py-[54px] flex gap-[10px] flex-col">
+                <div className="md:py-[54px] py-4 flex gap-[10px] flex-col">
                   <div className="flex flex-col">
                     <TextWrapper>
-                      <span className="gd1 font-bold tracking-[-1.442px] text-[42px] font-syne">
+                      <span className="gd1 font-bold tracking-[-1.442px] text-[26px] md:text-[42px] font-syne">
                         Target audience
                       </span>
                     </TextWrapper>
@@ -129,15 +139,15 @@ export default function Athlerse() {
                 </div>
               </div>
             </div>
-            <div className="py-[54px] flex flex-col items-center">
+            <div className="py-[54px] flex flex-col md:items-center">
               <TextWrapper>
-                <h2 className="gd1 font-bold tracking-[-1.442px] text-[42px] font-syne">
+                <h2 className="gd1 font-bold tracking-[-1.442px] text-[26px] md:text-[42px] font-syne">
                   Design process
                 </h2>
               </TextWrapper>
             </div>
-            <div className="flex flex-col gap-[94px]">
-              <div className="w-full flex gap-6 items-center">
+            <div className="flex flex-col md:gap-[94px]">
+              <div className="w-full flex md:flex-row flex-col gap-6 items-center">
                 <div className="grow flex justify-start">
                   <div className="flex flex-col gap-3">
                     <div className="flex gap-4 items-center">
@@ -162,7 +172,7 @@ export default function Athlerse() {
                     </div>
                   </div>
                 </div>
-                <div className="w-[505px] h-[395px] shrink-0 relative">
+                <div className="md:w-[505px] w-full h-[350px] shrink-0 relative">
                   <Image
                     src="/assets/athlerse/research.png"
                     fill
@@ -171,7 +181,7 @@ export default function Athlerse() {
                   />
                 </div>
               </div>
-              <div className="w-full flex gap-6 items-center">
+              <div className="w-full flex gap-6 md:flex-row flex-col items-center">
                 <div className="grow flex justify-start">
                   <div className="flex flex-col gap-3">
                     <div className="flex gap-4 items-center">
@@ -196,7 +206,7 @@ export default function Athlerse() {
                     </div>
                   </div>
                 </div>
-                <div className="w-[480px] h-[365px] shrink-0 relative">
+                <div className="md:w-[480px] w-full h-[365px] shrink-0 relative">
                   <Image
                     src="/assets/athlerse/ideation.png"
                     fill
@@ -205,7 +215,7 @@ export default function Athlerse() {
                   />
                 </div>
               </div>
-              <div className="w-full flex gap-[84px] items-center">
+              <div className="w-full flex gap-6 md:flex-row flex-col items-center">
                 <div className="grow flex justify-start">
                   <div className="flex flex-col gap-3">
                     <div className="flex gap-4 items-center">
@@ -229,7 +239,7 @@ export default function Athlerse() {
                     </div>
                   </div>
                 </div>
-                <div className="w-[296px] h-[296px] shrink-0 relative">
+                <div className="md:w-[296px] w-full h-[250px] md:h-[296px] shrink-0 relative">
                   <Image
                     src="/assets/athlerse/wireframe.png"
                     fill
@@ -238,7 +248,7 @@ export default function Athlerse() {
                   />
                 </div>
               </div>
-              <div className="w-full flex gap-[84px] items-center">
+              <div className="w-full flex md:mt-0 mt-[34px] gap-[84px] items-center">
                 <div className="grow flex">
                   <div className="flex flex-col gap-3 justify-center">
                     <div className="flex gap-4 items-center justify-center">
@@ -265,9 +275,9 @@ export default function Athlerse() {
               </div>
             </div>
             <div className="flex pt-[60px] relative">
-              <div className="w-full h-[1154px] relative mx-auto rounded-[40px] overflow-hidden flex gap-[80px]">
+              <div className="w-full h-[300px] md:h-[1154px] relative mx-auto rounded-[40px] overflow-hidden flex gap-[80px]">
                 <div className="grow flex items-center">
-                  <div className="relative w-full h-[716px]">
+                  <div className="relative w-full h-[150px] md:h-[716px]">
                     <Image
                       src="/assets/athlerse/getfit.png"
                       sizes="100vw"
@@ -295,7 +305,7 @@ export default function Athlerse() {
                   </div>
                 </div>
                 <div className="grow flex items-center">
-                  <div className="relative w-full h-[716px]">
+                  <div className="relative w-full h-[150px] md:h-[716px]">
                     <Image
                       src="/assets/athlerse/createaccount.png"
                       sizes="100vw"
@@ -308,11 +318,12 @@ export default function Athlerse() {
             </div>
           </div>
         </Container>
-        <div className="w-full h-[1200px] relative">
+        <div className="w-full h-[300px] md:h-[1200px] relative">
           <Image src="/assets/athlerse/mockup2.png" sizes="100vw" alt="" fill />
         </div>
         <Container>
           <AthlerseKeyFeatures />
+          <MobileKeyFeatures slides={slidesData} />
           <div className="mt-[60px] py-[54px] flex gap-[10px] flex-col">
             <div className="flex flex-col">
               <TextWrapper>
@@ -350,3 +361,32 @@ export default function Athlerse() {
     </>
   );
 }
+
+
+
+const slidesData = [
+  {
+    title: "Intuitive Trading Interface",
+    description:
+      "The core trading interface allows users to execute buy, sell, or exchange transactions with just a few clicks, using straightforward language and guiding tooltips.",
+    imageSrc: "/assets/athlerse/key1.png",
+  },
+  {
+    title: "Simplified Dashboard",
+    description:
+      "Users have access to a dashboard that displays only the most crucial information, minimizing clutter while providing essential details on holdings, transaction history, and market trends.",
+    imageSrc: "/assets/athlerse/key2.png",
+  },
+  {
+    title: "Enhanced Security Measures",
+    description:
+      "ValorExchange incorporates advanced security features, such as two-factor authentication and automated transaction verification, ensuring security without disrupting the user experience.",
+    imageSrc: "/assets/athlerse/key3.png",
+  },
+  {
+    title: "Enhanced Security Measures",
+    description:
+      "ValorExchange incorporates advanced security features, such as two-factor authentication and automated transaction verification, ensuring security without disrupting the user experience.",
+    imageSrc: "/assets/athlerse/key4.png",
+  },
+];

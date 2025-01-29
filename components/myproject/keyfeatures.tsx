@@ -99,13 +99,13 @@ export const KeyFeatures = () => {
     <>
       <div ref={parentRef} className="pt-[50px] flex flex-col items-center">
         <TextWrapper>
-          <span className="gd1 font-bold tracking-[-1.442px] text-[42px] font-syne">
-            Key Features of ValorExchange:
+          <span className="gd1 font-bold tracking-[-1.442px] text-[26px] md:text-[42px] font-syne">
+            Key Features of ValorExchange
           </span>
         </TextWrapper>
         <div
           ref={containerRef}
-          className="flex justify-between w-full mt-[68px] relative"
+          className="md:flex hidden justify-between w-full mt-[68px] relative"
         >
           <div className="sticky left-0 top-[268px] h-[395px] flex gap-[32px]">
             <div className="h-[395px] left-0 top-[268px] sticky w-[1px] bg-white/[0.1] flex justify-center custom-scroll">

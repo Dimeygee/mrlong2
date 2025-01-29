@@ -42,8 +42,7 @@ const generateRandomGradient = () => {
 export const OtherProjects = () => {
   const { onCursor } = useGlobalStateContext();
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const pathname = usePathname(); // Retrieve the current pathname
-
+  const pathname = usePathname(); 
   const gradients = useMemo(
     () =>
       Projects.map(() => ({
@@ -54,9 +53,9 @@ export const OtherProjects = () => {
     []
   );
 
-  // Filter out the project with a name matching the current pathname
+ 
   const filteredProjects = useMemo(() => {
-    const currentPageName = pathname?.split("/").pop()?.toLowerCase() || ""; // Get the last segment of the pathname and convert to lowercase
+    const currentPageName = pathname?.split("/").pop()?.toLowerCase() || ""; 
     return Projects.filter(
       (project) => project.name.toLowerCase() !== currentPageName
     );
@@ -65,16 +64,16 @@ export const OtherProjects = () => {
   return (
     <>
       <div
-        className={`flex flex-col gap-[32px] overflow-hidden transition-all duration-300 py-[82px]`}
+        className={`flex flex-col gap-[32px] overflow-hidden transition-all duration-300 py-[82px] relative mb-[100px]`}
       >
         <Container>
           <div className="flex items-center justify-between mx-auto px-5">
             <TextWrapper>
-              <span className="gd1 font-bold tracking-[-1.442px] text-[42px] font-syne">
+              <span className="gd1 font-bold tracking-[-1.442px] text-[26px] md:text-[42px] font-syne">
                 View other projects
               </span>
             </TextWrapper>
-            <div className="flex gap-6">
+            <div className="flex gap-6 md:relative absolute bottom-0 translate-x-[-50%] left-[50%]">
               <div
                 className="bgs w-[56px] h-[56px] text-white hover-item hover:text-black transition-colors duration-75 flex justify-center text-2xl font-bold items-center relative swiper-button-left"
                 onMouseEnter={() => onCursor("hovered")}
@@ -97,7 +96,80 @@ export const OtherProjects = () => {
           </div>
         </Container>
         <SwiperContainer>
-          <div className="relative h-[208px]">
+          <div className="relative h-[208px] md:hidden flex">
+            <Swiper
+              slidesPerView={1}
+              spaceBetween={20}
+              navigation={{
+                nextEl: ".swiper-button-right",
+                prevEl: ".swiper-button-left",
+              }}
+              
+              modules={[Navigation, Pagination]}
+              className="flex font-outfit container self-end"
+            >
+              {filteredProjects.map((project, index) => (
+                <SwiperSlide
+                  key={project.name}
+                  style={{
+                    width: "366px",
+                    height: "208px",
+                    display: "flex",
+                    position: "relative",
+                    perspective: "1000px",
+                    background: "#12141d",
+                  }}
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                >
+                  <Link
+                    href={`/${project.name.toLowerCase()}`}
+                    className="absolute w-full h-full top-0 left-0 z-[999]"
+                  ></Link>
+                  <motion.div
+                    initial={{ rotateX: 0, transformOrigin: "50% 100%" }}
+                    animate={{ rotateX: hoveredIndex === index ? -45 : 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="md:px-[59px] px-[27px] flex flex-col justify-center gap-[40px] rounded-[25px] w-full h-full z-[100] relative bg-[#12141d] border-white/[0.14] border-[1px]"
+                  >
+                    <div className="text-xl text-white/[0.5] leading-[25.2px] tracking-[-0.36px]">
+                      <span>{project.id}</span>
+                    </div>
+                    <div className="flex flex-col gap-[8px]">
+                      <span className="md:text-[32px] text-[26px] tracking-[-1.442px] uppercase font-bold font-syne">
+                        {project.name}
+                      </span>
+                      <span className="text-xl text-white/[0.5] leading-[25.2px] tracking-[-0.36px]">
+                        {project.type}
+                      </span>
+                    </div>
+                  </motion.div>
+                  <motion.div
+                    className="absolute top-0 left-0 w-full h-full z-[85] rounded-[25px]"
+                    style={{ background: gradients[index].gradient1 }}
+                    initial={{ rotateX: 0, transformOrigin: "50% 100%" }}
+                    animate={{ rotateX: hoveredIndex === index ? -35 : 0 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                  <motion.div
+                    className="absolute top-0 left-0 w-full h-full z-[80] rounded-[25px]"
+                    style={{ background: gradients[index].gradient2 }}
+                    initial={{ rotateX: 0, transformOrigin: "50% 100%" }}
+                    animate={{ rotateX: hoveredIndex === index ? -25 : 0 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                  <motion.div
+                    className="absolute top-0 left-0 w-full h-full z-[75] rounded-[25px]"
+                    style={{ background: gradients[index].gradient3 }}
+                    initial={{ rotateX: 0, transformOrigin: "50% 100%" }}
+                    animate={{ rotateX: hoveredIndex === index ? -15 : 0 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+          <div className="relative h-[208px] md:flex hidden">
             <Swiper
               slidesPerView={"auto"}
               spaceBetween={35}
@@ -105,10 +177,7 @@ export const OtherProjects = () => {
                 nextEl: ".swiper-button-right",
                 prevEl: ".swiper-button-left",
               }}
-              pagination={{
-                clickable: true,
-                el: ".swiper-pagination",
-              }}
+              
               modules={[Navigation, Pagination]}
               className="flex font-outfit container self-end"
               style={{
@@ -133,18 +202,21 @@ export const OtherProjects = () => {
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
-                  <Link href={`/${project.name.toLowerCase()}`} className="absolute w-full h-full top-0 left-0 z-[999]"></Link>
+                  <Link
+                    href={`/${project.name.toLowerCase()}`}
+                    className="absolute w-full h-full top-0 left-0 z-[999]"
+                  ></Link>
                   <motion.div
                     initial={{ rotateX: 0, transformOrigin: "50% 100%" }}
                     animate={{ rotateX: hoveredIndex === index ? -45 : 0 }}
                     transition={{ duration: 0.3 }}
-                    className="px-[59px] flex flex-col justify-center gap-[40px] rounded-[25px] w-full h-full z-[100] relative bg-[#12141d] border-white/[0.14] border-[1px]"
+                    className="md:px-[59px] px-[27px] flex flex-col justify-center gap-[40px] rounded-[25px] w-full h-full z-[100] relative bg-[#12141d] border-white/[0.14] border-[1px]"
                   >
                     <div className="text-xl text-white/[0.5] leading-[25.2px] tracking-[-0.36px]">
                       <span>{project.id}</span>
                     </div>
                     <div className="flex flex-col gap-[8px]">
-                      <span className="text-[32px] tracking-[-1.442px] uppercase font-bold font-syne">
+                      <span className="md:text-[32px] text-[26px] tracking-[-1.442px] uppercase font-bold font-syne">
                         {project.name}
                       </span>
                       <span className="text-xl text-white/[0.5] leading-[25.2px] tracking-[-0.36px]">
