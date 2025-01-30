@@ -6,14 +6,15 @@ import TextWrapper from "@/components/view/textwrapper";
 import { OtherProjects } from "@/components/myproject/otherproject";
 import { ArrowRightIcon, ArrowleftIcon, NetIcon } from "../icon";
 
+
 export default function Ralipo() {
   return (
     <>
-      <div className="md:pt-[184px]">
+      <div className="md:pt-[184px] pt-[140px]">
         <Container>
           <div className="flex flex-col">
             <div className="flex flex-col gap-[50px]">
-              <div className="flex gap-[47px] justify-between items-center">
+              <div className="flex gap-[47px] justify-between items-center md:flex-row flex-col">
                 <div className="flex flex-col grow-[1] shrink-0">
                   <span className="text-xl font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5]">
                     2024
@@ -35,7 +36,7 @@ export default function Ralipo() {
                   </span>
                 </div>
               </div>
-              <div className="w-full h-[542px] relative">
+              <div className="w-full md:h-[542px] h-[153px] relative">
                 <Image
                   src="/assets/rapilo/hero.png"
                   fill
@@ -66,13 +67,16 @@ export default function Ralipo() {
               </div>
             </div>
             <div className="flex gap-16 md:flex-row flex-col py-[56px]">
-              <div className="w-[326px] shrink-0 flex flex-col font-bold tracking-[-1.442px] font-syne text-5xl md:border-r-[1px] md:border-r-white/[0.4] md:border-b-0 md:border-b-transparent border-b-[1px] border-b-white/[0.4]">
+              <div className="w-[326px] shrink-0 hidden md:flex flex-row md:flex-col font-bold tracking-[-1.442px] font-syne md:text-5xl text-[26px] md:border-r-[1px] md:border-r-white/[0.4] md:border-b-0 md:border-b-transparent border-b-[1px] border-b-white/[0.4]">
                 <TextWrapper>
                   <h3 className="gd1">Problem </h3>
                 </TextWrapper>
                 <TextWrapper>
                   <h3 className="gd1">Statement </h3>
                 </TextWrapper>
+              </div>
+              <div className="w-[326px] shrink-0 md:hidden md flex-row md:flex-col font-bold tracking-[-1.442px] font-syne md:text-5xl text-[26px] md:border-r-[1px] md:border-r-white/[0.4] md:border-b-0 md:border-b-transparent border-b-[1px] border-b-white/[0.4]">
+                <h3 className="gd1">Problem Statement </h3>
               </div>
               <div className="grow">
                 <p className="tracking-[-0.36px] text-lg leading-[25.2px] font-outfit text-white/[0.5] whitespace-pre-line">
@@ -88,8 +92,8 @@ export default function Ralipo() {
                 </h2>
               </TextWrapper>
             </div>
-            <div className="flex flex-col gap-[94px]">
-              <div className="w-full flex gap-[172px] items-center">
+            <div className="flex flex-col md:gap-[94px] gap-7">
+              <div className="w-full flex md:flex-row flex-col md:gap-[172px] gap-5 items-center">
                 <div className="grow flex justify-start">
                   <div className="flex flex-col gap-3">
                     <div className="flex gap-4 items-center">
@@ -110,7 +114,7 @@ export default function Ralipo() {
                     </div>
                   </div>
                 </div>
-                <div className="w-[461px] h-[331px] shrink-0 relative">
+                <div className="md:w-[461px] w-full h-[221px] md:h-[331px] shrink-0 relative">
                   <Image
                     src="/assets/rapilo/research.png"
                     fill
@@ -119,7 +123,7 @@ export default function Ralipo() {
                   />
                 </div>
               </div>
-              <div className="w-full flex gap-6 items-center">
+              <div className="w-full flex md:flex-row flex-col gap-6 items-center">
                 <div className="grow flex justify-start">
                   <div className="flex flex-col gap-3">
                     <div className="flex gap-4 items-center">
@@ -149,7 +153,7 @@ export default function Ralipo() {
                     </div>
                   </div>
                 </div>
-                <div className="w-[539px] h-[365px] shrink-0 relative">
+                <div className="md:w-[539px] w-full md:h-[365px] h-[265px] shrink-0 relative">
                   <Image
                     src="/assets/rapilo/ideation.png"
                     fill
@@ -158,7 +162,7 @@ export default function Ralipo() {
                   />
                 </div>
               </div>
-              <div className="w-full flex gap-[84px] items-center">
+              <div className="w-full flex md:flex-row flex-col gap-[84px] items-center">
                 <div className="grow flex justify-start">
                   <div className="flex flex-col gap-3">
                     <div className="flex gap-4 items-center">
@@ -185,7 +189,7 @@ export default function Ralipo() {
                     </div>
                   </div>
                 </div>
-                <div className="w-[412px] h-[296px] shrink-0 relative">
+                <div className="md:w-[412px] w-full h-[250px] md:h-[296px] shrink-0 relative">
                   <Image
                     src="/assets/rapilo/wireframe.png"
                     fill
@@ -194,7 +198,7 @@ export default function Ralipo() {
                   />
                 </div>
               </div>
-              <div className="w-full flex gap-[84px] items-center">
+              <div className="w-full md:mt-0 mt-7 flex gap-[84px] items-center">
                 <div className="grow flex">
                   <div className="flex flex-col gap-3 justify-center">
                     <div className="flex gap-4 items-center justify-center">
@@ -229,10 +233,10 @@ export default function Ralipo() {
           </div>
         </Container>
         <div className="w-full relative flex items-end mt-[100px] justify-center">
-          <div className="w-[667px] h-[1448px] relative z-10">
+          <div className="md:w-[667px] w-[300px] h-[600px] md:h-[1448px] relative z-10">
             <Image src="/assets/rapilo/mockup1.png" alt="" sizes="100vw" fill />
           </div>
-          <div className="w-[573px] h-[1266px] ml-[-183px] relative z-0">
+          <div className="md:w-[573px] w-[300px] h-[400px] md:h-[1266px] ml-[-183px] relative z-0">
             <Image src="/assets/rapilo/mockup2.png" alt="" sizes="100vw" fill />
           </div>
         </div>
@@ -265,11 +269,11 @@ export default function Ralipo() {
                 Live website
               </span>
             </TextWrapper>
-            <span className="whitespace-pre-line text-xl font-light font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5]">
+            <span className="whitespace-pre-line text-xl font-light font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5] md:text-left text-center">
               Click the icon below to view the figma design for ValorExchange
             </span>
-            <div className="flex items-center gap-[28px] mt-4">
-              <div className="flex items-center gap-[8px]">
+            <div className="flex items-center gap-2 md:gap-[28px] mt-4">
+              <div className="flex items-center gap-1 md:gap-[8px]">
                 <ArrowRightIcon />
                 <ArrowRightIcon />
                 <ArrowRightIcon />
@@ -285,7 +289,7 @@ export default function Ralipo() {
                   <NetIcon />
                 </span>
               </div>
-              <div className="flex items-center gap-[8px]">
+              <div className="flex items-center gap-1 md:gap-[8px]">
                 <ArrowleftIcon />
                 <ArrowleftIcon />
                 <ArrowleftIcon />
