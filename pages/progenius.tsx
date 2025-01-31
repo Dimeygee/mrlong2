@@ -4,25 +4,31 @@ import Image from "next/image";
 import TextWrapper from "@/components/view/textwrapper";
 import { ProgeniusKeyFeatures } from "@/components/myproject/keyfeatures/progenius";
 import { OtherProjects } from "@/components/myproject/otherproject";
+import { MobileKeyFeatures } from "@/components/myproject/mobilekeyfeatures";
 
 export default function Progenius() {
   return (
     <>
-      <div className="md:pt-[184px]">
+      <div className="md:pt-[184px] pt-[140px]">
         <Container>
           <div className="flex flex-col">
             <div className="flex flex-col gap-[50px]">
-              <div className="flex gap-[47px] justify-between items-center">
+              <div className="flex gap-[47px] justify-between items-center md:flex-row flex-col">
                 <div className="flex flex-col grow-[1] shrink-0">
                   <span className="text-xl font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5]">
                     2024
                   </span>
                   <div className="my-[10px] h-[1px] bg-white/[0.4] w-full"></div>
 
-                  <div className="text-[32px] font-bold tracking-[-1.442px] font-syne leading-[1]">
+                  <div className="text-[32px] font-bold tracking-[-1.442px] font-syne leading-[1] md:flex hidden">
                     <HeroTextWrapper>
                       <h3 className="gd1">Progenius: Revolutionizing Crypto</h3>
                       <h3 className="gd1">Fundraising Management</h3>
+                    </HeroTextWrapper>
+                  </div>
+                  <div className="text-[32px] font-bold tracking-[-1.442px] font-syne leading-[1] md:hidden flex">
+                    <HeroTextWrapper>
+                      Progenius: Revolutionizing Crypto Fundraising Management
                     </HeroTextWrapper>
                   </div>
                 </div>
@@ -37,7 +43,7 @@ export default function Progenius() {
                   </span>
                 </div>
               </div>
-              <div className="w-full h-[542px] relative">
+              <div className="w-full md:h-[542px] h-[153px] relative">
                 <Image
                   src="/assets/progenius/hero.png"
                   fill
@@ -71,7 +77,7 @@ export default function Progenius() {
               </div>
             </div>
             <div className="flex gap-16 md:flex-row flex-col py-[56px]">
-              <div className="w-[326px] shrink-0 flex flex-col font-bold tracking-[-1.442px] font-syne text-5xl md:border-r-[1px] md:border-r-white/[0.4] md:border-b-0 md:border-b-transparent border-b-[1px] border-b-white/[0.4]">
+              <div className="w-[326px] shrink-0 hidden md:flex flex-row md:flex-col font-bold tracking-[-1.442px] font-syne md:text-5xl text-[26px] md:border-r-[1px] md:border-r-white/[0.4] md:border-b-0 md:border-b-transparent border-b-[1px] border-b-white/[0.4]">
                 <TextWrapper>
                   <h3 className="gd1">Problem </h3>
                 </TextWrapper>
@@ -86,9 +92,9 @@ export default function Progenius() {
                 </p>
               </div>
             </div>
-            <div className="flex gap-8">
+            <div className="flex gap-8 md:flex-row flex-col">
               <div className="grow flex gap-3 items-center">
-                <div className="w-[289px] h-[138px] relative">
+                <div className="w-[289px] h-[112px] md:h-[138px] relative">
                   <Image
                     src="/assets/progenius/bitcoin.png"
                     fill
@@ -96,7 +102,7 @@ export default function Progenius() {
                     alt=""
                   />
                 </div>
-                <div className="w-[142px] h-[138px] relative">
+                <div className="w-[289px] h-[112px] md:h-[138px] relative">
                   <Image
                     src="/assets/progenius/data.png"
                     fill
@@ -106,7 +112,7 @@ export default function Progenius() {
                 </div>
               </div>
               <div className="grow">
-                <div className="py-[54px] flex gap-[10px] flex-col">
+                <div className="py-[54px] md:flex-row flex-col flex gap-[10px] ">
                   <div className="flex flex-col">
                     <TextWrapper>
                       <span className="gd1 font-bold tracking-[-1.442px] text-[42px] font-syne">
@@ -136,8 +142,8 @@ export default function Progenius() {
                 </h2>
               </TextWrapper>
             </div>
-            <div className="flex flex-col gap-[94px]">
-              <div className="w-full flex gap-6 items-center">
+            <div className="flex flex-col gap-10 md:gap-[94px]">
+              <div className="w-full flex md:flex-row flex-col gap-6 items-center">
                 <div className="grow flex justify-start">
                   <div className="flex flex-col gap-3">
                     <div className="flex gap-4 items-center">
@@ -158,7 +164,7 @@ export default function Progenius() {
                     </div>
                   </div>
                 </div>
-                <div className="w-[505px] h-[395px] shrink-0 relative">
+                <div className="md:w-[505px] w-full h-[295px] md:h-[395px] shrink-0 relative">
                   <Image
                     src="/assets/progenius/research.png"
                     fill
@@ -167,7 +173,7 @@ export default function Progenius() {
                   />
                 </div>
               </div>
-              <div className="w-full flex gap-6 items-center">
+              <div className="w-full flex md:flex-row flex-col gap-6 items-center">
                 <div className="grow flex justify-start">
                   <div className="flex flex-col gap-3">
                     <div className="flex gap-4 items-center">
@@ -192,7 +198,7 @@ export default function Progenius() {
                     </div>
                   </div>
                 </div>
-                <div className="w-[480px] h-[365px] shrink-0 relative">
+                <div className="md:w-[480px] w-full h-[265px] md:h-[365px] shrink-0 relative">
                   <Image
                     src="/assets/progenius/ideation.png"
                     fill
@@ -201,7 +207,7 @@ export default function Progenius() {
                   />
                 </div>
               </div>
-              <div className="w-full flex gap-[84px] items-center">
+              <div className="w-full flex md:flex-row flex-col gap-6 items-center">
                 <div className="grow flex justify-start">
                   <div className="flex flex-col gap-3">
                     <div className="flex gap-4 items-center">
@@ -224,7 +230,7 @@ export default function Progenius() {
                     </div>
                   </div>
                 </div>
-                <div className="w-[296px] h-[296px] shrink-0 relative">
+                <div className="md:w-[296px] w-full h-[296px] shrink-0 relative">
                   <Image
                     src="/assets/wireframes.png"
                     fill
@@ -261,7 +267,7 @@ export default function Progenius() {
               </div>
             </div>
             <div className="flex py-[60px] relative">
-              <div className="w-[880px] h-[540px] relative mx-auto rounded-[40px] overflow-hidden">
+              <div className="w-[880px] h-[250px] md:h-[540px] relative mx-auto rounded-[40px] overflow-hidden">
                 <Image
                   src="/assets/progenius/mockup1.png"
                   sizes="100vw"
@@ -272,11 +278,11 @@ export default function Progenius() {
             </div>
           </div>
         </Container>
-        <div className="flex gap-[60px]">
-          <div className="relative grow h-[400px] overflow-hidden rounded-tr-[40px]">
+        <div className="flex md:gap-[60px] gap-4">
+          <div className="relative grow h-[120px] md:h-[400px] overflow-hidden rounded-tr-[40px]">
             <Image src="/assets/progenius/left.png" sizes="100vw" alt="" fill />
           </div>
-          <div className="relative grow h-[400px] rounded-tl-[40px] overflow-hidden">
+          <div className="relative grow h-[120px] md:h-[400px] rounded-tl-[40px] overflow-hidden">
             <Image
               src="/assets/progenius/right.png"
               sizes="100vw"
@@ -285,7 +291,7 @@ export default function Progenius() {
             />
           </div>
         </div>
-        <div className="w-full h-[1024px] relative">
+        <div className="w-full h-[250px] md:h-[1024px] relative">
           <Image
             src="/assets/progenius/promockup.png"
             sizes="100vw"
@@ -295,6 +301,7 @@ export default function Progenius() {
         </div>
         <Container>
           <ProgeniusKeyFeatures />
+          <MobileKeyFeatures slides={slidesData} />
           <div className="mt-[60px] py-[54px] flex gap-[10px] flex-col">
             <div className="flex flex-col">
               <TextWrapper>
@@ -332,3 +339,36 @@ export default function Progenius() {
     </>
   );
 }
+
+
+
+
+
+
+
+const slidesData = [
+  {
+    title: "Simplified Deal Creation",
+    description:
+      "Admin can effortlessly set up fundraising deals with guided steps, reducing the learning curve and speeding up the process.",
+    imageSrc: "/assets/progenius/key1.png",
+  },
+  {
+    title: "Comprehensive Investment Tracking",
+    description:
+      " Admin have access to a dashboard that displays only the most crucial information, minimizing clutter while providing essential details on holdings, transaction history, and market trends.",
+    imageSrc: "/assets/progenius/key2.png",
+  },
+  {
+    title: "Investor Management Tools",
+    description:
+      " Admin can manage investor profiles, track engagement, andmaintain transparency, building stronger relationships within the community.",
+    imageSrc: "/assets/progenius/key3.png",
+  },
+  {
+    title: "Clean and Modern Interface",
+    description:
+      " A visually appealing and intuitive design ensures that users,regardless of their technical background, can navigate the platform with ease.",
+    imageSrc: "/assets/progenius/key4.png",
+  },
+];
