@@ -340,12 +340,6 @@ export default function Progenius() {
   );
 }
 
-
-
-
-
-
-
 const slidesData = [
   {
     title: "Simplified Deal Creation",

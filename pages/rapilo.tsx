@@ -87,7 +87,7 @@ export default function Ralipo() {
             </div>
             <div className="py-[54px] flex flex-col items-center">
               <TextWrapper>
-                <h2 className="gd1 font-bold tracking-[-1.442px] text-[42px] font-syne">
+                <h2 className="gd1 font-bold tracking-[-1.442px] text-[26px] md:text-[42px] font-syne">
                   Design process
                 </h2>
               </TextWrapper>
@@ -244,7 +244,7 @@ export default function Ralipo() {
           <div className="mt-[60px] py-[54px] flex gap-[10px] flex-col">
             <div className="flex flex-col">
               <TextWrapper>
-                <span className="gd1 font-bold tracking-[-1.442px] text-[42px] font-syne">
+                <span className="gd1 font-bold tracking-[-1.442px] md:text-[42px] text-[26px] font-syne">
                   Results
                 </span>
               </TextWrapper>
