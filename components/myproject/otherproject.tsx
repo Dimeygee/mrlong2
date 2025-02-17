@@ -73,7 +73,7 @@ export const OtherProjects = () => {
                 View other projects
               </span>
             </TextWrapper>
-            <div className="flex gap-6 md:relative absolute bottom-0 translate-x-[-50%] left-[50%]">
+            <div className="flex gap-6 md:relative absolute bottom-0 translate-x-[-50%] md:left-0 left-[50%]">
               <div
                 className="bgs w-[56px] h-[56px] text-white hover-item hover:text-black transition-colors duration-75 flex justify-center text-2xl font-bold items-center relative swiper-button-left"
                 onMouseEnter={() => onCursor("hovered")}

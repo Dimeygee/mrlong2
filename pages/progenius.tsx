@@ -92,8 +92,8 @@ export default function Progenius() {
                 </p>
               </div>
             </div>
-            <div className="flex gap-8 md:flex-row flex-col">
-              <div className="grow flex gap-3 items-center">
+            <div className="flex md:gap-8 md:flex-row flex-col">
+              <div className="md:grow flex gap-3 items-center md:order-0 order-1">
                 <div className="w-[289px] h-[112px] md:h-[138px] relative">
                   <Image
                     src="/assets/progenius/bitcoin.png"
@@ -102,7 +102,7 @@ export default function Progenius() {
                     alt=""
                   />
                 </div>
-                <div className="w-[289px] h-[112px] md:h-[138px] relative">
+                <div className="w-[142px] h-[112px] md:h-[138px] relative">
                   <Image
                     src="/assets/progenius/data.png"
                     fill
@@ -112,10 +112,10 @@ export default function Progenius() {
                 </div>
               </div>
               <div className="grow">
-                <div className="py-[54px] md:flex-row flex-col flex gap-[10px] ">
+                <div className="md:py-[54px] py-4 flex gap-[10px] flex-col">
                   <div className="flex flex-col">
                     <TextWrapper>
-                      <span className="gd1 font-bold tracking-[-1.442px] text-[42px] font-syne">
+                      <span className="gd1 font-bold tracking-[-1.442px] text-[26px] md:text-[42px] font-syne">
                         Target audience
                       </span>
                     </TextWrapper>

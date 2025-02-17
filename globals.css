@@ -118,6 +118,12 @@ body {
   transform: rotateY(180deg);
 }
 
+.rfm-initial-child-container,.rfm-marquee{
+  gap:24px;
+  align-items:flex-start;
+
+}
+
 .video-section {
   position: relative;
   width: 100%;

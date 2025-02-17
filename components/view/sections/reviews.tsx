@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
+import Marquee from "react-fast-marquee";
 
 import Image from "next/image";
-import {Marquee} from "../marquee";
-import { Button } from "../../button";
+import { Button } from "@/components/button";
 
 const reviews = [
   {
@@ -71,90 +71,47 @@ const reviews = [
   },
 ];
 
-export const Reviews = () => {
-  
-
+export const Reviews: React.FC = () => {
   return (
-    <>
-      <div className="overflow-hidden  pt-[30px] pb-[60px]">
-        <div className="flex justify-center mb-[50px]">
-          <Button text="Recommendations" />
-        </div>
-        <div className="flex flex-col gap-[24px]">
-          <div
-            className="flex items-center gap-[24px]"
-          >
-            <Marquee duration={30}>
-              <div className="gap-[24px] flex">
-                {reviews.map((review: any, index: number) => {
-                  return (
-                    <div
-                      className="md:w-[605px] w-[352px] min-h-[194px] shrink-0 pl-[42px] md:pl-[65px] md:min-h-[298px] justify-center rounded-[32px] flex flex-col border-[2px] border-white/[0.1] py-[20px] md:py-[58px] md:gap-[32px] gap-[20px] pr-[46px]"
-                      key={index}
-                    >
-                      <div className="flex gap-[32px] text-white tracking-[-0.4px] font-bold text-[12px] md:text-base font-syne leading-[28px]">
-                        <span>{review.review}</span>
-                      </div>
-                      <div className="flex gap-[32px] items-center">
-                        <div className="md:w-[65px] md:h-[65px] w-[42px] h-[42px] rounded-full relative overflow-hidden">
-                          <Image
-                            src={`${review.image}`}
-                            fill
-                            sizes="100vw"
-                            alt=""
-                          />
-                        </div>
-                        <div className="flex flex-col gap-[4px]">
-                          <span className="font-bold uppercase text-[10px] md:text-sm text-white/[0.5] font-outfit">
-                            {review.name}
-                          </span>
-                          <span className="font-bold uppercase md:text-[12px] text-[8px] text-white/[0.5] font-outfit">
-                            {review.position}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </Marquee>
-            <Marquee duration={30}>
-              <div className="gap-[24px] flex">
-                {reviews.map((review: any, index: number) => {
-                  return (
-                    <div
-                      className="md:w-[605px] w-[352px] min-h-[194px] shrink-0 pl-[42px] md:pl-[65px] md:min-h-[298px] justify-center rounded-[32px] flex flex-col border-[2px] border-white/[0.1] py-[20px] md:py-[58px] md:gap-[32px] gap-[20px] pr-[46px]"
-                      key={index}
-                    >
-                      <div className="flex gap-[32px] text-white tracking-[-0.4px] font-bold text-[12px] md:text-base font-syne leading-[28px]">
-                        <span>{review.review}</span>
-                      </div>
-                      <div className="flex gap-[32px] items-center">
-                        <div className="md:w-[65px] md:h-[65px] w-[42px] h-[42px] rounded-full relative overflow-hidden">
-                          <Image
-                            src={`${review.image}`}
-                            fill
-                            sizes="100vw"
-                            alt=""
-                          />
-                        </div>
-                        <div className="flex flex-col gap-[4px]">
-                          <span className="md:text-sm font-bold uppercase  text-[10px] text-white/[0.5] font-outfit">
-                            {review.name}
-                          </span>
-                          <span className="font-bold uppercase md:text-[12px] text-[8px] text-white/[0.5] font-outfit">
-                            {review.position}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </Marquee>
-          </div>
-         </div>
+    <div className="overflow-hidden pt-[30px] pb-[60px]">
+      <div className="flex justify-center mb-[50px]">
+        <Button text="Recommendations" />
       </div>
-    </>
+      <div className="relative overflow-hidden">
+        <Marquee
+          pauseOnHover={true}
+          className="flex  whitespace-nowrap"
+        >
+          {reviews.map((review) => (
+            <div
+              key={review.id}
+              className="md:w-[605px] w-[352px] min-h-[194px] shrink-0 pl-[42px] md:pl-[65px] md:min-h-[298px] justify-center rounded-[32px] flex flex-col border-[2px] border-white/[0.1] py-[20px] md:py-[58px] md:gap-[32px] gap-[20px] pr-[46px]"
+            >
+              <div className="flex gap-[32px] text-white tracking-[-0.4px] font-bold text-[12px] md:text-base font-syne leading-[28px] text-wrap">
+                <span>{review.review}</span>
+              </div>
+              <div className="flex gap-[32px] items-center">
+                <div className="md:w-[65px] md:h-[65px] w-[42px] h-[42px] rounded-full relative overflow-hidden">
+                  <Image
+                    src={review.image}
+                    fill
+                    sizes="100vw"
+                    alt={review.name}
+                  />
+                </div>
+                <div className="flex flex-col gap-[4px]">
+                  <span className="font-bold uppercase text-[10px] md:text-sm text-white/[0.5] font-outfit">
+                    {review.name}
+                  </span>
+                  <span className="font-bold uppercase md:text-[12px] text-[8px] text-white/[0.5] font-outfit">
+                    {review.position}
+                  </span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </Marquee>
+      </div>
+    </div>
   );
 };
