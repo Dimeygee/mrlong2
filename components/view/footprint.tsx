@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Marquee from "./marquee";
+import {Marquee} from "./marquee";
 import TextWrapper from "./textwrapper";
 import { Button } from "../button";
 

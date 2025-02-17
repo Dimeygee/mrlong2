@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import Marquee from "../marquee";
+import {Marquee} from "../marquee";
 
 export const ProjectSection = () => {
   return (

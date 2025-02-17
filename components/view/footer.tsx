@@ -1,87 +1,111 @@
-
 import { Envelope, LogoRound, Dribble, Behance, Linkedin } from "@/icon";
-import {Container} from "./container"
+import { Container } from "./container";
+import { useGlobalStateContext } from "@/context/globalcontext";
 //import Image from "next/image"
 
 export const Footer = () => {
-    return (
-      <>
-        <div className="py-[74px]">
-          <Container>
-            <div className="flex flex-col gap-[27px]">
-              <div className="flex items-start md:justify-between md:flex-row  flex-col md:gap-0 gap-5">
-                <span className="hover-item inline-flex px-[26px] md:px-[55px] md:h-[138px] h-[67px] tracking-[-1.442px] text-xl md:text-[32px] rounded-[400px] border-[1px]  border-white font-syne font-bold  items-center gd1 uppercase  text-center">
-                  Contact
-                </span>
-                <div className="min-h-[203px] md:min-h-[142px] pl-[20px] md:pl-[41px] backdrop-blur-[22.5px] rounded-[25px] bg-white/[0.05] md:w-[670px] flex md:flex-row flex-col gap-[24px] md:justify-normal justify-center md:items-center  w-full">
-                  <div className="w-[72px] h-[72px] shrink-0 rounded-full bgs">
-                    <Envelope />
-                  </div>
-                  <div className="md:w-[72px] md:h-[72px] w-[49px] h-[49px] shrink-0 rounded-full sbgs">
-                    <SEnvelope />
-                  </div>
-                  <div className="flex flex-col md:gap-[10px] ">
-                    <span className="tracking-[-0.36px] leading-[25.2px] font-outfit text-lg text-white/[0.5]">
-                      Shoot me a mail
-                    </span>
-                    <h4 className="gd1 tracking-[-1.442px] font-bold font-syne text-xl md:text-[32px]">
-                      odebiyiridwan@gmail.com
-                    </h4>
-                  </div>
+  const { onCursor } = useGlobalStateContext();
+  return (
+    <>
+      <div className="py-[74px]">
+        <Container>
+          <div className="flex flex-col gap-[27px]">
+            <div className="flex items-start md:justify-between md:flex-row  flex-col md:gap-0 gap-5">
+              <span className="hover-item inline-flex px-[26px] md:px-[55px] md:h-[138px] h-[67px] tracking-[-1.442px] text-xl md:text-[32px] rounded-[400px] border-[1px]  border-white font-syne font-bold  items-center gd1 uppercase  text-center">
+                Contact
+              </span>
+              <div className="min-h-[203px] md:min-h-[142px] pl-[20px] md:pl-[41px] backdrop-blur-[22.5px] rounded-[25px] bg-white/[0.05] md:w-[670px] flex md:flex-row flex-col gap-[24px] md:justify-normal justify-center md:items-center  w-full">
+                <div className="w-[72px] h-[72px] shrink-0 rounded-full bgs">
+                  <Envelope />
                 </div>
-              </div>
-              <div className="video-section">
-                  <div className="font-syne font-bold w-full h-full tracking-[3px] md:text-center md:justify-center text-left flex items-center md:text-[137px] text-[60px]">
-                    Let{"'"}s talk design!
-                  </div>
-              </div>
-            </div>
-          </Container>
-        </div>
-        <div className="pt-[25px] pb-[94px]">
-          <Container>
-            <div className="flex flex-col gap-[32px]">
-              <div className="min-h-[166px] flex w-full items-center justify-between border-y-[1px] border-y-white/[0.3] md:flex-row flex-col md:py-0 py-[35px] md:gap-0 gap-[38px]">
-                <div className="flex  items-center gap-[8px] md:basis-[300px] justify-start">
-                  <LogoRound />
-                  <span className="text-lg font-syne text-white font-bold leading-[26px] tracking-[-0.356px]">
-                    mrlong
+                <div className="md:w-[72px] md:h-[72px] w-[49px] h-[49px] shrink-0 rounded-full sbgs">
+                  <SEnvelope />
+                </div>
+                <div className="flex flex-col md:gap-[10px] ">
+                  <span className="tracking-[-0.36px] leading-[25.2px] font-outfit text-lg text-white/[0.5]">
+                    Shoot me a mail
                   </span>
+                  <h4 className="gd1 tracking-[-1.442px] font-bold font-syne text-xl md:text-[32px]">
+                    odebiyiridwan@gmail.com
+                  </h4>
                 </div>
-                <div className="flex items-center gap-[40px]">
-                  <div className="w-[56px] h-[56px] rounded-full bgs">
-                    <Dribble />
-                  </div>
-                  <div className="w-[56px] h-[56px] rounded-full bgs">
-                    <Behance />
-                  </div>
-                  <div className="w-[56px] h-[56px] rounded-full bgs">
-                    <Linkedin />
-                  </div>
-                  <div className="w-[56px] h-[56px] rounded-full  sbgs">
-                    <Dribble />
-                  </div>
-                  <div className="w-[56px] h-[56px] rounded-full  sbgs">
-                    <Behance />
-                  </div>
-                  <div className="w-[56px] h-[56px] rounded-full  sbgs">
-                    <Linkedin />
-                  </div>
-                </div>
-                <span className="flex md:basis-[300px] justify-end text-base font-outfit tracking-[-0.356px]  leading-[26px] text-white/[0.3]">
-                  © mrlong 2024 Freelancer
-                </span>
-              </div>
-              <div className="w-full flex justify-center items-center text-base tracking-[-0.356px] font-outfit leading-[26px]">
-                Made with love ❤️ and coffee ☕️
               </div>
             </div>
-          </Container>
-        </div>
-      </>
-    );
-}
-
+            <div className="video-section">
+              <div className="font-syne font-bold w-full h-full tracking-[3px] md:text-center md:justify-center text-left flex items-center md:text-[137px] text-[60px]">
+                Let{"'"}s talk design!
+              </div>
+            </div>
+          </div>
+        </Container>
+      </div>
+      <div className="pt-[25px] pb-[94px]">
+        <Container>
+          <div className="flex flex-col gap-[32px]">
+            <div className="min-h-[166px] flex w-full items-center justify-between border-y-[1px] border-y-white/[0.3] md:flex-row flex-col md:py-0 py-[35px] md:gap-0 gap-[38px]">
+              <div className="flex  items-center gap-[8px] md:basis-[300px] justify-start">
+                <LogoRound />
+                <span className="text-lg font-syne text-white font-bold leading-[26px] tracking-[-0.356px]">
+                  mrlong
+                </span>
+              </div>
+              <div className="flex items-center gap-[40px]">
+                <div
+                  className="w-[56px] h-[56px] rounded-full bgs text-white hover-item hover:text-black transition-colors duration-75"
+                  onMouseEnter={() => onCursor("hovered")}
+                  onMouseLeave={() => onCursor("")}
+                >
+                  <Dribble />
+                </div>
+                <div
+                  className="w-[56px] h-[56px] rounded-full bgs text-white hover-item hover:text-black transition-colors duration-75"
+                  onMouseEnter={() => onCursor("hovered")}
+                  onMouseLeave={() => onCursor("")}
+                >
+                  <Behance />
+                </div>
+                <div
+                  className="w-[56px] h-[56px] rounded-full bgs text-white hover-item hover:text-black transition-colors duration-75"
+                  onMouseEnter={() => onCursor("hovered")}
+                  onMouseLeave={() => onCursor("")}
+                >
+                  <Linkedin />
+                </div>
+                <div
+                  className="w-[56px] h-[56px] rounded-full  sbgs"
+                  onMouseEnter={() => onCursor("hovered")}
+                  onMouseLeave={() => onCursor("")}
+                >
+                  <Dribble />
+                </div>
+                <div
+                  className="w-[56px] h-[56px] rounded-full  sbgs"
+                  onMouseEnter={() => onCursor("hovered")}
+                  onMouseLeave={() => onCursor("")}
+                >
+                  <Behance />
+                </div>
+                <div
+                  className="w-[56px] h-[56px] rounded-full  sbgs"
+                  onMouseEnter={() => onCursor("hovered")}
+                  onMouseLeave={() => onCursor("")}
+                >
+                  <Linkedin />
+                </div>
+              </div>
+              <span className="flex md:basis-[300px] justify-end text-base font-outfit tracking-[-0.356px]  leading-[26px] text-white/[0.3]">
+                © mrlong 2024 Freelancer
+              </span>
+            </div>
+            <div className="w-full flex justify-center items-center text-base tracking-[-0.356px] font-outfit leading-[26px]">
+              Made with love ❤️ and coffee ☕️
+            </div>
+          </div>
+        </Container>
+      </div>
+    </>
+  );
+};
 
 const SEnvelope = () => {
   return (
@@ -103,4 +127,4 @@ const SEnvelope = () => {
       />
     </svg>
   );
-}
+};

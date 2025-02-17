@@ -57,7 +57,7 @@ export const WorkFolder = ({ work, key }: { work: any; key?: number }) => {
               {work.name}
             </h4>
           </TextWrapper>
-          <span className="text-lg font-outfit text-white/[0.5] tracking-[-0.36px] leading-[25.2px] absolute md:top-[50%] md:translate-y-[-50%] md:translate-x-[-50%] md:left-[50%] md:relative top-[20px] right-[20px]">
+          <span className="text-lg font-outfit text-white/[0.5] tracking-[-0.36px] leading-[25.2px] md:text-center absolute md:top-[50%] md:translate-y-[-50%] md:translate-x-[-50%] md:left-[50%] top-[20px] right-[20px]">
             {work.type}
           </span>
           <div
