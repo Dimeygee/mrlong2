@@ -5,6 +5,7 @@ import TextWrapper from "@/components/view/textwrapper";
 import { AthlerseKeyFeatures } from "@/components/myproject/keyfeatures/athlerse";
 import { OtherProjects } from "@/components/myproject/otherproject";
 import { MobileKeyFeatures } from "@/components/myproject/mobilekeyfeatures";
+import { ArrowRightIcon, NetIcon, ArrowleftIcon } from "@/icon";
 
 export default function Athlerse() {
   return (
@@ -348,12 +349,39 @@ export default function Athlerse() {
           <div className="py-[43px] flex flex-col gap-2 items-center">
             <TextWrapper>
               <span className="gd1 font-medium tracking-[-0.36px]  text-[42px] font-syne">
-                Figma Design
+                Live website
               </span>
             </TextWrapper>
-            <span className="whitespace-pre-line text-xl font-light font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5]">
-              Click the icon below to view the figma design for ValorExchange
+            <span className="whitespace-pre-line text-xl font-light font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5] md:text-left text-center">
+              Click the icon below to view the live website design for Athlerse
             </span>
+            <div className="flex items-center gap-2 md:gap-[28px] mt-4">
+              <div className="flex items-center gap-1 md:gap-[8px]">
+                <ArrowRightIcon />
+                <ArrowRightIcon />
+                <ArrowRightIcon />
+                <ArrowRightIcon />
+                <ArrowRightIcon />
+              </div>
+              <a
+                href="https://www.athlerse.com/"
+                target="__blank"
+                className="bgs w-[56px] h-[56px] text-white hover-item hover:text-black transition-colors duration-75 flex justify-center text-2xl font-bold items-center relative swiper-button-right group"
+                //onMouseEnter={() => onCursor("hovered")}
+                //onMouseLeave={() => onCursor("")}
+              >
+                <span className="group-hover:text-black">
+                  <NetIcon />
+                </span>
+              </a>
+              <div className="flex items-center gap-1 md:gap-[8px]">
+                <ArrowleftIcon />
+                <ArrowleftIcon />
+                <ArrowleftIcon />
+                <ArrowleftIcon />
+                <ArrowleftIcon />
+              </div>
+            </div>
           </div>
         </Container>
         <OtherProjects />

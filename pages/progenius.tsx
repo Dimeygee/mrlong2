@@ -5,6 +5,7 @@ import TextWrapper from "@/components/view/textwrapper";
 import { ProgeniusKeyFeatures } from "@/components/myproject/keyfeatures/progenius";
 import { OtherProjects } from "@/components/myproject/otherproject";
 import { MobileKeyFeatures } from "@/components/myproject/mobilekeyfeatures";
+import { ArrowRightIcon, Figma, ArrowleftIcon } from "@/icon";
 
 export default function Progenius() {
   return (
@@ -330,8 +331,35 @@ export default function Progenius() {
               </span>
             </TextWrapper>
             <span className="whitespace-pre-line text-xl font-light font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5]">
-              Click the icon below to view the figma design for ValorExchange
+              Click the icon below to view the figma design for Progenius
             </span>
+            <div className="flex items-center gap-2 md:gap-[28px] mt-4">
+              <div className="flex items-center gap-1 md:gap-[8px]">
+                <ArrowRightIcon />
+                <ArrowRightIcon />
+                <ArrowRightIcon />
+                <ArrowRightIcon />
+                <ArrowRightIcon />
+              </div>
+              <a
+                href="https://www.figma.com/design/2gavLGb1lPAxI9G7nEVwG5/Odebiyi-Ridwan-Figma-Portfolio?node-id=1008-58128"
+                target="__blank"
+                className="bgs w-[56px] h-[56px] text-white hover-item hover:text-black transition-colors duration-75 flex justify-center text-2xl font-bold items-center relative swiper-button-right group"
+                //onMouseEnter={() => onCursor("hovered")}
+                //onMouseLeave={() => onCursor("")}
+              >
+                <span className="group-hover:text-black">
+                  <Figma />
+                </span>
+              </a>
+              <div className="flex items-center gap-1 md:gap-[8px]">
+                <ArrowleftIcon />
+                <ArrowleftIcon />
+                <ArrowleftIcon />
+                <ArrowleftIcon />
+                <ArrowleftIcon />
+              </div>
+            </div>
           </div>
         </Container>
         <OtherProjects />

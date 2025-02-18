@@ -477,3 +477,24 @@ export const Close = () => {
     </svg>
   );
 };
+
+
+export const Figma = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+  >
+    <path
+      opacity="0.4"
+      d="M12 12C12 10.34 13.34 9 15 9C16.66 9 18 10.34 18 12C18 13.66 16.66 15 15 15C13.34 15 12 13.66 12 12ZM9 21C10.66 21 12 19.66 12 18V15H9C7.34 15 6 16.34 6 18C6 19.66 7.34 21 9 21ZM6 6C6 7.66 7.34 9 9 9H12V3H9C7.34 3 6 4.34 6 6Z"
+      fill="currentColor"
+    />
+    <path
+      d="M15 3C16.66 3 18 4.34 18 6C18 7.66 16.66 9 15 9H12V3H15ZM6 12C6 13.66 7.34 15 9 15H12V9H9C7.34 9 6 10.34 6 12Z"
+      fill="currentColor"
+    />
+  </svg>
+);

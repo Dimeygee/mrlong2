@@ -270,7 +270,7 @@ export default function Ralipo() {
               </span>
             </TextWrapper>
             <span className="whitespace-pre-line text-xl font-light font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5] md:text-left text-center">
-              Click the icon below to view the figma design for ValorExchange
+             Click the icon below to view the live website design for Ralipo
             </span>
             <div className="flex items-center gap-2 md:gap-[28px] mt-4">
               <div className="flex items-center gap-1 md:gap-[8px]">
@@ -280,7 +280,9 @@ export default function Ralipo() {
                 <ArrowRightIcon />
                 <ArrowRightIcon />
               </div>
-              <div
+              <a
+                href="https://www.ralipo.com/"
+                target="__blank"
                 className="bgs w-[56px] h-[56px] text-white hover-item hover:text-black transition-colors duration-75 flex justify-center text-2xl font-bold items-center relative swiper-button-right group"
                 //onMouseEnter={() => onCursor("hovered")}
                 //onMouseLeave={() => onCursor("")}
@@ -288,7 +290,7 @@ export default function Ralipo() {
                 <span className="group-hover:text-black">
                   <NetIcon />
                 </span>
-              </div>
+              </a>
               <div className="flex items-center gap-1 md:gap-[8px]">
                 <ArrowleftIcon />
                 <ArrowleftIcon />

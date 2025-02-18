@@ -31,10 +31,7 @@ export const MobileKeyFeatures = ({ slides }: MobileKeyFeaturesProps) => {
           nextEl: ".swiper-button-right",
           prevEl: ".swiper-button-left",
         }}
-        pagination={{
-          clickable: true,
-          el: ".swiper-pagination",
-        }}
+        pagination={true}
         modules={[Navigation, Pagination]}
         className="flex font-outfit container self-end"
       >
@@ -56,10 +53,18 @@ export const MobileKeyFeatures = ({ slides }: MobileKeyFeaturesProps) => {
               <p className="mt-[7px] mb-[21px] text-sm font-outfit text-white/[0.5] tracking-[-0.36px]">
                 {slide.description}
               </p>
-              <div className=" w-full relative self-center" style={{
-                height:IsAthlerse ? "300px" : "261px",
-                width:IsAthlerse && index !== 2 ? "50%" : IsAthlerse && index === 2 ? "40%" : "100%"
-              }}>
+              <div
+                className=" w-full relative self-center"
+                style={{
+                  height: IsAthlerse ? "300px" : "261px",
+                  width:
+                    IsAthlerse && index !== 2
+                      ? "50%"
+                      : IsAthlerse && index === 2
+                      ? "40%"
+                      : "100%",
+                }}
+              >
                 <Image
                   src={slide.imageSrc}
                   alt={slide.title}
