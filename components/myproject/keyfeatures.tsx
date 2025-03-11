@@ -4,6 +4,7 @@ import Image from "next/image";
 import TextWrapper from "../view/textwrapper";
 import { useState, useEffect, useRef, useCallback } from "react";
 
+
 export const KeyFeatures = () => {
   const refs = useRef<(HTMLDivElement | null)[]>([null, null, null]);
   const textRefs = useRef<(HTMLDivElement | null)[]>([null, null, null]); // Refs for text containers

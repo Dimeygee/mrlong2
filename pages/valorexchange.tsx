@@ -304,7 +304,7 @@ export default function ValorExchange() {
         </div>
         <Container>
           <KeyFeatures />
-          <MobileKeyFeatures slides={slidesData} />
+         <MobileKeyFeatures slides={slidesData} />
           <div className="mt-[60px] py-[54px] flex gap-[10px] flex-col">
             <div className="flex flex-col">
               <TextWrapper>

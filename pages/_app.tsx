@@ -2,7 +2,7 @@
 import { AppProps } from "next/app";
 import { AnimatePresence, motion } from "framer-motion";
 import { Syne, Outfit, DM_Sans } from "next/font/google";
-import { SmoothScrollbar } from "../components/view/smoothscrollable";
+//import { SmoothScrollbar } from "../components/view/smoothscrollable";
 import { GlobalProvider } from "../context/globalcontext";
 import { Nav } from "../components/view/nav";
 import { Footer } from "../components/view/footer";
@@ -56,7 +56,6 @@ function MyApp({ Component, pageProps, router }: AppProps) {
 
   return (
     <div className={`${outfit.variable} ${dsans.variable} ${syne.variable}`}>
-      <SmoothScrollbar>
         <LoadingProvider>
           <GlobalProvider>
             <CustomCursor />
@@ -114,7 +113,6 @@ function MyApp({ Component, pageProps, router }: AppProps) {
             <Footer />
           </GlobalProvider>
         </LoadingProvider>
-      </SmoothScrollbar>
     </div>
   );
 }
