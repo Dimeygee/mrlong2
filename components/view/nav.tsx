@@ -101,13 +101,15 @@ export const Nav = () => {
                 >
                   <Envelope />
                 </div>
-                <div
+                <Link
+                  href="https://drive.google.com/file/d/1jwSvU0iMWnOuF7QUoZ2Mk93nEvIqajc0/view"
+                  target="_blank"
                   className="rounded-[28px] min-h-[56px] border-[2px] border-[rgba(255,255,255,0.1)] items-center justify-center text-base w-[161px] tracking-[-0.36px] font-outfit hover-item hover:text-black transition-colors duration-75 md:flex hidden"
                   onMouseEnter={() => onCursor("hovered")}
                   onMouseLeave={() => onCursor("")}
                 >
                   <span>View resume</span>
-                </div>
+                </Link>
                 <div
                   className=" md:hidden flex w-[56px] h-[56px] rounded-full border-[2px] border-[rgba(255,255,255,0.1)] text-white items-center justify-center hover-item hover:text-black transition-colors duration-75"
                   onMouseEnter={() => onCursor("hovered")}

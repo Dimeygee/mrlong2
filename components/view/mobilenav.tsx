@@ -27,7 +27,7 @@ export const MobileNav = ({
 
   const MobileNavMenu = [
     { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
+    { label: "About", href: "#about" },
     {
       label: "Dribbble",
       href: "https://dribbble.com/mrlong007",
@@ -125,7 +125,7 @@ export const MobileNav = ({
             {/* Resume Button */}
             <div className="mt-6">
               <a
-                href="/assets/Odebiyi Ridwan Resume.pdf"
+                href="https://drive.google.com/file/d/1jwSvU0iMWnOuF7QUoZ2Mk93nEvIqajc0/view"
                 target="_blank"
                 download="Odebiyi Ridwan Resume"
               >

@@ -5,7 +5,7 @@ import {Marquee} from "../marquee";
 export const ProjectSection = () => {
   return (
     <>
-      <div className="pt-24 pb-28 overflow-hidden flex gap-5">
+      <div id="about" className="pt-24 pb-28 overflow-hidden flex gap-5">
         <Marquee duration={30}>
           <div className="flex gap-5 items-center">
             {Projects.map((project: string, index: number) => {

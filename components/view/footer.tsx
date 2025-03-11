@@ -1,6 +1,7 @@
 import { Envelope, LogoRound, Dribble, Behance, Linkedin } from "@/icon";
 import { Container } from "./container";
 import { useGlobalStateContext } from "@/context/globalcontext";
+import Link from "next/link";
 //import Image from "next/image"
 
 export const Footer = () => {
@@ -50,48 +51,60 @@ export const Footer = () => {
                 </span>
               </div>
               <div className="flex items-center gap-[40px]">
-                <div
+                <Link
+                  target="__blank"
+                  href="https://dribbble.com/mrlong007"
                   className="w-[56px] h-[56px] rounded-full bgs text-white hover-item hover:text-black transition-colors duration-75"
                   onMouseEnter={() => onCursor("hovered")}
                   onMouseLeave={() => onCursor("")}
                 >
                   <Dribble />
-                </div>
-                <div
+                </Link>
+                <Link
+                  target="__blank"
+                  href="https://www.behance.net/mrlong007"
                   className="w-[56px] h-[56px] rounded-full bgs text-white hover-item hover:text-black transition-colors duration-75"
                   onMouseEnter={() => onCursor("hovered")}
                   onMouseLeave={() => onCursor("")}
                 >
                   <Behance />
-                </div>
-                <div
+                </Link>
+                <Link
+                  target="__blank"
+                  href="https://linkedin.com/mrlong007"
                   className="w-[56px] h-[56px] rounded-full bgs text-white hover-item hover:text-black transition-colors duration-75"
                   onMouseEnter={() => onCursor("hovered")}
                   onMouseLeave={() => onCursor("")}
                 >
                   <Linkedin />
-                </div>
-                <div
+                </Link>
+                <Link
+                  target="__blank"
+                  href="https://dribbble.com/mrlong007"
                   className="w-[56px] h-[56px] rounded-full  sbgs"
                   onMouseEnter={() => onCursor("hovered")}
                   onMouseLeave={() => onCursor("")}
                 >
                   <Dribble />
-                </div>
-                <div
+                </Link>
+                <Link
+                  target="__blank"
+                  href="https://www.behance.net/mrlong007"
                   className="w-[56px] h-[56px] rounded-full  sbgs"
                   onMouseEnter={() => onCursor("hovered")}
                   onMouseLeave={() => onCursor("")}
                 >
                   <Behance />
-                </div>
-                <div
+                </Link>
+                <Link
+                  target="__blank"
+                  href="https://linkedin.com/mrlong007"
                   className="w-[56px] h-[56px] rounded-full  sbgs"
                   onMouseEnter={() => onCursor("hovered")}
                   onMouseLeave={() => onCursor("")}
                 >
                   <Linkedin />
-                </div>
+                </Link>
               </div>
               <span className="flex md:basis-[300px] justify-end text-base font-outfit tracking-[-0.356px]  leading-[26px] text-white/[0.3]">
                 © mrlong 2024 Freelancer
@@ -106,6 +119,25 @@ export const Footer = () => {
     </>
   );
 };
+
+
+/*
+  {
+      label: "Dribbble",
+      href: "https://dribbble.com/mrlong007",
+      external: true,
+    },
+    {
+      label: "Linkedin",
+      href: "https://linkedin.com/mrlong007",
+      external: true,
+    },
+    {
+      label: "Behance",
+      href: "https://www.behance.net/mrlong007",
+      external: true,
+    },
+*/
 
 const SEnvelope = () => {
   return (
