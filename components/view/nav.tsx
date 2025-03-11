@@ -94,13 +94,14 @@ export const Nav = () => {
                 </Link>
               </div>
               <div className="flex gap-[32px]">
-                <div
+                <a
+                  href="mailto:Odebiyiridwan@gmail.com"
                   className="bgs w-[56px] h-[56px] text-white hover-item hover:text-black transition-colors duration-75 relative md:flex hidden"
                   onMouseEnter={() => onCursor("hovered")}
                   onMouseLeave={() => onCursor("")}
                 >
                   <Envelope />
-                </div>
+                </a>
                 <Link
                   href="https://drive.google.com/file/d/1jwSvU0iMWnOuF7QUoZ2Mk93nEvIqajc0/view"
                   target="_blank"
