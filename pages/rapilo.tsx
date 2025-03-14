@@ -5,11 +5,44 @@ import TextWrapper from "@/components/view/textwrapper";
 //import { KeyFeatures } from "@/components/myproject/keyfeatures";
 import { OtherProjects } from "@/components/myproject/otherproject";
 import { ArrowRightIcon, ArrowleftIcon, NetIcon } from "../icon";
-
+import Head from "next/head";
 
 export default function Ralipo() {
   return (
     <>
+      <Head>
+        <title>mrlong - Ralipo</title>
+        <meta
+          name="description"
+          content="A platform focused on user engagement and feedback collection, needed a modern."
+        />
+        <meta
+          name="keywords"
+          content="Digital Product Designer, UI/UX, Web Design, Interactive Design, Product Development"
+        />
+        <meta name="author" content="mrlong" />
+        <meta property="og:title" content="mrlong - Rapilo" />
+        <meta
+          property="og:description"
+          content="A platform focused on user engagement and feedback collection, needed a modern."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://mrlong.vercel.com/ralipo" />
+        {/*<meta
+          property="og:image"
+          content="https://yourwebsite.com/og-image.jpg"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="mrlong - Home" />
+        <meta
+          name="twitter:description"
+          content="Digital Product Designer crafting 'Magic' through innovative and interactive product design."
+        />
+        <meta
+          name="twitter:image"
+          content="https://yourwebsite.com/twitter-image.jpg"
+        />*/}
+      </Head>
       <div className="md:pt-[184px] pt-[140px]">
         <Container>
           <div className="flex flex-col">
@@ -270,7 +303,7 @@ export default function Ralipo() {
               </span>
             </TextWrapper>
             <span className="whitespace-pre-line text-xl font-light font-outfit tracking-[-0.36px] leading-[25.2px] text-white/[0.5] md:text-left text-center">
-             Click the icon below to view the live website design for Ralipo
+              Click the icon below to view the live website design for Ralipo
             </span>
             <div className="flex items-center gap-2 md:gap-[28px] mt-4">
               <div className="flex items-center gap-1 md:gap-[8px]">
