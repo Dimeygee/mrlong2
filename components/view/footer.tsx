@@ -71,7 +71,7 @@ export const Footer = () => {
                 </Link>
                 <Link
                   target="__blank"
-                  href="https://linkedin.com/mrlong007"
+                  href="https://www.linkedin.com/in/odebiyiridwan/"
                   className="w-[56px] h-[56px] rounded-full bgs text-white hover-item hover:text-black transition-colors duration-75"
                   onMouseEnter={() => onCursor("hovered")}
                   onMouseLeave={() => onCursor("")}
@@ -98,7 +98,7 @@ export const Footer = () => {
                 </Link>
                 <Link
                   target="__blank"
-                  href="https://linkedin.com/mrlong007"
+                  href="https://www.linkedin.com/in/odebiyiridwan/"
                   className="w-[56px] h-[56px] rounded-full  sbgs"
                   onMouseEnter={() => onCursor("hovered")}
                   onMouseLeave={() => onCursor("")}
@@ -129,7 +129,7 @@ export const Footer = () => {
     },
     {
       label: "Linkedin",
-      href: "https://linkedin.com/mrlong007",
+      href: "https://www.linkedin.com/in/odebiyiridwan/",
       external: true,
     },
     {
