@@ -334,7 +334,7 @@ export default function RocketMarketing() {
               <a
                 href="https://rocketmarketing.io/"
                 target="__blank"
-                className="bgs w-[56px] h-[56px] text-white hover-item hover:text-black transition-colors duration-75 flex justify-center text-2xl font-bold items-center relative swiper-button-right group"
+                className="bgs w-[56px] h-[56px] text-white hover-item hover:text-black transition-colors duration-75 flex justify-center text-2xl font-bold items-center relative group"
                 //onMouseEnter={() => onCursor("hovered")}
                 //onMouseLeave={() => onCursor("")}
               >

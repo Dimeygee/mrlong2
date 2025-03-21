@@ -384,7 +384,7 @@ export default function ValorExchange() {
               <a
                 href="https://www.figma.com/file/2gavLGb1lPAxI9G7nEVwG5/Odebiyi-Ridwan-Figma-Portfolio?node-id=0%3A1"
                 target="__blank"
-                className="bgs w-[56px] h-[56px] text-white hover-item hover:text-black transition-colors duration-75 flex justify-center text-2xl font-bold items-center relative swiper-button-right group"
+                className="bgs w-[56px] h-[56px] text-white hover-item hover:text-black transition-colors duration-75 flex justify-center text-2xl font-bold items-center relative group"
                 //onMouseEnter={() => onCursor("hovered")}
                 //onMouseLeave={() => onCursor("")}
               >
