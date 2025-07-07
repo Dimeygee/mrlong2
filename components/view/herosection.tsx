@@ -66,12 +66,12 @@ export const HeroSection = () => {
       </div>
       <h1 className="flex flex-col text-[46px] tracking-[-1.442px] font-bold font-syne items-center leading-[1] text-center">
         <HeroTextWrapper>
-          <span className="gd1">Digital Product Designer</span>
+          <span className="gd1">Crafting Digital Products Users</span>
         </HeroTextWrapper>
         <HeroTextWrapper transitionDelay={1}>
           <span>
-            <span className="gd1 text-center">Crafting</span> &quot;
-            <span className="abg text-center">Magic</span>&quot;
+            <span className="gd1 text-center">Actually</span> &quot;
+            <span className="abg text-center">Love</span>&quot;
           </span>
         </HeroTextWrapper>
       </h1>
