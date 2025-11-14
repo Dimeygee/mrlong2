@@ -7,13 +7,6 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   color: var(--foreground);
   background: #12141d;
@@ -118,10 +111,10 @@ body {
   transform: rotateY(180deg);
 }
 
-.rfm-initial-child-container,.rfm-marquee{
-  gap:24px;
-  align-items:flex-start;
-
+.rfm-initial-child-container,
+.rfm-marquee {
+  gap: 24px;
+  align-items: flex-start;
 }
 
 .video-section {
@@ -262,16 +255,14 @@ body {
   z-index: 50;
 }
 
-
-.swiper-wrapper{
-  margin-bottom:60px;
+.swiper-wrapper {
+  margin-bottom: 60px;
 }
 
-.swiper-pagination-bullet-active{
-  background:white !important;
+.swiper-pagination-bullet-active {
+  background: white !important;
 }
 
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
   background: rgba(255, 255, 255, 1) !important;
 }
-
