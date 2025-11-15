@@ -59,11 +59,13 @@ export default function ProjectLayout({
 
           {/* MAIN IMAGE */}
           <div className="mt-3 rounded-b-[20px] md:rounded-b-[25px] h-[220px] sm:h-[280px] md:h-[352px] overflow-hidden relative">
-            <Image
-              src={mainImage}
-              alt={`${projectTitle} screenshot`}
-              fill
-              className="object-cover"
+            <video
+              src={`/assets/vids/${mainImage}.mp4`}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute top-0 left-0 w-full h-full object-cover"
             />
           </div>
 

@@ -29,7 +29,7 @@ export default function Athlerse() {
       <ProjectLayout
         projectTitle="Redpay  payment  gateway"
         projectSubtitle="product design"
-        mainImage="/assets/redpay/hero.png"
+        mainImage="redpay"
         overviewText={`RedPay is a subsidiary of Heirs Holdings under the UBA Group. It powers secure digital payments for online transactions across Africa. My role was to design a clean and intuitive payment interface that allows users to complete transactions quickly across multiple payment methods including card, bank transfer, QR code and USSD.
           
         Timeline: 3 weeks

@@ -3,7 +3,6 @@
 import { Container } from "../container";
 import TextWrapper from "../textwrapper";
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRightReview } from "@/icon";
 
 export const SelectedWork: React.FC = () => {
@@ -45,18 +44,19 @@ export const SelectedWork: React.FC = () => {
                 className="flex flex-col gap-4"
                 key={index}
               >
-                {/* IMAGE */}
+                {/* VIDEO */}
                 <div
                   className="mt-[11px] rounded-t-[25px] 
                   h-[240px] xs:h-[260px] sm:h-[300px] md:h-[352px] 
-                  overflow-hidden relative"
+                  overflow-hidden relative bg-black"
                 >
-                  <Image
-                    src={work.platform}
-                    alt={`hero`}
-                    fill
-                    className="object-cover"
-                    priority={false}
+                  <video
+                    src={`/assets/vids/${work.video}.mp4`}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="absolute top-0 left-0 w-full h-full object-cover"
                   />
                 </div>
 
@@ -92,56 +92,44 @@ export const SelectedWork: React.FC = () => {
 const Works = [
   {
     id: "#2022",
-    name: "Redpay  payment  gateway",
+    name: "Redpay payment gateway",
     type: "Product Design",
-    platform: "/assets/redpay/hero.png",
-    width: "203px",
-    height: "52px",
+    video: "redpay",
     to: "/redpay",
   },
   {
     id: "#2024",
-    name: "athlerse watch",
+    name: "Athlerse Watch",
     type: "Product Design",
-    platform: "/assets/athlerse-watch.png",
-    width: "203px",
-    height: "52px",
+    video: "athlersewatch",
     to: "/athlerse",
   },
   {
     id: "#2024",
-    name: "zuri",
+    name: "Zuri",
     type: "Landing Page",
-    platform: "/assets/zuri/hero.png",
-    width: "158px",
-    height: "39px",
+    video: "zuri",
     to: "/zuri",
   },
   {
     id: "#2024",
     name: "Glopayz",
     type: "Product Design",
-    platform: "/assets/glopayz/hero.png",
-    width: "208px",
-    height: "60px",
+    video: "glopayz",
     to: "/glopayz",
   },
   {
     id: "#2023",
     name: "Quonos",
-    type: "Landing page",
-    platform: "/assets/quonox/hero.png",
-    width: "203px",
-    height: "52px",
+    type: "Landing Page",
+    video: "quonos",
     to: "/quonos",
   },
   {
     id: "#2024",
-    name: "Ucee  MFB  SMart  Onboarding",
+    name: "Ucee MFB Smart Onboarding",
     type: "Product Design",
-    platform: "/assets/ucee/hero.png",
-    width: "264px",
-    height: "47px",
+    video: "ucee",
     to: "/ucee",
   },
 ];

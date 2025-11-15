@@ -29,7 +29,7 @@ export default function glopayz() {
       <ProjectLayout
         projectTitle="glopayz"
         projectSubtitle="product design"
-        mainImage="/assets/glopayz/hero.png"
+        mainImage="glopayz"
         overviewText={`GloPayz is a cross border mobile wallet that makes it easy for users across Africa and the diaspora to send and receive money, hold multiple currencies and make local transfers without unnecessary banking friction. I designed the end to end mobile experience including onboarding, wallet management, transfers, currency conversion and virtual cards.
             
             Role: Product Designer

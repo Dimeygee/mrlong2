@@ -16,11 +16,11 @@ import Link from "next/link";
 
 const Projects = [
   //{ id: "#2022", name: "Athlerse", type: "Product Design" },
-  { id: "#2024", name: "Rapilo", type: "Landing page" },
+  { id: "", name: "Rapilo", type: "Landing page" },
   //{ id: "#2024", name: "Dartspay", type: "Landing page" },
-  { id: "#2024", name: "Progenius", type: "Product Design" },
-  { id: "#2024", name: "RocketMarketing", type: "Landing page" },
-  { id: "#2024", name: "ValorExchange", type: "Landing page" },
+  { id: "", name: "Progenius", type: "Product Design" },
+  { id: "", name: "RocketMarketing", type: "Landing page" },
+  { id: "", name: "ValorExchange", type: "Landing page" },
 ];
 
 const generateRandomGradient = () => {

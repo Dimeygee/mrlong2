@@ -30,7 +30,7 @@ export default function Athlerse() {
       <ProjectLayout
         projectTitle="Athlerse watch"
         projectSubtitle="product design"
-        mainImage="/assets/athlerse-watch.png"
+        mainImage="athlersewatch"
         overviewText={`Athlerse is a social fitness platform that lets users track workouts and compete through challenges. I designed the companion smartwatch interface that allows users to view daily activity, start workouts quickly and monitor real-time metrics directly from their wrist.
 
 Role: Lead Product Designer

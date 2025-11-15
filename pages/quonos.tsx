@@ -29,7 +29,7 @@ export default function Quonos() {
       <ProjectLayout
         projectTitle="quonos"
         projectSubtitle="Landing page"
-        mainImage="/assets/quonox/hero.png"
+        mainImage="quonox"
         overviewText={`Quonos is a creative studio that offers branding, product design, development and visual content services for startups and growing digital businesses. I designed a modern landing page that communicates credibility, showcases featured work and guides prospects toward contacting the studio.
 
         Role: Product Designer

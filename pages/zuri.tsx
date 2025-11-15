@@ -29,9 +29,9 @@ export default function Zuri() {
       <ProjectLayout
         projectTitle="zuri"
         projectSubtitle="Landing page"
-        mainImage="/assets/zuri/hero.png"
+        mainImage="zuri"
         overviewText={`Zuri Naturals is a UK based skincare brand focused on clean, effective products for dark skin tones. They needed a simple and conversion focused website where customers could browse products, understand ingredient benefits, read reviews and purchase easily. I designed a responsive landing page that highlights the brand story and improves the shopping experience.
-            
+
         Role: Product Designer
         Timeline: 2 weeks
         Platform: Web

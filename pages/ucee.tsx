@@ -29,7 +29,7 @@ export default function Ucee() {
       <ProjectLayout
         projectTitle="ucee"
         projectSubtitle="Landing page"
-        mainImage="/assets/ucee/hero.png"
+        mainImage="ucee"
         overviewText={`UCEE MFB is a digital microfinance bank operating across multiple states in Nigeria. I designed the Agent Smart Onboarding experience which allows registered agents to generate location based referral links and QR codes that prospective customers can use to open UCEE MFB accounts online. The solution was built to support field marketing and real time customer acquisition.
 
         Role: Product Designer
