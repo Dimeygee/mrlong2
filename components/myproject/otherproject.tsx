@@ -67,7 +67,7 @@ export const OtherProjects = () => {
         className={`flex flex-col gap-[32px] overflow-hidden transition-all duration-300 py-[82px] relative mb-[100px]`}
       >
         <Container>
-          <div className="flex items-center justify-between mx-auto px-5">
+          <div className="flex items-center justify-between mx-auto px-5 mb-[70px]">
             <TextWrapper>
               <span className="gd1 font-bold tracking-[-1.442px] text-[26px] md:text-[42px] font-syne">
                 View other projects
