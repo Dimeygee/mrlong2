@@ -79,7 +79,7 @@ export default function ProjectLayout({
                 <div className="w-8 h-8 sm:w-[37px] sm:h-[37px]">
                   <Globe />
                 </div>
-                <span className="uppercase font-syne text-white text-sm sm:text-lg">
+                <span className="uppercase mt-2 font-syne text-white text-sm sm:text-lg">
                   View live website here
                 </span>
               </div>

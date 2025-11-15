@@ -16,7 +16,7 @@ export const FootPrint = () => {
                 {FootPrints.map((print, index) => {
                   return (
                     <div
-                      className="md:w-[185px] md:h-[54px] w-[145px] h-[44px] relative shrink-0"
+                      className="md:w-[185px] md:h-[54px] w-[145px] h-[35px] relative shrink-0"
                       key={index}
                     >
                       <Image
@@ -24,7 +24,7 @@ export const FootPrint = () => {
                         alt=""
                         fill
                         sizes="100vw"
-                        style={{ objectFit: "cover" }}
+                        style={{ objectFit: "contain" }}
                       />
                     </div>
                   );
@@ -79,5 +79,5 @@ const FootPrints = [
   "/assets/f (5).png",
   "/assets/athlerse.png",
   "/assets/rapilo.png",
-  "/assets/f (3).png",
+  //"/assets/f (3).png",
 ];

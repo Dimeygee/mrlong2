@@ -73,10 +73,10 @@ export const SelectedWork: React.FC = () => {
                     {work.name}
                   </span>
                   <span
-                    className="text-[14px] sm:text-lg font-light font-syne 
-                    leading-none uppercase text-white flex items-center gap-1"
+                    className="text-[14px] flex sm:text-lg font-light font-syne 
+                    leading-none uppercase text-white items-center gap-1"
                   >
-                    {work.type}
+                    <span className="hidden md:flex">{work.type}</span>
                     <ArrowRightReview />
                   </span>
                 </div>

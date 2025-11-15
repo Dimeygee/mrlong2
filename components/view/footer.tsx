@@ -81,7 +81,7 @@ export const Footer = () => {
                 <Link
                   target="__blank"
                   href="https://dribbble.com/mrlong007"
-                  className="w-[56px] h-[56px] rounded-full  sbgs"
+                  className="w-[56px] text-white h-[56px] rounded-full  sbgs"
                   onMouseEnter={() => onCursor("hovered")}
                   onMouseLeave={() => onCursor("")}
                 >
@@ -90,7 +90,7 @@ export const Footer = () => {
                 <Link
                   target="__blank"
                   href="https://www.behance.net/mrlong007"
-                  className="w-[56px] h-[56px] rounded-full  sbgs"
+                  className="w-[56px] text-white h-[56px] rounded-full  sbgs"
                   onMouseEnter={() => onCursor("hovered")}
                   onMouseLeave={() => onCursor("")}
                 >
@@ -99,7 +99,7 @@ export const Footer = () => {
                 <Link
                   target="__blank"
                   href="https://www.linkedin.com/in/odebiyiridwan/"
-                  className="w-[56px] h-[56px] rounded-full  sbgs"
+                  className="w-[56px] text-white h-[56px] rounded-full  sbgs"
                   onMouseEnter={() => onCursor("hovered")}
                   onMouseLeave={() => onCursor("")}
                 >
@@ -110,7 +110,7 @@ export const Footer = () => {
                 © mrlong 2024 Freelancer
               </span>
             </div>
-            <div className="w-full flex justify-center items-center text-base tracking-[-0.356px] font-outfit leading-[26px]">
+            <div className="w-full flex justify-center text-white items-center text-base tracking-[-0.356px] font-outfit leading-[26px]">
               Made with love ❤️ and coffee ☕️
             </div>
           </div>

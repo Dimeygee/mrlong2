@@ -16,11 +16,13 @@ import Link from "next/link";
 
 const Projects = [
   //{ id: "#2022", name: "Athlerse", type: "Product Design" },
-  { id: "", name: "Rapilo", type: "Landing page" },
+  { id: "", name: "Athlerse Watch", type: "Landing page" },
   //{ id: "#2024", name: "Dartspay", type: "Landing page" },
-  { id: "", name: "Progenius", type: "Product Design" },
-  { id: "", name: "RocketMarketing", type: "Landing page" },
-  { id: "", name: "ValorExchange", type: "Landing page" },
+  { id: "", name: "Zuri", type: "Product Design" },
+  { id: "", name: "UCEE MFB", type: "Landing page" },
+  { id: "", name: "Redpay", type: "Landing page" },
+  { id: "", name: "Glopayz", type: "Landing page" },
+  { id: "", name: "Quonos", type: "Landing page" },
 ];
 
 const generateRandomGradient = () => {
@@ -112,7 +114,7 @@ export const OtherProjects = () => {
                   key={project.name}
                   style={{
                     width: "366px",
-                    height: "208px",
+                    height: "128px",
                     display: "flex",
                     position: "relative",
                     perspective: "1000px",
@@ -139,7 +141,7 @@ export const OtherProjects = () => {
                         {project.name}
                       </span>
                       <span className="text-xl text-white/[0.5] leading-[25.2px] tracking-[-0.36px]">
-                        {project.type}
+                        {""}
                       </span>
                     </div>
                   </motion.div>
@@ -191,7 +193,7 @@ export const OtherProjects = () => {
                   key={project.name}
                   style={{
                     width: "476px",
-                    height: "208px",
+                    height: "148px",
                     display: "flex",
                     position: "relative",
                     perspective: "1000px",
@@ -218,7 +220,7 @@ export const OtherProjects = () => {
                         {project.name}
                       </span>
                       <span className="text-xl text-white/[0.5] leading-[25.2px] tracking-[-0.36px]">
-                        {project.type}
+                        {""}
                       </span>
                     </div>
                   </motion.div>
