@@ -114,7 +114,7 @@ export const MobileNav = ({
               <div key={index} className="overflow-hidden">
                 <motion.div
                   variants={mobileLinkVars}
-                  className="flex text-4xl text-center font-inter dstroke cursor-pointer"
+                  className="flex text-4xl text-center text-white font-inter dstroke cursor-pointer"
                   onClick={() => handleMenuClick(menu.href, menu.external)}
                 >
                   <span>{menu.label}</span>
@@ -129,7 +129,7 @@ export const MobileNav = ({
                 target="_blank"
                 download="Odebiyi Ridwan Resume"
               >
-                <button className="border-[#2F80ED] border-2 rounded-[28px] px-[36px] py-[15px] text-base font-outfit transition duration-[0.5s] hover:bg-[#2F80ED] hover:text-white">
+                <button className="border-[#2F80ED] border-2 rounded-[28px] px-[36px] py-[15px] text-base font-outfit text-white transition duration-[0.5s] hover:bg-[#2F80ED] hover:text-white">
                   View Resume
                 </button>
               </a>

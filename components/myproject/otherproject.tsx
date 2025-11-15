@@ -15,9 +15,9 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 const Projects = [
-  { id: "#2022", name: "Athlerse", type: "Product Design" },
+  //{ id: "#2022", name: "Athlerse", type: "Product Design" },
   { id: "#2024", name: "Rapilo", type: "Landing page" },
-  { id: "#2024", name: "Dartspay", type: "Landing page" },
+  //{ id: "#2024", name: "Dartspay", type: "Landing page" },
   { id: "#2024", name: "Progenius", type: "Product Design" },
   { id: "#2024", name: "RocketMarketing", type: "Landing page" },
   { id: "#2024", name: "ValorExchange", type: "Landing page" },
@@ -104,7 +104,6 @@ export const OtherProjects = () => {
                 nextEl: ".swiper-button-right",
                 prevEl: ".swiper-button-left",
               }}
-              
               modules={[Navigation, Pagination]}
               className="flex font-outfit container self-end"
             >
@@ -135,8 +134,8 @@ export const OtherProjects = () => {
                     <div className="text-xl text-white/[0.5] leading-[25.2px] tracking-[-0.36px]">
                       <span>{project.id}</span>
                     </div>
-                    <div className="flex flex-col gap-[8px]">
-                      <span className="md:text-[32px] text-[26px] tracking-[-1.442px] uppercase font-bold font-syne">
+                    <div className="flex flex-col gap-[8px] text-white/[0.5]">
+                      <span className="md:text-[32px] text-[26px] tracking-[-1.442px] uppercase font-bold font-syne text-white/[0.5]">
                         {project.name}
                       </span>
                       <span className="text-xl text-white/[0.5] leading-[25.2px] tracking-[-0.36px]">
@@ -177,7 +176,6 @@ export const OtherProjects = () => {
                 nextEl: ".swiper-button-right",
                 prevEl: ".swiper-button-left",
               }}
-              
               modules={[Navigation, Pagination]}
               className="flex font-outfit container self-end"
               style={{
@@ -216,7 +214,7 @@ export const OtherProjects = () => {
                       <span>{project.id}</span>
                     </div>
                     <div className="flex flex-col gap-[8px]">
-                      <span className="md:text-[32px] text-[26px] tracking-[-1.442px] uppercase font-bold font-syne">
+                      <span className="md:text-[32px] text-[26px] tracking-[-1.442px] uppercase font-bold font-syne text-white/[0.5]">
                         {project.name}
                       </span>
                       <span className="text-xl text-white/[0.5] leading-[25.2px] tracking-[-0.36px]">

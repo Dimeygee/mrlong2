@@ -105,7 +105,7 @@ export const Nav = () => {
                 <Link
                   href="https://drive.google.com/file/d/1jwSvU0iMWnOuF7QUoZ2Mk93nEvIqajc0/view"
                   target="_blank"
-                  className="rounded-[28px] min-h-[56px] border-[2px] border-[rgba(255,255,255,0.1)] items-center justify-center text-base w-[161px] tracking-[-0.36px] font-outfit hover-item hover:text-black transition-colors duration-75 md:flex hidden"
+                  className="rounded-[28px] min-h-[56px] border-[2px] border-[rgba(255,255,255,0.1)] items-center justify-center text-white text-base w-[161px] tracking-[-0.36px] font-outfit hover-item hover:text-black transition-colors duration-75 md:flex hidden"
                   onMouseEnter={() => onCursor("hovered")}
                   onMouseLeave={() => onCursor("")}
                 >
