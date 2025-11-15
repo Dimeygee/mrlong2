@@ -76,6 +76,7 @@ This leads to poor engagement and low retention.`}
           "/assets/athlerse/athlerse-watch4.png",
           "/assets/athlerse/athlerse-watch5.png",
         ]}
+        mid="/assets/athlerse/mid.png"
       >
         <OtherProjects />
       </ProjectLayout>

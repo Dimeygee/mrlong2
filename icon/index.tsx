@@ -498,3 +498,88 @@ export const Figma = () => (
     />
   </svg>
 );
+
+export const Globe = () => (
+  <svg
+    width="37"
+    height="37"
+    viewBox="0 0 37 37"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g filter="url(#filter0_i_5207_1466)">
+      <rect width="37" height="37" rx="18.5" fill="white" fill-opacity="0.17" />
+      <path
+        opacity="0.4"
+        d="M13.83 19.75C13.98 22.83 15.02 25.97 16.83 28.76C12.59 27.82 9.36003 24.19 9.03003 19.75H13.83Z"
+        fill="white"
+      />
+      <path
+        opacity="0.4"
+        d="M13.83 18.2502H9.03003C9.36003 13.8102 12.59 10.1802 16.83 9.24023C15.02 12.0302 13.98 15.1702 13.83 18.2502Z"
+        fill="white"
+      />
+      <path
+        d="M19.5 9.42999C21.4 12.13 22.51 15.23 22.67 18.25H15.33C15.49 15.23 16.6 12.13 18.5 9.42999L18.8 9H19.2L19.5 9.42999Z"
+        fill="white"
+      />
+      <path
+        d="M22.67 19.75C22.51 22.77 21.4 25.87 19.5 28.57L19.2 29H18.8L18.5 28.57C16.6 25.87 15.49 22.77 15.33 19.75H22.67Z"
+        fill="white"
+      />
+      <path
+        opacity="0.4"
+        d="M28.97 19.75C28.64 24.19 25.41 27.82 21.17 28.76C22.98 25.97 24.02 22.83 24.17 19.75H28.97Z"
+        fill="white"
+      />
+      <path
+        opacity="0.4"
+        d="M24.17 18.2502C24.02 15.1702 22.98 12.0302 21.17 9.24023C25.41 10.1802 28.64 13.8102 28.97 18.2502H24.17Z"
+        fill="white"
+      />
+    </g>
+    <defs>
+      <filter
+        id="filter0_i_5207_1466"
+        x="0"
+        y="0"
+        width="37"
+        height="48.2321"
+        filterUnits="userSpaceOnUse"
+        colorInterpolationFilters="sRGB"
+      >
+        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="BackgroundImageFix"
+          result="shape"
+        />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feMorphology
+          radius="1.98214"
+          operator="erode"
+          in="SourceAlpha"
+          result="effect1_innerShadow_5207_1466"
+        />
+        <feOffset dy="13.3718" />
+        <feGaussianBlur stdDeviation="4.625" />
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.12 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="shape"
+          result="effect1_innerShadow_5207_1466"
+        />
+      </filter>
+    </defs>
+  </svg>
+);

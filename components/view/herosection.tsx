@@ -52,9 +52,9 @@ export const HeroSection = () => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="w-[391px] h-[401px] relative cursor-pointer">
+      <div className="w-[326px] h-[401px] relative cursor-pointer">
         <Image
-          src="/assets/mrlong.png"
+          src="/assets/herohome.png"
           alt="mrlong"
           fill
           sizes="100vw"

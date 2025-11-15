@@ -1,5 +1,6 @@
+import { isArray } from "lodash";
 import Image from "next/image";
-
+import { ArrowRightIcon, Globe } from "@/icon";
 
 interface ProjectLayoutProps {
   projectTitle: string;
@@ -8,7 +9,7 @@ interface ProjectLayoutProps {
   overviewText: string;
   problemText: string;
   designGoals?: string[];
-  approach?: string[];
+  approach?: string[] | string;
   keyFeatures?: { title: string; sublinks?: string[] }[];
   visualLanguageText?: string;
   impactText?: string;
@@ -16,6 +17,10 @@ interface ProjectLayoutProps {
   conclusionText?: string;
   additionalImages?: string[]; // images for the middle 900px section
   children?: React.ReactNode;
+  mid?: string;
+  hassix?: string | null;
+  hasone?: string | null;
+  userexperience?: string;
 }
 
 export default function ProjectLayout({
@@ -27,19 +32,23 @@ export default function ProjectLayout({
   designGoals = [],
   approach = [],
   keyFeatures = [],
+  userexperience,
   visualLanguageText,
   impactText,
   futureEnhancements = [],
   conclusionText,
   additionalImages = [],
   children,
+  mid,
+  hassix,
+  hasone,
 }: ProjectLayoutProps) {
   return (
     <>
       <div className="pt-[164px]">
         {/* HEADER */}
         <div className="w-[584px] mx-auto">
-          <div className="py-[12px] px-[23px] flex justify-between items-center rounded-t-[32px] bg-[rgba(255,255,25,0.12)]">
+          <div className="py-[12px] px-[23px] flex justify-between items-center rounded-t-[32px] bg-white/[0.12]">
             <span className="text-lg font-bold font-syne leading-none uppercase text-white">
               {projectTitle}
             </span>
@@ -64,18 +73,17 @@ export default function ProjectLayout({
             <span className="font-outfit text-base text-white/60 leading-none">
               important links
             </span>
-              <div
-                className="rounded-[100px] flex justify-between bg-[rgba(255,255,25,0.12)]"
-              >
-                <div className="flex gap-4 items-center">
-                  <div className="w-[37px] h-[37px]" />
-                  <span className="uppercase font-syne text-white text-lg">
-                    View life website here
-                  </span>
+            <div className="rounded-[100px] px-[23px] py-[12px] flex justify-between  bg-white/[0.12] items-center">
+              <div className="flex gap-4 items-center">
+                <div className="w-[37px] h-[37px]">
+                  <Globe />
                 </div>
-                <div className="w-[6px] h-[12px]" />
+                <span className="uppercase font-syne text-white text-lg">
+                  View life website here
+                </span>
               </div>
-            
+              <ArrowRightIcon />
+            </div>
           </div>
 
           {/* OVERVIEW */}
@@ -115,20 +123,30 @@ export default function ProjectLayout({
             </div>
           )}
 
+          <div className="h-[400px] relative mt-[64px]">
+            <Image src={`${mid}`} alt="" fill />
+          </div>
+
           {/* APPROACH */}
           {approach.length > 0 && (
             <div className="flex flex-col gap-4 mt-[64px]">
               <span className="font-bold font-syne text-[28px] text-white leading-none">
                 Approach
               </span>
-              {approach.map((item, i) => (
-                <span
-                  key={i}
-                  className="whitespace-pre-line leading-[25.2px] tracking-[-0.36px] text-white/60 font-outfit text-lg"
-                >
-                  {item}
+              {isArray(approach) &&
+                approach.map((item, i) => (
+                  <span
+                    key={i}
+                    className="whitespace-pre-line leading-[25.2px] tracking-[-0.36px] text-white/60 font-outfit text-lg"
+                  >
+                    {item}
+                  </span>
+                ))}
+              {!isArray(approach) && (
+                <span className="whitespace-pre-line leading-[25.2px] tracking-[-0.36px] text-white/60 font-outfit text-lg">
+                  {approach}
                 </span>
-              ))}
+              )}
             </div>
           )}
 
@@ -157,6 +175,17 @@ export default function ProjectLayout({
             </div>
           )}
 
+          {userexperience && (
+            <div className="flex flex-col gap-4 mt-[64px]">
+              <span className="font-bold font-syne text-[28px] text-white leading-none">
+                User Experience
+              </span>
+              <p className="whitespace-pre-line leading-[25.2px] tracking-[-0.36px] text-white/60 font-outfit text-lg">
+                {userexperience}
+              </p>
+            </div>
+          )}
+
           {/* VISUAL LANGUAGE */}
           {visualLanguageText && (
             <div className="flex flex-col gap-4 mt-[64px]">
@@ -171,53 +200,77 @@ export default function ProjectLayout({
         </div>
 
         {/* MIDDLE IMAGES */}
-        {additionalImages.length > 0 && (
-          <div className="w-[900px] mx-auto">
-            <div className="mt-[64px] flex-col flex gap-4">
-              {additionalImages.map((img, i) => {
-                if (i === 1 || i === 2) {
-                  // side-by-side layouts
-                  return (
-                    <div key={i} className="h-[400px] flex gap-4">
-                      <div
-                        className={`w-[${
-                          i === 1 ? "65%" : "35%"
-                        }] h-full relative`}
-                      >
-                        <Image
-                          src={img}
-                          fill
-                          className="object-cover"
-                          alt={`middle image ${i}`}
-                        />
-                      </div>
-                      <div
-                        className={`w-[${
-                          i === 1 ? "35%" : "65%"
-                        }] h-full relative`}
-                      >
-                        <Image
-                          src={additionalImages[i + 1]}
-                          fill
-                          className="object-cover"
-                          alt={`middle image ${i + 1}`}
-                        />
-                      </div>
-                    </div>
-                  );
-                }
-                return i === 0 ? (
-                  <div key={i} className="h-[400px] relative">
-                    <Image
-                      src={img}
-                      fill
-                      className="object-cover"
-                      alt={`middle image ${i}`}
-                    />
-                  </div>
-                ) : null;
-              })}
+        {hasone && hassix && (
+          <div className="w-[900px] mx-auto flex flex-col gap-4 mt-[64px]">
+            <div className="relative h-[400px]">
+              <Image src={`${hasone}`} alt="hasone" fill />
             </div>
+            <div className="relative h-[2270px]">
+              <Image src={`${hassix}`} alt="hasone" fill />
+            </div>
+          </div>
+        )}
+        {additionalImages.length > 0 && !hasone && (
+          <div className="w-[900px] mx-auto mt-[64px] flex flex-col gap-4">
+            {/* First image */}
+            <div className="h-[400px] relative">
+              <Image
+                src={additionalImages[0]}
+                fill
+                className="object-cover"
+                alt=""
+              />
+            </div>
+
+            {/* Second + Third images side by side */}
+            {additionalImages.length > 2 && (
+              <div className="flex gap-4 h-[400px]">
+                <div className="w-[65%] h-full relative">
+                  <Image
+                    src={additionalImages[1]}
+                    fill
+                    className="object-cover"
+                    alt=""
+                  />
+                </div>
+                <div className="w-[35%] h-full relative">
+                  <Image
+                    src={additionalImages[2]}
+                    fill
+                    className="object-cover"
+                    alt=""
+                  />
+                </div>
+              </div>
+            )}
+
+            {/* Fourth + Fifth side by side (if available) */}
+            {additionalImages.length > 4 && (
+              <div className="flex gap-4 h-[400px]">
+                <div className="w-[35%] h-full relative">
+                  <Image
+                    src={additionalImages[3]}
+                    fill
+                    className="object-cover"
+                    alt=""
+                  />
+                </div>
+                <div className="w-[65%] h-full relative">
+                  <Image
+                    src={additionalImages[4]}
+                    fill
+                    className="object-cover"
+                    alt=""
+                  />
+                </div>
+              </div>
+            )}
+
+            {hassix && (
+              <div className="mt-4 relative h-[1456px]">
+                <Image src={hassix} alt="" fill />
+              </div>
+            )}
           </div>
         )}
 
