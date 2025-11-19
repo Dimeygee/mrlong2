@@ -16,13 +16,13 @@ import Link from "next/link";
 
 const Projects = [
   //{ id: "#2022", name: "Athlerse", type: "Product Design" },
-  { id: "", name: "Athlerse Watch", type: "Product Design" },
+  { id: "", name: "Athlerse Watch", type: "Product Design", to: "/athlerse" },
   //{ id: "#2024", name: "Dartspay", type: "Landing page" },
-  { id: "", name: "Zuri", type: "Landing page" },
-  { id: "", name: "UCEE MFB", type: "Product Design" },
-  { id: "", name: "Redpay", type: "Product Design" },
-  { id: "", name: "Glopayz", type: "Product Design" },
-  { id: "", name: "Quonos", type: "Product Design" },
+  { id: "", name: "Zuri", type: "Landing page", to: "/zuri" },
+  { id: "", name: "UCEE MFB", type: "Product Design", to: "/ucee" },
+  { id: "", name: "Redpay", type: "Product Design", to: "/redpay" },
+  { id: "", name: "Glopayz", type: "Product Design", to: "/glopayz" },
+  { id: "", name: "Quonos", type: "Product Design", to: "/quonos" },
 ];
 
 const generateRandomGradient = () => {
@@ -124,7 +124,7 @@ export const OtherProjects = () => {
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
                   <Link
-                    href={`/${project.name.toLowerCase()}`}
+                    href={`/${project.to}`}
                     className="absolute w-full h-full top-0 left-0 z-[999]"
                   ></Link>
                   <motion.div
@@ -203,7 +203,7 @@ export const OtherProjects = () => {
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
                   <Link
-                    href={`/${project.name.toLowerCase()}`}
+                    href={`/${project.to}`}
                     className="absolute w-full h-full top-0 left-0 z-[999]"
                   ></Link>
                   <motion.div

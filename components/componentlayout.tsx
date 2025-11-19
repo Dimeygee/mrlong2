@@ -71,15 +71,15 @@ export default function ProjectLayout({
 
           {/* IMPORTANT LINKS */}
           <div className="mt-6 flex flex-col gap-3">
-            <span className="font-outfit text-sm sm:text-base text-white/60">
-              important links
+            <span className="font-outfit text-sm sm:text-base uppercase text-white/60">
+              Important links
             </span>
             <div className="rounded-full px-5 py-3 flex justify-between bg-white/10 items-center">
               <div className="flex gap-3 items-center">
                 <div className="w-8 h-8 sm:w-[37px] sm:h-[37px]">
                   <Globe />
                 </div>
-                <span className="uppercase mt-2 font-syne text-white text-sm sm:text-lg">
+                <span className="uppercase font-syne text-white text-sm sm:text-lg">
                   View live website here
                 </span>
               </div>

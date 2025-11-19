@@ -108,7 +108,7 @@ const Works = [
     id: "#2024",
     name: "Zuri",
     type: "Landing Page",
-    video: "zuri",
+    video: "Zuri",
     to: "/zuri",
   },
   {
