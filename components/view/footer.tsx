@@ -15,11 +15,11 @@ export const Footer = () => {
               <span className="hover-item inline-flex px-[26px] md:px-[55px] md:h-[138px] h-[67px] tracking-[-1.442px] text-xl md:text-[32px] rounded-[400px] border-[1px]  border-white font-syne font-bold  items-center gd1 uppercase  text-center">
                 Contact
               </span>
-              <div className="min-h-[203px] md:min-h-[142px] pl-[20px] md:pl-[41px] backdrop-blur-[22.5px] rounded-[25px] bg-white/[0.05] md:w-[670px] flex md:flex-row flex-col gap-[24px] md:justify-normal justify-center md:items-center  w-full">
-                <div className="w-[72px] h-[72px] shrink-0 rounded-full bgs">
+              <div className="min-h-[203px] md:min-h-[142px] pl-[20px] md:pl-[41px] backdrop-blur-[22.5px] rounded-[100px] bg-white/[0.05] md:w-[670px] flex md:flex-row flex-col gap-[24px] md:justify-normal justify-center md:items-center  w-full ">
+                <div className="w-[72px] h-[72px] shrink-0 rounded-full bgs text-white">
                   <Envelope />
                 </div>
-                <div className="md:w-[72px] md:h-[72px] w-[49px] h-[49px] shrink-0 rounded-full sbgs">
+                <div className="md:w-[72px] md:h-[72px] w-[49px] h-[49px] shrink-0 rounded-full sbgs text-white">
                   <SEnvelope />
                 </div>
                 <div className="flex flex-col md:gap-[10px] ">

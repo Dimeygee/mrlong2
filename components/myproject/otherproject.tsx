@@ -16,13 +16,13 @@ import Link from "next/link";
 
 const Projects = [
   //{ id: "#2022", name: "Athlerse", type: "Product Design" },
-  { id: "", name: "Athlerse Watch", type: "Landing page" },
+  { id: "", name: "Athlerse Watch", type: "Product Design" },
   //{ id: "#2024", name: "Dartspay", type: "Landing page" },
-  { id: "", name: "Zuri", type: "Product Design" },
-  { id: "", name: "UCEE MFB", type: "Landing page" },
-  { id: "", name: "Redpay", type: "Landing page" },
-  { id: "", name: "Glopayz", type: "Landing page" },
-  { id: "", name: "Quonos", type: "Landing page" },
+  { id: "", name: "Zuri", type: "Landing page" },
+  { id: "", name: "UCEE MFB", type: "Product Design" },
+  { id: "", name: "Redpay", type: "Product Design" },
+  { id: "", name: "Glopayz", type: "Product Design" },
+  { id: "", name: "Quonos", type: "Product Design" },
 ];
 
 const generateRandomGradient = () => {
@@ -137,11 +137,11 @@ export const OtherProjects = () => {
                       <span>{project.id}</span>
                     </div>
                     <div className="flex flex-col gap-[8px] text-white/[0.5]">
-                      <span className="md:text-[32px] text-[26px] tracking-[-1.442px] uppercase font-bold font-syne text-white/[0.5]">
+                      <span className="md:text-[32px] text-[26px] tracking-[-1.442px] uppercase font-bold font-syne text-white">
                         {project.name}
                       </span>
                       <span className="text-xl text-white/[0.5] leading-[25.2px] tracking-[-0.36px]">
-                        {""}
+                        {project.type}
                       </span>
                     </div>
                   </motion.div>
@@ -215,12 +215,12 @@ export const OtherProjects = () => {
                     <div className="text-xl text-white/[0.5] leading-[25.2px] tracking-[-0.36px]">
                       <span>{project.id}</span>
                     </div>
-                    <div className="flex flex-col gap-[8px]">
-                      <span className="md:text-[32px] text-[26px] tracking-[-1.442px] uppercase font-bold font-syne text-white/[0.5]">
+                    <div className="flex flex-col gap-[3px]">
+                      <span className="md:text-[28px] text-[26px] tracking-[-1.442px] uppercase font-bold font-syne text-white">
                         {project.name}
                       </span>
-                      <span className="text-xl text-white/[0.5] leading-[25.2px] tracking-[-0.36px]">
-                        {""}
+                      <span className="text-lg text-white/[0.5] leading-[25.2px] tracking-[-0.36px] pb-6">
+                        {project.type}
                       </span>
                     </div>
                   </motion.div>

@@ -70,12 +70,14 @@ export const HeroSection = () => {
         </HeroTextWrapper>
         <HeroTextWrapper transitionDelay={1}>
           <span>
-            <span className="gd1 text-center">Actually</span> &quot;
-            <span className="abg text-center">Love</span>&quot;
+            <span className="gd1 text-center">Actually</span>
+            <span className="text-white"> &quot;</span>
+            <span className="abg text-center">Love</span>
+            <span className="text-white">&quot;</span>
           </span>
         </HeroTextWrapper>
       </h1>
-      <div className="flex-col mt-[18px] mb-[24px] text-lg tracking-[-0.36px] leading-[25.1px] font-outfit text-white/[0.5] items-center px-[20px] hidden md:flex">
+      <div className="flex-col mt-[18px] mb-[24px] text-lg tracking-[-0.36px] leading-[25.1px] font-outfit text-white/[0.5] font-normal items-center px-[20px] hidden md:flex">
         <span className="leading-[1] text-center">
           <HeroTextWrapper transitionDelay={1}>
             Do you have a billion-dollar idea and are looking for a product

@@ -159,14 +159,15 @@ export default function ProjectLayout({
                 Key Features
               </span>
               {keyFeatures.map((feature, i) => (
-                <div key={i} className="flex flex-col gap-1">
+                <div key={i} className="flex flex-col gap-1 relative pl-9">
+                  <div className="absolute w-1 h-1 bg-white rounded-full left-[13px] top-3"></div>
                   <span className="text-white font-syne text-lg">
                     {feature.title}
                   </span>
                   {feature.sublinks?.map((sub, j) => (
                     <span
                       key={j}
-                      className="text-white/60 font-outfit text-base sm:text-lg pl-4"
+                      className="text-white/60 font-outfit text-base sm:text-lg"
                     >
                       {sub}
                     </span>
