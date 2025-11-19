@@ -36,14 +36,17 @@ export default function Ucee() {
         Timeline: 3 weeks
         Platform: 
         WebTools: Figma`}
-        problemText={`Customer acquisition for microfinance banks is often slow and resource heavy. Agents struggle with:
-
-            Collecting customer information manually
-            Sharing registration forms securely
-            Tracking where customers come from
-            Scaling outreach across multiple states
-
-        Traditional onboarding creates friction and delays.`}
+        ProblemList={{
+          intro:
+            "Customer acquisition for microfinance banks is often slow and resource heavy. Agents struggle with:",
+          list: [
+            "Collecting customer information manually",
+            "Sharing registration forms securely",
+            "Tracking where customers come from",
+            "Scaling outreach across multiple states",
+          ],
+          outro: "Traditional onboarding creates friction and delays.",
+        }}
         designGoals={[
           " Make new account registration easier and faster",
           "Enable agents to generate unique referral links",
@@ -51,14 +54,18 @@ export default function Ucee() {
           "Reduce manual data handling",
           "Improve registration funnel completion",
         ]}
-        approach={`I studied the existing field onboarding process and identified friction points. The new design allows agents to:
-
-            Log in securely
-            Generate a unique referral link
-            Download a QR code for offline scanning
-            Track sign ups by location
-
-        The interface is simple to understand, even in busy field conditions.`}
+        approachlist={{
+          intro:
+            "I studied the existing field onboarding process and identified friction points. The new design allows agents to:",
+          list: [
+            "Log in securely",
+            "Generate a unique referral link",
+            "Download a QR code for offline scanning",
+            "Track sign ups by location",
+          ],
+          outro:
+            "The interface is simple to understand, even in busy field conditions.",
+        }}
         mid="/assets/ucee/mid.png"
         keyFeatures={[
           {
@@ -94,7 +101,17 @@ export default function Ucee() {
         ]}
         userexperience="The onboarding journey is lightweight and mobile friendly since most prospects register on their phones. Messaging was simplified to reduce confusion, and progress feedback keeps users confident during form completion."
         visualLanguageText="The interface uses clear typography, bold CTAs and simple icons. The layout focuses on speed and legibility since many agents operate outdoors or on the move."
-        impactText="This solution drove significant growth. UCEE MFB recorded over one hundred thousand new customer registrations across Nigeria through the Agent Smart Onboarding system. Referral tracking improved visibility into which regions were performing well and allowed targeted agent incentives."
+        impactList={{
+          intro: "During prototype testing, users reported:",
+          list: [
+            "Clearer understanding of fees",
+            "Faster money movement without second guessing",
+            "Confidence in tracking transfers end to end",
+            "The streamlined flows reduced hesitation for first time cross border users.",
+          ],
+          outro:
+            "The interface is simple to understand, even in busy field conditions.",
+        }}
         futureEnhancements={[
           "Reward tiers for high performing agents",
           "Real time regional leaderboards",

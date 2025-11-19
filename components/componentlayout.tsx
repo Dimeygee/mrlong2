@@ -1,13 +1,18 @@
-import { isArray } from "lodash";
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from "next/image";
 import { ArrowRightIcon, Globe } from "@/icon";
 
+interface ProblemListType {
+  intro: string;
+  list: string[];
+  outro: string;
+}
 interface ProjectLayoutProps {
   projectTitle: string;
   projectSubtitle: string;
   mainImage: string;
   overviewText: string;
-  problemText: string;
+  problemText?: string;
   designGoals?: string[];
   approach?: string[] | string;
   keyFeatures?: { title: string; sublinks?: string[] }[];
@@ -21,6 +26,9 @@ interface ProjectLayoutProps {
   hassix?: string | null;
   hasone?: string | null;
   userexperience?: string;
+  ProblemList?: ProblemListType;
+  approachlist?: ProblemListType;
+  impactList?: ProblemListType;
 }
 
 export default function ProjectLayout({
@@ -42,7 +50,11 @@ export default function ProjectLayout({
   mid,
   hassix,
   hasone,
+  ProblemList,
+  approachlist,
+  impactList,
 }: ProjectLayoutProps) {
+  console.log(approach, impactText);
   return (
     <>
       <div className="pt-[120px] sm:pt-[140px] md:pt-[164px]">
@@ -98,14 +110,33 @@ export default function ProjectLayout({
           </div>
 
           {/* PROBLEM */}
-          <div className="flex flex-col gap-4 mt-14">
-            <span className="font-bold font-syne text-2xl sm:text-[28px] text-white">
-              The Problem
-            </span>
-            <p className="whitespace-pre-line text-white/60 font-outfit text-base sm:text-lg leading-relaxed">
-              {problemText}
-            </p>
-          </div>
+
+          {ProblemList ? (
+            <div className="flex flex-col gap-4 mt-14">
+              <span className="font-bold font-syne text-2xl sm:text-[28px] text-white">
+                The Problem
+              </span>
+              <span className="whitespace-pre-line  text-white/60 font-outfit text-base sm:text-lg leading-relaxed">
+                {ProblemList.intro}
+                <ul className="text-white/60 whitespace-pre-line font-outfit font-normal text-base sm:text-lg leading-relaxed pl-7 list-disc">
+                  {ProblemList.list.map((problem, index) => {
+                    return <li key={index}>{problem}</li>;
+                  })}
+                </ul>
+
+                {ProblemList.outro}
+              </span>
+            </div>
+          ) : (
+            <div className="flex flex-col gap-4 mt-14">
+              <span className="font-bold font-syne text-2xl sm:text-[28px] text-white">
+                The Problem
+              </span>
+              <p className="whitespace-pre-line text-white/60 font-outfit text-base sm:text-lg leading-relaxed">
+                {problemText}
+              </p>
+            </div>
+          )}
 
           {/* DESIGN GOALS */}
           {designGoals.length > 0 && (
@@ -113,14 +144,13 @@ export default function ProjectLayout({
               <span className="font-bold font-syne text-2xl sm:text-[28px] text-white">
                 Design Goals
               </span>
-              {designGoals.map((goal, i) => (
-                <span
-                  key={i}
-                  className="whitespace-pre-line text-white/60 font-outfit text-base sm:text-lg leading-relaxed"
-                >
-                  {goal}
-                </span>
-              ))}
+              <span className="whitespace-pre-line  text-white/60 font-outfit text-base sm:text-lg leading-relaxed">
+                <ul className="text-white/60 whitespace-pre-line font-outfit font-normal text-base sm:text-lg leading-relaxed pl-7 list-disc">
+                  {designGoals.map((goal, i) => (
+                    <li key={i}>{goal}</li>
+                  ))}
+                </ul>
+              </span>
             </div>
           )}
 
@@ -130,25 +160,21 @@ export default function ProjectLayout({
           </div>
 
           {/* APPROACH */}
-          {approach && (
+          {approachlist && (
             <div className="flex flex-col gap-4 mt-14">
               <span className="font-bold font-syne text-2xl sm:text-[28px] text-white">
                 Approach
               </span>
-              {isArray(approach) ? (
-                approach.map((item, i) => (
-                  <span
-                    key={i}
-                    className="whitespace-pre-line text-white/60 font-outfit text-base sm:text-lg leading-relaxed"
-                  >
-                    {item}
-                  </span>
-                ))
-              ) : (
-                <span className="whitespace-pre-line text-white/60 font-outfit text-base sm:text-lg leading-relaxed">
-                  {approach}
-                </span>
-              )}
+              <span className="whitespace-pre-line leading-[-0.36px]  text-white/60 font-outfit text-base sm:text-lg ">
+                {approachlist.intro}
+                <ul className="text-white/60 whitespace-pre-line font-outfit font-normal text-base sm:text-lg  pl-7 list-disc">
+                  {approachlist.list.map((problem, index) => {
+                    return <li key={index}>{problem}</li>;
+                  })}
+                </ul>
+
+                {approachlist.outro}
+              </span>
             </div>
           )}
 
@@ -275,14 +301,21 @@ export default function ProjectLayout({
 
         {/* IMPACT, FUTURE ENHANCEMENTS, CONCLUSION */}
         <div className="w-full max-w-[584px] mx-auto px-4 flex flex-col">
-          {impactText && (
+          {impactList && (
             <div className="flex flex-col gap-4 mt-14">
               <span className="font-bold font-syne text-2xl sm:text-[28px] text-white">
                 Impact
               </span>
-              <p className="text-white/60 whitespace-pre-line font-outfit text-base sm:text-lg leading-relaxed">
-                {impactText}
-              </p>
+              <span className="whitespace-pre-line leading-[-0.36px]  text-white/60 font-outfit text-base sm:text-lg ">
+                {impactList.intro}
+                <ul className="text-white/60 whitespace-pre-line font-outfit font-normal text-base sm:text-lg  pl-7 list-disc">
+                  {impactList.list.map((problem, index) => {
+                    return <li key={index}>{problem}</li>;
+                  })}
+                </ul>
+
+                {impactList.outro}
+              </span>
             </div>
           )}
 

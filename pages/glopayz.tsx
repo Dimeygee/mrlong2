@@ -44,15 +44,19 @@ export default function glopayz() {
           "Support multiple wallets in different currencies",
           "Build confidence through transparency",
         ]}
-        approach={`I researched similar products like Grey, Geegpay, Pesa and Chipper Cash to identify patterns that reduce confusion. I then mapped flows for:
-
-            Wallet creation
-            Local transfers
-            International transfers
-            FX conversion
-            Virtual card activation
-
-        Wireframes focused on reducing decisions and keeping users calm.`}
+        approachlist={{
+          intro:
+            "I researched similar products like Grey, Geegpay, Pesa and Chipper Cash to identify patterns that reduce confusion. I then mapped flows for:",
+          list: [
+            "Wallet creation",
+            "Local transfers",
+            "International transfers",
+            "FX conversion",
+            "Virtual card activation",
+          ],
+          outro:
+            "The interface is simple to understand, even in busy field conditions.",
+        }}
         mid="/assets/glopayz/mid.png"
         keyFeatures={[
           {
@@ -93,13 +97,16 @@ export default function glopayz() {
           },
         ]}
         visualLanguageText="The UI uses a clean financial aesthetic with blue color and soft shadows. Typography is structured to improve speed of scanning. Color coding allows users to identify currency types and transaction states instantly."
-        impactText={`During prototype testing, users reported:
-
-            Clearer understanding of fees
-            Faster money movement without second guessing
-            Confidence in tracking transfers end to end
-
-        The streamlined flows reduced hesitation for first time cross border users.`}
+        impactList={{
+          intro: "During prototype testing, users reported:",
+          list: [
+            "Clearer understanding of fees",
+            "Faster money movement without second guessing",
+            "Confidence in tracking transfers end to end",
+          ],
+          outro:
+            "The streamlined flows reduced hesitation for first time cross border users.",
+        }}
         futureEnhancements={[
           "Rewards on FX conversions",
           "Social usernames for transfers",

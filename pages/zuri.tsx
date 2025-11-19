@@ -36,27 +36,38 @@ export default function Zuri() {
         Timeline: 2 weeks
         Platform: Web
         Tools: Figma`}
-        problemText={`Skincare buyers often feel overwhelmed when shopping online. It is difficult to trust ingredients, compare products and know which items are suitable for their skin. Without clarity and social proof, shoppers hesitate and abandon the process.
-
-        * Zuri needed:
-        * Clear product presentation
-        * Ingredient transparency
-        * Simple checkout paths
-        * Visible customer reviews`}
         designGoals={[
           "Increase product discovery",
           "Build trust through reviews and benefits",
           "Reduce friction during checkout",
           "Communicate brand identity with clarity",
         ]}
-        approach={`I reviewed competitive beauty landing pages to understand what drives conversion. Based on this, I structured the page to show:
-                * Hero product highlights
-                * Category previews
-                * Ingredient benefits
-                * Customer reviews
-                * Clear pricing
-                * Simple add to cart actions
-        Each section was designed to flow logically and reduce thinking time.`}
+        ProblemList={{
+          intro:
+            "Skincare buyers often feel overwhelmed when shopping online. It is difficult to trust ingredients, compare products and know which items are suitable for their skin. Without clarity and social proof, shoppers hesitate and abandon the process.",
+          list: [
+            "Zuri needed:",
+            "Clear product presentation",
+            "Ingredient transparency",
+            "Simple checkout paths",
+            "Visible customer reviews",
+          ],
+          outro: "",
+        }}
+        approachlist={{
+          intro:
+            "I reviewed competitive beauty landing pages to understand what drives conversion. Based on this, I structured the page to show:",
+          list: [
+            "Hero product highlights",
+            "Category previews",
+            "Ingredient benefits",
+            "Customer reviews",
+            "Clear pricing",
+            "Simple add to cart actions",
+          ],
+          outro:
+            "Each section was designed to flow logically and reduce thinking time.",
+        }}
         mid="/assets/zuri/mid.png"
         keyFeatures={[
           {

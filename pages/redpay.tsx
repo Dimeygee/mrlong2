@@ -44,12 +44,17 @@ export default function Athlerse() {
           "Create trust through visual clarity and security cues",
           "Minimize drop off through smart fallbacks",
         ]}
-        approach={[
-          "Competitive analysis (Paystack, Flutterwave, Monnify)",
-          "User flow mapping for each payment method",
-          "Wireframes to test layout clarity",
-          "High fidelity UI focused on readability and trust cues",
-        ]}
+        
+        approachlist={{
+          intro: "",
+          list: [
+            "Competitive analysis (Paystack, Flutterwave, Monnify)",
+            "User flow mapping for each payment method",
+            "Wireframes to test layout clarity",
+            "High fidelity UI focused on readability and trust cues",
+          ],
+          outro: "",
+        }}
         mid="/assets/redpay/mid.png"
         keyFeatures={[
           {

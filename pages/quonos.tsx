@@ -36,13 +36,17 @@ export default function Quonos() {
         Timeline: 2 weeks
         Platform: Web
         Tools: Figma`}
-        problemText={`
-            Creative studios often struggle with landing pages that:
-                Feel generic
-                Do not explain capabilities clearly
-                Lack work samples
-                Hide contact actions
-            Visitors want to understand a studio quickly, trust their quality and take the next step.`}
+        ProblemList={{
+          intro: "Creative studios often struggle with landing pages that:",
+          list: [
+            "Feel generic",
+            "Do not explain capabilities clearly",
+            "Lack work samples",
+            "Hide contact actions",
+          ],
+          outro:
+            " Visitors want to understand a studio quickly, trust their quality and take the next step.",
+        }}
         designGoals={[
           "Present services and capabilities clearly",
           "Showcase portfolio visuals in a clean layout",
@@ -50,15 +54,19 @@ export default function Quonos() {
           "Create simple pathways to contact",
           "Reflect a modern studio personality",
         ]}
-        approach={`I reviewed leading creative studio sites to understand how they communicate value. Based on this, I structured the page to introduce:
-
-            Hero positioning and value statement
-            Service categories
-            Featured case visuals
-            Client value proposition
-            Clear calls to action
-
-        The flow reduces cognitive load and builds trust section by section.`}
+        approachlist={{
+          intro:
+            "I reviewed leading creative studio sites to understand how they communicate value. Based on this, I structured the page to introduce:",
+          list: [
+            "Hero positioning and value statement",
+            "Service categories",
+            "Featured case visuals",
+            "Client value proposition",
+            "Clear calls to action",
+          ],
+          outro:
+            "The flow reduces cognitive load and builds trust section by section.",
+        }}
         mid="/assets/quonox/mid.png"
         keyFeatures={[
           {

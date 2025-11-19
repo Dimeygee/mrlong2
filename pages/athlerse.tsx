@@ -1,4 +1,3 @@
-
 import { OtherProjects } from "@/components/myproject/otherproject";
 
 import Head from "next/head";
@@ -37,27 +36,64 @@ Role: Lead Product Designer
 Timeline: 3 weeks
 Platform: Smartwatch interface
 Tools: Figma`}
-        problemText={`Most fitness watch interfaces feel fragmented or overly complex. Users struggle to:
-- View essential data at a glance
-- Start a workout with minimal friction
-- Track performance metrics in real-time
-- Sync progress with a social fitness community
-
-This leads to poor engagement and low retention.`}
+        ProblemList={{
+          intro:
+            "Most fitness watch interfaces feel fragmented or overly complex. Users struggle to:",
+          list: [
+            "View essential data at a glance",
+            "Start a workout with minimal friction",
+            "Track performance metrics in real-time",
+            "Sync progress with a social fitness community",
+          ],
+          outro: "This leads to poor engagement and low retention.",
+        }}
         designGoals={[
           "Make core fitness actions quick and effortless",
           "Surface key health stats clearly",
           "Encourage consistent daily activity",
           "Connect results to the Athlerse social experience",
         ]}
-        approach={[
-          "I mapped the most frequent actions users perform on a fitness watch",
-        ]}
+        approachlist={{
+          intro:
+            "I mapped the most frequent actions users perform on a fitness watch",
+          list: [
+            "Check steps and calories",
+            "Review recent activities",
+            "Start a run, walk or cycle session",
+            "Track distance, pace, heart rate and time",
+          ],
+          outro:
+            "Wireframes explored hierarchy and typography legibility. High fidelity designs focused on clarity under motion, sweat and outdoor lighting.",
+        }}
         keyFeatures={[
           {
             title: "Activity Overview",
             sublinks: [
               "Shows steps, distance and calories burned with simple visual progress indicators",
+            ],
+          },
+          {
+            title: "Workout Starter",
+            sublinks: [
+              "Users can begin a run, walk or cycle with one tap and optional social mode called Run With Me.",
+            ],
+          },
+          {
+            title: "Real Time Metrics",
+            sublinks: [
+              "During workouts users see distance, pace, heart rate, time and position in challenges.",
+            ],
+          },
+          {
+            title: "Challenge Progress",
+            sublinks: [
+              "Displays badge based challenges and rankings from the Athlerse app to encourage friendly competition.",
+            ],
+          },
+          {
+            title: "Workout Summary",
+            sublinks: [
+              "After completing a session users get a clean recap and can view deeper stats on the app.",
             ],
           },
         ]}
