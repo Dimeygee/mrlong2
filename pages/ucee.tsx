@@ -101,6 +101,7 @@ export default function Ucee() {
         ]}
         userexperience="The onboarding journey is lightweight and mobile friendly since most prospects register on their phones. Messaging was simplified to reduce confusion, and progress feedback keeps users confident during form completion."
         visualLanguageText="The interface uses clear typography, bold CTAs and simple icons. The layout focuses on speed and legibility since many agents operate outdoors or on the move."
+        link="https://agent.getucee.com/"
         impactList={{
           intro: "During prototype testing, users reported:",
           list: [

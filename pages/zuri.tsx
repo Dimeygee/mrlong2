@@ -54,6 +54,7 @@ export default function Zuri() {
           ],
           outro: "",
         }}
+        link="https://zurinaturals.co.uk/"
         approachlist={{
           intro:
             "I reviewed competitive beauty landing pages to understand what drives conversion. Based on this, I structured the page to show:",

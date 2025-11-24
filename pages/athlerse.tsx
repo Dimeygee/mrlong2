@@ -36,6 +36,8 @@ Role: Lead Product Designer
 Timeline: 3 weeks
 Platform: Smartwatch interface
 Tools: Figma`}
+        link=" https://www.figma.com/proto/qVKKlbD9sizwTkWJJAKJyd/Athlerse-Watch?node-id=12-215&p=f&t=BxKV2kg7zE5uMeOE-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=12%3A215
+"
         ProblemList={{
           intro:
             "Most fitness watch interfaces feel fragmented or overly complex. Users struggle to:",

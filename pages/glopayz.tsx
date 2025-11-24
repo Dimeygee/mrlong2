@@ -97,6 +97,7 @@ export default function glopayz() {
           },
         ]}
         visualLanguageText="The UI uses a clean financial aesthetic with blue color and soft shadows. Typography is structured to improve speed of scanning. Color coding allows users to identify currency types and transaction states instantly."
+        link=""
         impactList={{
           intro: "During prototype testing, users reported:",
           list: [

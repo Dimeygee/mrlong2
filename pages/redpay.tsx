@@ -44,7 +44,7 @@ export default function Athlerse() {
           "Create trust through visual clarity and security cues",
           "Minimize drop off through smart fallbacks",
         ]}
-        
+        link="https://redpay.africa/"
         approachlist={{
           intro: "",
           list: [

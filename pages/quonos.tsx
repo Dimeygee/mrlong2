@@ -54,6 +54,7 @@ export default function Quonos() {
           "Create simple pathways to contact",
           "Reflect a modern studio personality",
         ]}
+        link="https://www.quonos.studio/"
         approachlist={{
           intro:
             "I reviewed leading creative studio sites to understand how they communicate value. Based on this, I structured the page to introduce:",

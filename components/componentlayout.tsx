@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from "next/image";
 import { ArrowRightIcon, Globe } from "@/icon";
+import Link from "next/link";
 
 interface ProblemListType {
   intro: string;
@@ -29,6 +30,7 @@ interface ProjectLayoutProps {
   ProblemList?: ProblemListType;
   approachlist?: ProblemListType;
   impactList?: ProblemListType;
+  link: string
 }
 
 export default function ProjectLayout({
@@ -53,6 +55,7 @@ export default function ProjectLayout({
   ProblemList,
   approachlist,
   impactList,
+  link
 }: ProjectLayoutProps) {
   console.log(approach, impactText);
   return (
@@ -86,7 +89,13 @@ export default function ProjectLayout({
             <span className="font-outfit text-sm sm:text-base uppercase text-white/60">
               Important links
             </span>
-            <div className="rounded-full px-5 py-3 flex justify-between bg-white/10 items-center">
+            <Link
+              href={link || "#"}
+              target={link ? "__blank" : undefined}
+              className="rounded-full px-5 py-3 flex justify-between bg-white/10 items-center cursor-pointer"
+              title={link ? "Open website" : "Work in progress"}
+              
+            >
               <div className="flex gap-3 items-center">
                 <div className="w-8 h-8 sm:w-[37px] sm:h-[37px]">
                   <Globe />
@@ -96,7 +105,7 @@ export default function ProjectLayout({
                 </span>
               </div>
               <ArrowRightIcon />
-            </div>
+            </Link>
           </div>
 
           {/* OVERVIEW */}
