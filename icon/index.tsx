@@ -405,7 +405,7 @@ export const NetIcon = () => {
 }
 
 
-export const ArrowRightIcon = () => {
+export const ArrowRightIcon = ({ currentColor }: { currentColor?: string }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -417,11 +417,11 @@ export const ArrowRightIcon = () => {
       <path
         opacity="0.4"
         d="M3.5 13H21.5C22.053 13 22.5 12.552 22.5 12C22.5 11.448 22.053 11 21.5 11H3.5C2.947 11 2.5 11.448 2.5 12C2.5 12.552 2.947 13 3.5 13Z"
-        fill="white"
+        fill={currentColor ? `${currentColor}` : "white"}
       />
       <path
         d="M14.4997 20C14.7557 20 15.0117 19.9021 15.2067 19.7071L22.2068 12.7071C22.5978 12.3161 22.5978 11.684 22.2068 11.293L15.2067 4.29301C14.8158 3.90201 14.1837 3.90201 13.7927 4.29301C13.4017 4.68401 13.4017 5.31607 13.7927 5.70707L20.0857 12L13.7927 18.293C13.4017 18.684 13.4017 19.3161 13.7927 19.7071C13.9877 19.9021 14.2437 20 14.4997 20Z"
-        fill="white"
+        fill={currentColor ? `${currentColor}` : "white"}
       />
     </svg>
   );
@@ -583,3 +583,78 @@ export const Globe = () => (
     </defs>
   </svg>
 );
+
+
+export const Repair = () => {
+  return (
+    <svg
+      width="37"
+      height="37"
+      viewBox="0 0 37 37"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g filter="url(#filter0_i_5207_1392)">
+        <rect
+          width="37"
+          height="37"
+          rx="18.5"
+          fill="white"
+          fill-opacity="0.17"
+        />
+        <path
+          opacity="0.4"
+          d="M17.4652 12.5699C17.9042 11.8689 18.5112 11.2869 19.2262 10.8589C21.0132 9.78891 22.9113 9.80889 24.4363 10.4249L22.2653 12.6059C21.6893 13.1849 21.6903 14.1309 22.2673 14.7079L23.2923 15.7329C23.8703 16.3099 24.8162 16.3119 25.3942 15.7349L27.5752 13.5639C28.1912 15.0879 28.2112 16.9969 27.1312 18.7839C26.6872 19.5309 26.0513 20.1669 25.2933 20.6209C24.0123 21.3929 22.6592 21.5949 21.4392 21.4179C20.9822 21.3519 20.5233 21.5139 20.1973 21.8409L14.8742 27.1629C13.7592 28.2779 11.9513 28.2779 10.8363 27.1629C9.72125 26.0479 9.72125 24.2399 10.8363 23.1249L16.1592 17.8019C16.4852 17.4759 16.6493 17.0169 16.5823 16.5599C16.4043 15.3349 16.6073 13.9869 17.3883 12.6959C17.4143 12.6539 17.4392 12.6119 17.4652 12.5699Z"
+          fill="white"
+        />
+        <path
+          d="M13.0201 26C12.4681 26 12.0151 25.552 12.0151 25C12.0151 24.448 12.4571 24 13.0101 24H13.0201C13.5721 24 14.0201 24.448 14.0201 25C14.0201 25.552 13.5721 26 13.0201 26Z"
+          fill="white"
+        />
+      </g>
+      <defs>
+        <filter
+          id="filter0_i_5207_1392"
+          x="0"
+          y="0"
+          width="37"
+          height="48.2321"
+          filterUnits="userSpaceOnUse"
+          color-interpolation-filters="sRGB"
+        >
+          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="BackgroundImageFix"
+            result="shape"
+          />
+          <feColorMatrix
+            in="SourceAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+            result="hardAlpha"
+          />
+          <feMorphology
+            radius="1.98214"
+            operator="erode"
+            in="SourceAlpha"
+            result="effect1_innerShadow_5207_1392"
+          />
+          <feOffset dy="13.3718" />
+          <feGaussianBlur stdDeviation="4.625" />
+          <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.12 0"
+          />
+          <feBlend
+            mode="normal"
+            in2="shape"
+            result="effect1_innerShadow_5207_1392"
+          />
+        </filter>
+      </defs>
+    </svg>
+  );
+}

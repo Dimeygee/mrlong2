@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from "next/image";
-import { ArrowRightIcon, Globe } from "@/icon";
+import { ArrowRightIcon, Globe, Repair } from "@/icon";
 import Link from "next/link";
 
 interface ProblemListType {
@@ -30,7 +30,7 @@ interface ProjectLayoutProps {
   ProblemList?: ProblemListType;
   approachlist?: ProblemListType;
   impactList?: ProblemListType;
-  link: string
+  link: string;
 }
 
 export default function ProjectLayout({
@@ -55,7 +55,7 @@ export default function ProjectLayout({
   ProblemList,
   approachlist,
   impactList,
-  link
+  link,
 }: ProjectLayoutProps) {
   console.log(approach, impactText);
   return (
@@ -94,17 +94,28 @@ export default function ProjectLayout({
               target={link ? "__blank" : undefined}
               className="rounded-full px-5 py-3 flex justify-between bg-white/10 items-center cursor-pointer"
               title={link ? "Open website" : "Work in progress"}
-              
             >
-              <div className="flex gap-3 items-center">
-                <div className="w-8 h-8 sm:w-[37px] sm:h-[37px]">
-                  <Globe />
+              {link ? (
+                <div className="flex gap-3 items-center">
+                  <div className="w-8 h-8 sm:w-[37px] sm:h-[37px]">
+                    <Globe />
+                  </div>
+                  <span className="uppercase font-syne text-white text-sm sm:text-lg">
+                    View live website here
+                  </span>
                 </div>
-                <span className="uppercase font-syne text-white text-sm sm:text-lg">
-                  View live website here
-                </span>
-              </div>
-              <ArrowRightIcon />
+              ) : (
+                <div className="flex gap-3 items-center">
+                  <div className="w-8 h-8 sm:w-[37px] sm:h-[37px]">
+                    <Repair />
+                  </div>
+                  <span className="uppercase font-syne text-white text-sm sm:text-lg">
+                    product is in active development...
+                  </span>
+                </div>
+              )}
+
+              <ArrowRightIcon currentColor={"rgba(255,255,255,0.1)"} />
             </Link>
           </div>
 
