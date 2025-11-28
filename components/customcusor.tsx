@@ -31,7 +31,7 @@ export const CustomCursor = () => {
     transform: "translate(-50%, -50%)",
   };
 
-  return <div style={cursorStyles} className="cursor" />;
+  return <div style={cursorStyles} className="cursor md:flex hidden" />;
 };
 
 export default CustomCursor;

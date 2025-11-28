@@ -97,9 +97,9 @@ export default function ProjectLayout({
             >
               {link ? (
                 <div className="flex gap-3 items-center">
-                  <div className="w-8 h-8 sm:w-[37px] sm:h-[37px]">
+                  <span >
                     <Globe />
-                  </div>
+                  </span>
                   <span className="uppercase font-syne text-white text-sm sm:text-lg">
                     View live website here
                   </span>
