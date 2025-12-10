@@ -69,7 +69,7 @@ export const OtherProjects = () => {
         className={`flex flex-col gap-[32px] overflow-hidden transition-all duration-300 py-[82px] relative mb-[100px]`}
       >
         <Container>
-          <div className="flex items-center justify-between mx-auto px-5 mb-[70px]">
+          <div className="flex items-center justify-between mx-auto px-5 mb-[30px]">
             <TextWrapper>
               <span className="gd1 font-bold tracking-[-1.442px] text-[26px] md:text-[42px] font-syne">
                 View other projects
@@ -114,7 +114,7 @@ export const OtherProjects = () => {
                   key={project.name}
                   style={{
                     width: "366px",
-                    height: "128px",
+                    height: "138px",
                     display: "flex",
                     position: "relative",
                     perspective: "1000px",
@@ -133,9 +133,9 @@ export const OtherProjects = () => {
                     transition={{ duration: 0.3 }}
                     className="md:px-[59px] px-[27px] flex flex-col justify-center gap-[40px] rounded-[25px] w-full h-full z-[100] relative bg-[#12141d] border-white/[0.14] border-[1px]"
                   >
-                    <div className="text-xl text-white/[0.5] leading-[25.2px] tracking-[-0.36px]">
+                    {/* <div className="text-xl text-white/[0.5] leading-[25.2px] tracking-[-0.36px]">
                       <span>{project.id}</span>
-                    </div>
+                    </div> */}
                     <div className="flex flex-col gap-[8px] text-white/[0.5]">
                       <span className="md:text-[32px] text-[26px] tracking-[-1.442px] uppercase font-bold font-syne text-white">
                         {project.name}
@@ -212,9 +212,9 @@ export const OtherProjects = () => {
                     transition={{ duration: 0.3 }}
                     className="md:px-[59px] px-[27px] flex flex-col justify-center gap-[40px] rounded-[25px] w-full h-full z-[100] relative bg-[#12141d] border-white/[0.14] border-[1px]"
                   >
-                    <div className="text-xl text-white/[0.5] leading-[25.2px] tracking-[-0.36px]">
+                    {/* <div className="text-xl text-white/[0.5] leading-[25.2px] tracking-[-0.36px]">
                       <span>{project.id}</span>
-                    </div>
+                    </div> */}
                     <div className="flex flex-col gap-[3px]">
                       <span className="md:text-[28px] text-[26px] tracking-[-1.442px] uppercase font-bold font-syne text-white">
                         {project.name}

@@ -15,18 +15,19 @@ export const Footer = () => {
               <span className="hover-item inline-flex px-[26px] md:px-[55px] md:h-[138px] h-[67px] tracking-[-1.442px] text-xl md:text-[32px] rounded-[400px] border-[1px]  border-white font-syne font-bold  items-center gd1 uppercase  text-center">
                 Contact
               </span>
-              <div className="min-h-[203px] md:min-h-[142px] pl-[20px] md:pl-[41px] backdrop-blur-[22.5px] rounded-[100px] bg-white/[0.05] md:w-[670px] flex md:flex-row flex-col gap-[24px] md:justify-normal justify-center md:items-center  w-full ">
-                <div className="w-[72px] h-[72px] shrink-0 rounded-full bgs text-white">
+              <div className="py-[34px] md:py-0 md:min-h-[142px] pl-[20px] md:pl-[41px] pr-[20px] backdrop-blur-[22.5px] rounded-[100px] bg-white/[0.05] md:w-[670px] w-full flex flex-row items-center gap-[24px] flex-nowrap overflow-hidden">
+                <div className="w-[72px] h-[72px] shrink-0 rounded-full bgs text-white flex items-center justify-center">
                   <Envelope />
                 </div>
-                <div className="md:w-[72px] md:h-[72px] w-[49px] h-[49px] shrink-0 rounded-full sbgs text-white">
+                <div className="md:w-[72px] md:h-[72px] w-[49px] h-[49px] shrink-0 rounded-full sbgs text-white flex items-center justify-center">
                   <SEnvelope />
                 </div>
-                <div className="flex flex-col md:gap-[10px] ">
-                  <span className="tracking-[-0.36px] leading-[25.2px] font-outfit text-lg text-white/[0.5]">
+                <div className="flex flex-col md:gap-[10px] flex-1 min-w-0">
+                  <span className="tracking-[-0.36px] leading-[25.2px] font-outfit text-lg text-white/[0.5] whitespace-nowrap">
                     Shoot me a mail
                   </span>
-                  <h4 className="gd1 tracking-[-1.442px] font-bold font-syne text-xl md:text-[32px]">
+
+                  <h4 className="gd1 tracking-[-1.442px] font-bold font-syne text-xl md:text-[32px] truncate">
                     odebiyiridwan@gmail.com
                   </h4>
                 </div>
@@ -119,7 +120,6 @@ export const Footer = () => {
     </>
   );
 };
-
 
 /*
   {

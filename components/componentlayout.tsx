@@ -61,7 +61,6 @@ export default function ProjectLayout({
   return (
     <>
       <div className="pt-[120px] sm:pt-[140px] md:pt-[164px]">
-        {/* HEADER */}
         <div className="w-full max-w-[584px] mx-auto px-4">
           <div className="py-3 px-5 flex justify-between items-center rounded-t-[24px] md:rounded-t-[32px] bg-white/10">
             <span className="text-base sm:text-lg font-bold font-syne uppercase text-white">
@@ -72,7 +71,6 @@ export default function ProjectLayout({
             </span>
           </div>
 
-          {/* MAIN IMAGE */}
           <div className="mt-3 rounded-b-[20px] md:rounded-b-[25px] h-[220px] sm:h-[280px] md:h-[352px] overflow-hidden relative">
             <video
               src={`/assets/vids/${mainImage}.mp4`}
@@ -84,7 +82,6 @@ export default function ProjectLayout({
             />
           </div>
 
-          {/* IMPORTANT LINKS */}
           <div className="mt-6 flex flex-col gap-3">
             <span className="font-outfit text-sm sm:text-base uppercase text-white/60">
               Important links
@@ -97,7 +94,7 @@ export default function ProjectLayout({
             >
               {link ? (
                 <div className="flex gap-3 items-center">
-                  <span >
+                  <span>
                     <Globe />
                   </span>
                   <span className="uppercase font-syne text-white text-sm sm:text-lg">
@@ -119,7 +116,6 @@ export default function ProjectLayout({
             </Link>
           </div>
 
-          {/* OVERVIEW */}
           <div className="flex flex-col gap-4 mt-14">
             <span className="font-bold font-syne text-2xl sm:text-[28px] text-white">
               Overview
@@ -128,8 +124,6 @@ export default function ProjectLayout({
               {overviewText}
             </p>
           </div>
-
-          {/* PROBLEM */}
 
           {ProblemList ? (
             <div className="flex flex-col gap-4 mt-14">
@@ -158,7 +152,6 @@ export default function ProjectLayout({
             </div>
           )}
 
-          {/* DESIGN GOALS */}
           {designGoals.length > 0 && (
             <div className="flex flex-col gap-4 mt-14">
               <span className="font-bold font-syne text-2xl sm:text-[28px] text-white">
@@ -174,12 +167,10 @@ export default function ProjectLayout({
             </div>
           )}
 
-          {/* MID IMAGE */}
           <div className="h-[250px] sm:h-[320px] md:h-[400px] relative mt-14">
             <Image src={`${mid}`} alt="" fill className="object-cover" />
           </div>
 
-          {/* APPROACH */}
           {approachlist && (
             <div className="flex flex-col gap-4 mt-14">
               <span className="font-bold font-syne text-2xl sm:text-[28px] text-white">
@@ -198,7 +189,6 @@ export default function ProjectLayout({
             </div>
           )}
 
-          {/* KEY FEATURES */}
           {keyFeatures.length > 0 && (
             <div className="flex flex-col gap-4 mt-14">
               <span className="font-bold font-syne text-2xl sm:text-[28px] text-white">
@@ -223,7 +213,6 @@ export default function ProjectLayout({
             </div>
           )}
 
-          {/* USER EXPERIENCE */}
           {userexperience && (
             <div className="flex flex-col gap-4 mt-14">
               <span className="font-bold font-syne text-2xl sm:text-[28px] text-white">
@@ -235,7 +224,6 @@ export default function ProjectLayout({
             </div>
           )}
 
-          {/* VISUAL LANGUAGE */}
           {visualLanguageText && (
             <div className="flex flex-col gap-4 mt-14">
               <span className="font-bold font-syne text-2xl sm:text-[28px] text-white">
@@ -248,7 +236,6 @@ export default function ProjectLayout({
           )}
         </div>
 
-        {/* MIDDLE IMAGES SECTION */}
         {hasone && hassix && (
           <div className="w-full max-w-[900px] mx-auto flex flex-col gap-4 mt-14 px-4">
             <div className="relative h-[250px] sm:h-[350px] md:h-[400px]">
@@ -260,10 +247,8 @@ export default function ProjectLayout({
           </div>
         )}
 
-        {/* ADDITIONAL IMAGES */}
         {additionalImages.length > 0 && !hasone && (
           <div className="w-full max-w-[900px] mx-auto mt-14 flex flex-col gap-4 px-4">
-            {/* First Image */}
             <div className="relative h-[250px] sm:h-[350px] md:h-[400px]">
               <Image
                 src={additionalImages[0]}
@@ -273,7 +258,6 @@ export default function ProjectLayout({
               />
             </div>
 
-            {/* Second + Third images */}
             {additionalImages.length > 2 && (
               <div className="flex flex-col sm:flex-row gap-4 h-auto sm:h-[350px] md:h-[400px]">
                 <div className="relative w-full sm:w-[65%] h-[250px] sm:h-full">
@@ -284,25 +268,40 @@ export default function ProjectLayout({
                     alt=""
                   />
                 </div>
-                <div className="relative w-full sm:w-[35%] h-[250px] sm:h-full">
+                <div
+                  className={`relative w-full sm:w-[35%] ${
+                    projectTitle === "glopayz" ? "h-[350px]" : "h-[250px]"
+                  } sm:h-full`}
+                >
                   <Image
                     src={additionalImages[2]}
                     fill
-                    className="object-cover"
+                    className={
+                      projectTitle === "glopayz"
+                        ? "object-fill"
+                        : "object-cover"
+                    }
                     alt=""
                   />
                 </div>
               </div>
             )}
 
-            {/* 4 + 5 */}
             {additionalImages.length > 4 && (
               <div className="flex flex-col sm:flex-row gap-4 h-auto sm:h-[350px] md:h-[400px]">
-                <div className="relative w-full sm:w-[35%] h-[250px] sm:h-full">
+                <div
+                  className={`relative w-full sm:w-[35%] ${
+                    projectTitle === "glopayz" ? "h-[350px]" : "h-[250px]"
+                  } sm:h-full`}
+                >
                   <Image
                     src={additionalImages[3]}
                     fill
-                    className="object-cover"
+                    className={
+                      projectTitle === "glopayz"
+                        ? "object-fill"
+                        : "object-cover"
+                    }
                     alt=""
                   />
                 </div>
@@ -319,7 +318,6 @@ export default function ProjectLayout({
           </div>
         )}
 
-        {/* IMPACT, FUTURE ENHANCEMENTS, CONCLUSION */}
         <div className="w-full max-w-[584px] mx-auto px-4 flex flex-col">
           {impactList && (
             <div className="flex flex-col gap-4 mt-14">
