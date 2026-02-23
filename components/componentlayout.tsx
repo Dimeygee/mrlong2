@@ -73,11 +73,13 @@ export default function ProjectLayout({
 
           <div className="mt-3 rounded-b-[20px] md:rounded-b-[25px] h-[220px] sm:h-[280px] md:h-[352px] overflow-hidden relative">
             <video
-              src={`/assets/vids/${mainImage}.mp4`}
+              src={`/assets/vids/${mainImage}.webm`}
               autoPlay
               loop
               muted
               playsInline
+              preload="metadata"
+              poster={`/assets/posters/${mainImage}.jpg`}
               className="absolute top-0 left-0 w-full h-full object-cover"
             />
           </div>
