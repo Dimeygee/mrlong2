@@ -6,7 +6,7 @@ import Link from "next/link";
 import { ArrowRightReview } from "@/icon";
 import { useEffect, useRef, useState } from "react";
 
-function LazyVideo({ src }: { src: string }) {
+function LazyVideo({ src, poster }: { src: string; poster: string }) {
   const ref = useRef<HTMLVideoElement | null>(null);
   const [visible, setVisible] = useState(false);
 
@@ -28,6 +28,7 @@ function LazyVideo({ src }: { src: string }) {
     <video
       ref={ref}
       src={visible ? src : undefined}
+      poster={poster}
       autoPlay
       loop
       muted
@@ -61,7 +62,7 @@ export const SelectedWork: React.FC = () => {
             {Works.map((work, index) => (
               <Link href={work.to} className="flex flex-col gap-4" key={index}>
                 <div className="mt-[11px] rounded-t-[25px] h-[240px] sm:h-[300px] md:h-[352px] overflow-hidden relative bg-black">
-                  <LazyVideo src={`/assets/vids/${work.video}.webm`} />
+                  <LazyVideo src={`/assets/vids/${work.video}.webm`}  poster={`/assets/posters/${work.video}.png`} />
                 </div>
 
                 <div className="py-[12px] px-[18px] sm:px-[23px] flex justify-between items-center rounded-b-[32px] bg-white/[0.12]">
