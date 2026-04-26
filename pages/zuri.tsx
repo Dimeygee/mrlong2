@@ -112,13 +112,21 @@ export default function Zuri() {
         ]}
         conclusionText="The Zuri Naturals landing page delivers a simple and trustworthy shopping experience for skincare buyers. By focusing on clarity, product education and reviews, the design supports faster decisions and increases customer confidence."
         additionalImages={[
-          "/assets/zuri/1.png",
-          "/assets/zuri/2.png",
-          "/assets/zuri/3.png",
-          "/assets/zuri/4.png",
-          "/assets/zuri/5.png",
+          "/assets/zuri/z1.png",
+          "/assets/zuri/z2.png",
+          "/assets/zuri/z3.png",
+          "/assets/zuri/z4.png",
+          "/assets/zuri/z5.png",
+          "/assets/zuri/z6.png",
+          "/assets/zuri/z7.png",
+          "/assets/zuri/z8.png",
+          "/assets/zuri/z9.png",
+          "/assets/zuri/z10.png",
+          "/assets/zuri/z11.png",
+          "/assets/zuri/z12.png",
+          "/assets/zuri/z13.png",
         ]}
-        hassix={"/assets/zuri/6.png"}
+        //hassix={"/assets/zuri/z6.png"}
       >
         <OtherProjects />
       </ProjectLayout>

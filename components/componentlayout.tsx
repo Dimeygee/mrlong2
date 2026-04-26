@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from "next/image";
 import { ArrowRightIcon, Globe, Repair } from "@/icon";
 import Link from "next/link";
@@ -8,6 +7,7 @@ interface ProblemListType {
   list: string[];
   outro: string;
 }
+
 interface ProjectLayoutProps {
   projectTitle: string;
   projectSubtitle: string;
@@ -31,6 +31,8 @@ interface ProjectLayoutProps {
   approachlist?: ProblemListType;
   impactList?: ProblemListType;
   link: string;
+  simpleGrid?: string[];
+  projectName?: boolean
 }
 
 export default function ProjectLayout({
@@ -56,6 +58,8 @@ export default function ProjectLayout({
   approachlist,
   impactList,
   link,
+  simpleGrid = [],
+  projectName
 }: ProjectLayoutProps) {
   console.log(approach, impactText);
   return (
@@ -113,7 +117,6 @@ export default function ProjectLayout({
                   </span>
                 </div>
               )}
-
               <ArrowRightIcon currentColor={"rgba(255,255,255,0.1)"} />
             </Link>
           </div>
@@ -132,14 +135,13 @@ export default function ProjectLayout({
               <span className="font-bold font-syne text-2xl sm:text-[28px] text-white">
                 The Problem
               </span>
-              <span className="whitespace-pre-line  text-white/60 font-outfit text-base sm:text-lg leading-relaxed">
+              <span className="whitespace-pre-line text-white/60 font-outfit text-base sm:text-lg leading-relaxed">
                 {ProblemList.intro}
                 <ul className="text-white/60 whitespace-pre-line font-outfit font-normal text-base sm:text-lg leading-relaxed pl-7 list-disc">
-                  {ProblemList.list.map((problem, index) => {
-                    return <li key={index}>{problem}</li>;
-                  })}
+                  {ProblemList.list.map((problem, index) => (
+                    <li key={index}>{problem}</li>
+                  ))}
                 </ul>
-
                 {ProblemList.outro}
               </span>
             </div>
@@ -159,7 +161,7 @@ export default function ProjectLayout({
               <span className="font-bold font-syne text-2xl sm:text-[28px] text-white">
                 Design Goals
               </span>
-              <span className="whitespace-pre-line  text-white/60 font-outfit text-base sm:text-lg leading-relaxed">
+              <span className="whitespace-pre-line text-white/60 font-outfit text-base sm:text-lg leading-relaxed">
                 <ul className="text-white/60 whitespace-pre-line font-outfit font-normal text-base sm:text-lg leading-relaxed pl-7 list-disc">
                   {designGoals.map((goal, i) => (
                     <li key={i}>{goal}</li>
@@ -178,14 +180,13 @@ export default function ProjectLayout({
               <span className="font-bold font-syne text-2xl sm:text-[28px] text-white">
                 Approach
               </span>
-              <span className="whitespace-pre-line leading-[-0.36px]  text-white/60 font-outfit text-base sm:text-lg ">
+              <span className="whitespace-pre-line text-white/60 font-outfit text-base sm:text-lg">
                 {approachlist.intro}
-                <ul className="text-white/60 whitespace-pre-line font-outfit font-normal text-base sm:text-lg  pl-7 list-disc">
-                  {approachlist.list.map((problem, index) => {
-                    return <li key={index}>{problem}</li>;
-                  })}
+                <ul className="text-white/60 whitespace-pre-line font-outfit font-normal text-base sm:text-lg pl-7 list-disc">
+                  {approachlist.list.map((problem, index) => (
+                    <li key={index}>{problem}</li>
+                  ))}
                 </ul>
-
                 {approachlist.outro}
               </span>
             </div>
@@ -249,67 +250,53 @@ export default function ProjectLayout({
           </div>
         )}
 
-        {additionalImages.length > 0 && !hasone && (
+        {simpleGrid.length > 0 && (
           <div className="w-full max-w-[900px] mx-auto mt-14 flex flex-col gap-4 px-4">
-            <div className="relative h-[250px] sm:h-[350px] md:h-[400px]">
-              <Image
-                src={additionalImages[0]}
-                fill
-                className="object-cover"
-                alt=""
-              />
-            </div>
+            {simpleGrid.length >= 1 && (
+              <div className="relative w-full h-[250px] sm:h-[350px] md:h-[400px]">
+                <Image
+                  src={simpleGrid[0]}
+                  fill
+                  className="object-cover"
+                  alt=""
+                />
+              </div>
+            )}
 
-            {additionalImages.length > 2 && (
-              <div className="flex flex-col sm:flex-row gap-4 h-auto sm:h-[350px] md:h-[400px]">
-                <div className="relative w-full sm:w-[65%] h-[250px] sm:h-full">
+            {simpleGrid.length >= 3 && (
+              <div className="flex flex-col sm:flex-row gap-4">
+                <div className="relative w-full sm:w-[60%] h-[250px] sm:h-[350px] md:h-[400px]">
                   <Image
-                    src={additionalImages[1]}
+                    src={simpleGrid[1]}
                     fill
                     className="object-cover"
                     alt=""
                   />
                 </div>
-                <div
-                  className={`relative w-full sm:w-[35%] ${
-                    projectTitle === "glopayz" ? "h-[350px]" : "h-[250px]"
-                  } sm:h-full`}
-                >
+                <div className="relative w-full sm:w-[40%] h-[250px] sm:h-[350px] md:h-[400px]">
                   <Image
-                    src={additionalImages[2]}
+                    src={simpleGrid[2]}
                     fill
-                    className={
-                      projectTitle === "glopayz"
-                        ? "object-fill"
-                        : "object-cover"
-                    }
+                    className="object-cover"
                     alt=""
                   />
                 </div>
               </div>
             )}
 
-            {additionalImages.length > 4 && (
-              <div className="flex flex-col sm:flex-row gap-4 h-auto sm:h-[350px] md:h-[400px]">
-                <div
-                  className={`relative w-full sm:w-[35%] ${
-                    projectTitle === "glopayz" ? "h-[350px]" : "h-[250px]"
-                  } sm:h-full`}
-                >
+            {simpleGrid.length >= 5 && (
+              <div className="flex flex-col sm:flex-row gap-4">
+                <div className="relative w-full sm:w-[40%] h-[250px] sm:h-[350px] md:h-[400px]">
                   <Image
-                    src={additionalImages[3]}
+                    src={simpleGrid[3]}
                     fill
-                    className={
-                      projectTitle === "glopayz"
-                        ? "object-fill"
-                        : "object-cover"
-                    }
+                    className="object-cover"
                     alt=""
                   />
                 </div>
-                <div className="relative w-full sm:w-[65%] h-[250px] sm:h-full">
+                <div className="relative w-full sm:w-[60%] h-[250px] sm:h-[350px] md:h-[400px]">
                   <Image
-                    src={additionalImages[4]}
+                    src={simpleGrid[4]}
                     fill
                     className="object-cover"
                     alt=""
@@ -320,20 +307,190 @@ export default function ProjectLayout({
           </div>
         )}
 
+        {additionalImages.length > 0 && !hasone && simpleGrid.length === 0 && (
+          <div className="w-full max-w-[900px] mx-auto mt-14 flex flex-col gap-4 px-4">
+            {additionalImages.length >= 2 && (
+              <div className="flex flex-col sm:flex-row gap-4">
+                <div className="relative w-full sm:w-1/2 h-[250px] sm:h-[350px] md:h-[400px]">
+                  <Image
+                    src={additionalImages[0]}
+                    fill
+                    className="object-cover"
+                    alt=""
+                  />
+                </div>
+                <div className="relative w-full sm:w-1/2 h-[250px] sm:h-[350px] md:h-[400px]">
+                  <Image
+                    src={additionalImages[1]}
+                    fill
+                    className="object-cover"
+                    alt=""
+                  />
+                </div>
+              </div>
+            )}
+
+            {additionalImages.length >= 3 && (
+              <div className="relative w-full h-[250px] sm:h-[350px] md:h-[400px]">
+                <Image
+                  src={additionalImages[2]}
+                  fill
+                  className="object-cover"
+                  alt=""
+                />
+              </div>
+            )}
+
+            {additionalImages.length >= 5 && (
+              <div className="flex flex-col sm:flex-row gap-4">
+                <div className="relative w-full sm:w-[60%] h-[250px] sm:h-[350px] md:h-[400px]">
+                  <Image
+                    src={additionalImages[3]}
+                    fill
+                    className="object-cover"
+                    alt=""
+                  />
+                </div>
+                <div className="relative w-full sm:w-[40%] h-[250px] sm:h-[350px] md:h-[400px]">
+                  <Image
+                    src={additionalImages[4]}
+                    fill
+                    className="object-cover"
+                    alt=""
+                  />
+                </div>
+              </div>
+            )}
+
+            {additionalImages.length >= 6 && (
+              <div className="relative w-full h-[250px] sm:h-[350px] md:h-[400px]">
+                <Image
+                  src={additionalImages[5]}
+                  fill
+                  className="object-cover"
+                  alt=""
+                />
+              </div>
+            )}
+
+            {additionalImages.length >= 8 && (
+              <div className="flex flex-col sm:flex-row gap-4">
+                <div
+                  className={
+                    projectName
+                      ? "relative w-full sm:w-[50%]  h-[250px] sm:h-[350px] md:h-[400px]"
+                      : "relative w-full  h-[250px] sm:h-[350px] md:h-[400px] sm:w-[60%]"
+                  }
+                >
+                  <Image
+                    src={additionalImages[6]}
+                    fill
+                    className="object-cover"
+                    alt=""
+                  />
+                </div>
+                <div
+                  className={
+                    projectName
+                      ? "relative w-full sm:w-[50%] h-[250px] sm:h-[350px] md:h-[400px]"
+                      : "relative w-full sm:w-[40%] h-[250px] sm:h-[350px] md:h-[400px]"
+                  }
+                >
+                  <Image
+                    src={additionalImages[7]}
+                    fill
+                    className="object-cover"
+                    alt=""
+                  />
+                </div>
+              </div>
+            )}
+
+            {additionalImages.length >= 11 && (
+              <div className="flex flex-col sm:flex-row gap-4">
+                <div className="relative w-full sm:w-[40%] h-[250px] sm:h-[350px] md:h-[400px]">
+                  <Image
+                    src={additionalImages[8]}
+                    fill
+                    className="object-cover"
+                    alt=""
+                  />
+                </div>
+                <div className="relative w-full sm:w-[60%] h-[250px] sm:h-[350px] md:h-[400px]">
+                  <Image
+                    src={additionalImages[9]}
+                    fill
+                    className="object-cover"
+                    alt=""
+                  />
+                </div>
+              </div>
+            )}
+
+            {additionalImages.length >= 11 && (
+              <div className="flex flex-col sm:flex-row gap-4">
+                <div
+                  className={
+                    projectName
+                      ? "relative w-full sm:w-full h-[250px] sm:h-[350px] md:h-[400px]"
+                      : "relative w-full sm:w-1/2 h-[250px] sm:h-[350px] md:h-[400px]"
+                  }
+                >
+                  <Image
+                    src={additionalImages[10]}
+                    fill
+                    className="object-cover"
+                    alt=""
+                  />
+                </div>
+                <div className={projectName ? "hidden" : "relative w-full sm:w-1/2 h-[250px] sm:h-[350px] md:h-[400px]"}>
+                  <Image
+                    src={additionalImages[11]}
+                    fill
+                    className="object-cover"
+                    alt=""
+                  />
+                </div>
+              </div>
+            )}
+
+            {additionalImages.length >= 12 && (
+              <div className="relative w-full h-[250px] sm:h-[350px] md:h-[400px]">
+                <Image
+                  src={additionalImages[12]}
+                  fill
+                  className="object-cover"
+                  alt=""
+                />
+              </div>
+            )}
+
+            {/* {additionalImages.length >= 12 && (
+              <div className="relative w-full h-[250px] sm:h-[350px] md:h-[400px]">
+                <Image
+                  src={additionalImages[11]}
+                  fill
+                  className="object-cover"
+                  alt=""
+                />
+              </div>
+            )} */}
+          </div>
+        )}
+
         <div className="w-full max-w-[584px] mx-auto px-4 flex flex-col">
           {impactList && (
             <div className="flex flex-col gap-4 mt-14">
               <span className="font-bold font-syne text-2xl sm:text-[28px] text-white">
                 Impact
               </span>
-              <span className="whitespace-pre-line leading-[-0.36px]  text-white/60 font-outfit text-base sm:text-lg ">
+              <span className="whitespace-pre-line text-white/60 font-outfit text-base sm:text-lg">
                 {impactList.intro}
-                <ul className="text-white/60 whitespace-pre-line font-outfit font-normal text-base sm:text-lg  pl-7 list-disc">
-                  {impactList.list.map((problem, index) => {
-                    return <li key={index}>{problem}</li>;
-                  })}
+                <ul className="text-white/60 whitespace-pre-line font-outfit font-normal text-base sm:text-lg pl-7 list-disc">
+                  {impactList.list.map((problem, index) => (
+                    <li key={index}>{problem}</li>
+                  ))}
                 </ul>
-
                 {impactList.outro}
               </span>
             </div>

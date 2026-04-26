@@ -121,7 +121,14 @@ export default function glopayz() {
           "/assets/glopayz/3.png",
           "/assets/glopayz/4.png",
           "/assets/glopayz/5.png",
+          "/assets/glopayz/6.png",
+          "/assets/glopayz/7.png",
+          "/assets/glopayz/8.png",
+          "/assets/glopayz/9.png",
+          "/assets/glopayz/10.png",
+          "/assets/glopayz/12.png",
         ]}
+        projectName
       >
         <OtherProjects />
       </ProjectLayout>

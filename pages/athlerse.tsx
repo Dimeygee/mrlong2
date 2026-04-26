@@ -36,7 +36,7 @@ Role: Lead Product Designer
 Timeline: 3 weeks
 Platform: Smartwatch interface
 Tools: Figma`}
-        link=" https://www.figma.com/proto/qVKKlbD9sizwTkWJJAKJyd/Athlerse-Watch?node-id=12-215&p=f&t=BxKV2kg7zE5uMeOE-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=12%3A215
+        link=" https://www.figma.com/proto/qVKKlbD9sizwTkWJJAKJyd/?node-id=12-215&p=f&t=BxKV2kg7zE5uMeOE-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=12%3A215
 "
         ProblemList={{
           intro:
@@ -108,11 +108,18 @@ Tools: Figma`}
         ]}
         conclusionText="The Athlerse watch interface brings social fitness directly to the wrist with a clear, lightweight design. By focusing on speed, visibility, and motivation, it encourages users to stay active and share progress with friends inside the Athlerse community."
         additionalImages={[
-          "/assets/athlerse/athlerse-watch1.png",
-          "/assets/athlerse/athlerse-watch2.png",
-          "/assets/athlerse/athlerse-watch3.png",
-          "/assets/athlerse/athlerse-watch4.png",
-          "/assets/athlerse/athlerse-watch5.png",
+          "/assets/athlerse/1.png",
+          "/assets/athlerse/2.png",
+          "/assets/athlerse/3.png",
+          "/assets/athlerse/4.png",
+          "/assets/athlerse/5.png",
+          "/assets/athlerse/6.png",
+          "/assets/athlerse/7.png",
+          "/assets/athlerse/8.png",
+          "/assets/athlerse/9.png",
+          "/assets/athlerse/10.png",
+          "/assets/athlerse/11.png",
+          "/assets/athlerse/12.png",
         ]}
         mid="/assets/athlerse/mid.png"
       >

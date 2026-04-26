@@ -87,7 +87,14 @@ export default function Athlerse() {
           "/assets/redpay/3.png",
           "/assets/redpay/4.png",
           "/assets/redpay/5.png",
+          "/assets/redpay/6.png",
+          "/assets/redpay/7.png",
+          "/assets/redpay/8.png",
+          "/assets/redpay/9.png",
+          "/assets/redpay/10.png",
+          "/assets/redpay/11.png",
         ]}
+        projectName
         hassix={null}
       >
         <OtherProjects />

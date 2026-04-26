@@ -120,7 +120,7 @@ export default function Ucee() {
           "Verification status tracking",
         ]}
         conclusionText="The UCEE MFB Agent Smart Onboarding experience brings scalable customer acquisition to the field. By combining referral links, QR codes and location tracking, agents can register customers faster and more reliably. The result is higher conversion, better visibility and meaningful growth for the microfinance network."
-        additionalImages={[
+        simpleGrid={[
           "/assets/ucee/1.png",
           "/assets/ucee/2.png",
           "/assets/ucee/3.png",
