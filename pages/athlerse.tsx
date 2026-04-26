@@ -120,6 +120,7 @@ Tools: Figma`}
           "/assets/athlerse/10.png",
           "/assets/athlerse/11.png",
           "/assets/athlerse/12.png",
+          "/assets/athlerse/13.png",
         ]}
         mid="/assets/athlerse/mid.png"
       >
