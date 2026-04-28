@@ -32,7 +32,73 @@ interface ProjectLayoutProps {
   impactList?: ProblemListType;
   link: string;
   simpleGrid?: string[];
-  projectName?: boolean
+  projectName?: boolean;
+}
+
+/**
+ * Mobile: renders as a natural-height block (w-full h-auto), no cropping.
+ * Desktop (sm+): renders as a fixed-height container with object-cover fill.
+ */
+function ResponsiveImg({
+  src,
+  alt = "",
+  desktopHeightClass = "sm:h-[480px]",
+  widthClass = "w-full",
+}: {
+  src: string;
+  alt?: string;
+  desktopHeightClass?: string;
+  widthClass?: string;
+}) {
+  return (
+    <div className={`${widthClass} overflow-hidden`}>
+      {/* Mobile – natural height */}
+      <Image
+        src={src}
+        alt={alt}
+        width={0}
+        height={0}
+        sizes="100vw"
+        className={`w-full h-auto block sm:hidden`}
+      />
+      {/* Desktop – fixed height, object-cover */}
+      <div className={`hidden sm:block relative w-full ${desktopHeightClass}`}>
+        <Image src={src} alt={alt} fill className="object-cover" />
+      </div>
+    </div>
+  );
+}
+
+/**
+ * Full-bleed single image (used for mid, hasone, hassix, and wide singles).
+ * Mobile: natural height. Desktop: fixed height with object-cover.
+ */
+function SingleResponsiveImg({
+  src,
+  alt = "",
+  desktopHeightClass = "sm:h-[400px]",
+}: {
+  src: string;
+  alt?: string;
+  desktopHeightClass?: string;
+}) {
+  return (
+    <div className="w-full overflow-hidden">
+      {/* Mobile */}
+      <Image
+        src={src}
+        alt={alt}
+        width={0}
+        height={0}
+        sizes="100vw"
+        className="w-full h-auto block sm:hidden"
+      />
+      {/* Desktop */}
+      <div className={`hidden sm:block relative w-full ${desktopHeightClass}`}>
+        <Image src={src} alt={alt} fill className="object-cover" />
+      </div>
+    </div>
+  );
 }
 
 export default function ProjectLayout({
@@ -59,13 +125,14 @@ export default function ProjectLayout({
   impactList,
   link,
   simpleGrid = [],
-  projectName
+  projectName,
 }: ProjectLayoutProps) {
   console.log(approach, impactText);
   return (
     <>
       <div className="pt-[120px] sm:pt-[140px] md:pt-[164px]">
         <div className="w-full max-w-[584px] mx-auto px-4">
+          {/* ── Header ── */}
           <div className="py-3 px-5 flex justify-between items-center rounded-t-[24px] md:rounded-t-[32px] bg-white/10">
             <span className="text-base sm:text-lg font-bold font-syne uppercase text-white">
               {projectTitle}
@@ -75,6 +142,7 @@ export default function ProjectLayout({
             </span>
           </div>
 
+          {/* ── Hero video ── */}
           <div className="mt-3 rounded-b-[20px] md:rounded-b-[25px] h-[220px] sm:h-[280px] md:h-[352px] overflow-hidden relative">
             <video
               src={`/assets/vids/${mainImage}.webm`}
@@ -88,6 +156,7 @@ export default function ProjectLayout({
             />
           </div>
 
+          {/* ── Link ── */}
           <div className="mt-6 flex flex-col gap-3">
             <span className="font-outfit text-sm sm:text-base uppercase text-white/60">
               Important links
@@ -121,6 +190,7 @@ export default function ProjectLayout({
             </Link>
           </div>
 
+          {/* ── Overview ── */}
           <div className="flex flex-col gap-4 mt-14">
             <span className="font-bold font-syne text-2xl sm:text-[28px] text-white">
               Overview
@@ -130,6 +200,7 @@ export default function ProjectLayout({
             </p>
           </div>
 
+          {/* ── Problem ── */}
           {ProblemList ? (
             <div className="flex flex-col gap-4 mt-14">
               <span className="font-bold font-syne text-2xl sm:text-[28px] text-white">
@@ -156,25 +227,31 @@ export default function ProjectLayout({
             </div>
           )}
 
+          {/* ── Design Goals ── */}
           {designGoals.length > 0 && (
             <div className="flex flex-col gap-4 mt-14">
               <span className="font-bold font-syne text-2xl sm:text-[28px] text-white">
                 Design Goals
               </span>
-              <span className="whitespace-pre-line text-white/60 font-outfit text-base sm:text-lg leading-relaxed">
-                <ul className="text-white/60 whitespace-pre-line font-outfit font-normal text-base sm:text-lg leading-relaxed pl-7 list-disc">
-                  {designGoals.map((goal, i) => (
-                    <li key={i}>{goal}</li>
-                  ))}
-                </ul>
-              </span>
+              <ul className="text-white/60 whitespace-pre-line font-outfit font-normal text-base sm:text-lg leading-relaxed pl-7 list-disc">
+                {designGoals.map((goal, i) => (
+                  <li key={i}>{goal}</li>
+                ))}
+              </ul>
             </div>
           )}
 
-          <div className="h-[250px] sm:h-[320px] md:h-[400px] relative mt-14">
-            <Image src={`${mid}`} alt="" fill className="object-cover" />
-          </div>
+          {/* ── Mid image ── */}
+          {mid && (
+            <div className="w-full mt-14 overflow-hidden">
+              <SingleResponsiveImg
+                src={mid}
+                desktopHeightClass="sm:h-[400px]"
+              />
+            </div>
+          )}
 
+          {/* ── Approach ── */}
           {approachlist && (
             <div className="flex flex-col gap-4 mt-14">
               <span className="font-bold font-syne text-2xl sm:text-[28px] text-white">
@@ -183,8 +260,8 @@ export default function ProjectLayout({
               <span className="whitespace-pre-line text-white/60 font-outfit text-base sm:text-lg">
                 {approachlist.intro}
                 <ul className="text-white/60 whitespace-pre-line font-outfit font-normal text-base sm:text-lg pl-7 list-disc">
-                  {approachlist.list.map((problem, index) => (
-                    <li key={index}>{problem}</li>
+                  {approachlist.list.map((item, index) => (
+                    <li key={index}>{item}</li>
                   ))}
                 </ul>
                 {approachlist.outro}
@@ -192,6 +269,7 @@ export default function ProjectLayout({
             </div>
           )}
 
+          {/* ── Key Features ── */}
           {keyFeatures.length > 0 && (
             <div className="flex flex-col gap-4 mt-14">
               <span className="font-bold font-syne text-2xl sm:text-[28px] text-white">
@@ -199,7 +277,7 @@ export default function ProjectLayout({
               </span>
               {keyFeatures.map((feature, i) => (
                 <div key={i} className="flex flex-col gap-1 relative pl-9">
-                  <div className="absolute w-1 h-1 bg-white rounded-full left-[13px] top-3"></div>
+                  <div className="absolute w-1 h-1 bg-white rounded-full left-[13px] top-3" />
                   <span className="text-white font-syne text-lg">
                     {feature.title}
                   </span>
@@ -216,6 +294,7 @@ export default function ProjectLayout({
             </div>
           )}
 
+          {/* ── User Experience ── */}
           {userexperience && (
             <div className="flex flex-col gap-4 mt-14">
               <span className="font-bold font-syne text-2xl sm:text-[28px] text-white">
@@ -227,6 +306,7 @@ export default function ProjectLayout({
             </div>
           )}
 
+          {/* ── Visual Language ── */}
           {visualLanguageText && (
             <div className="flex flex-col gap-4 mt-14">
               <span className="font-bold font-syne text-2xl sm:text-[28px] text-white">
@@ -239,245 +319,173 @@ export default function ProjectLayout({
           )}
         </div>
 
+        {/* ── hasone + hassix pair ── */}
         {hasone && hassix && (
           <div className="w-full max-w-[900px] mx-auto flex flex-col gap-4 mt-14 px-4">
-            <div className="relative h-[250px] sm:h-[350px] md:h-[400px]">
-              <Image src={hasone} alt="image" fill className="object-cover" />
-            </div>
-            <div className="relative h-[1200px] sm:h-[1700px] md:h-[2270px]">
-              <Image src={hassix} alt="image" fill className="object-cover" />
-            </div>
+            <SingleResponsiveImg
+              src={hasone}
+              alt="image"
+              desktopHeightClass="sm:h-[400px]"
+            />
+            {/* hassix is intentionally tall on desktop to match the original */}
+            <SingleResponsiveImg
+              src={hassix}
+              alt="image"
+              desktopHeightClass="sm:h-[1700px] md:h-[2270px]"
+            />
           </div>
         )}
 
+        {/* ── simpleGrid ── */}
         {simpleGrid.length > 0 && (
           <div className="w-full max-w-[900px] mx-auto mt-14 flex flex-col gap-4 px-4">
             {simpleGrid.length >= 1 && (
-              <div className="relative w-full h-[250px] sm:h-[350px] md:h-[400px]">
-                <Image
-                  src={simpleGrid[0]}
-                  fill
-                  className="object-cover"
-                  alt=""
-                />
-              </div>
+              <SingleResponsiveImg
+                src={simpleGrid[0]}
+                desktopHeightClass="sm:h-[400px]"
+              />
             )}
 
             {simpleGrid.length >= 3 && (
               <div className="flex flex-col sm:flex-row gap-4">
-                <div className="relative w-full sm:w-[60%] h-[250px] sm:h-[350px] md:h-[400px]">
-                  <Image
-                    src={simpleGrid[1]}
-                    fill
-                    className="object-cover"
-                    alt=""
-                  />
-                </div>
-                <div className="relative w-full sm:w-[40%] h-[250px] sm:h-[350px] md:h-[400px]">
-                  <Image
-                    src={simpleGrid[2]}
-                    fill
-                    className="object-cover"
-                    alt=""
-                  />
-                </div>
+                <ResponsiveImg
+                  src={simpleGrid[1]}
+                  widthClass="w-full sm:w-[60%]"
+                  desktopHeightClass="sm:h-[480px]"
+                />
+                <ResponsiveImg
+                  src={simpleGrid[2]}
+                  widthClass="w-full sm:w-[40%]"
+                  desktopHeightClass="sm:h-[480px]"
+                />
               </div>
             )}
 
             {simpleGrid.length >= 5 && (
               <div className="flex flex-col sm:flex-row gap-4">
-                <div className="relative w-full sm:w-[40%] h-[250px] sm:h-[350px] md:h-[400px]">
-                  <Image
-                    src={simpleGrid[3]}
-                    fill
-                    className="object-cover"
-                    alt=""
-                  />
-                </div>
-                <div className="relative w-full sm:w-[60%] h-[250px] sm:h-[350px] md:h-[400px]">
-                  <Image
-                    src={simpleGrid[4]}
-                    fill
-                    className="object-cover"
-                    alt=""
-                  />
-                </div>
+                <ResponsiveImg
+                  src={simpleGrid[3]}
+                  widthClass="w-full sm:w-[40%]"
+                  desktopHeightClass="sm:h-[480px]"
+                />
+                <ResponsiveImg
+                  src={simpleGrid[4]}
+                  widthClass="w-full sm:w-[60%]"
+                  desktopHeightClass="sm:h-[480px]"
+                />
               </div>
             )}
           </div>
         )}
 
+        {/* ── additionalImages ── */}
         {additionalImages.length > 0 && !hasone && simpleGrid.length === 0 && (
           <div className="w-full max-w-[900px] mx-auto mt-14 flex flex-col gap-4 px-4">
             {additionalImages.length >= 2 && (
               <div className="flex flex-col sm:flex-row gap-4">
-                <div className="relative w-full sm:w-1/2 h-[250px] sm:h-[350px] md:h-[400px]">
-                  <Image
-                    src={additionalImages[0]}
-                    fill
-                    className="object-cover"
-                    alt=""
-                  />
-                </div>
-                <div className="relative w-full sm:w-1/2 h-[250px] sm:h-[350px] md:h-[400px]">
-                  <Image
-                    src={additionalImages[1]}
-                    fill
-                    className="object-cover"
-                    alt=""
-                  />
-                </div>
+                <ResponsiveImg
+                  src={additionalImages[0]}
+                  widthClass="w-full sm:w-1/2"
+                  desktopHeightClass="sm:h-[400px]"
+                />
+                <ResponsiveImg
+                  src={additionalImages[1]}
+                  widthClass="w-full sm:w-1/2"
+                  desktopHeightClass="sm:h-[400px]"
+                />
               </div>
             )}
 
             {additionalImages.length >= 3 && (
-              <div className="relative w-full h-[250px] sm:h-[350px] md:h-[400px]">
-                <Image
-                  src={additionalImages[2]}
-                  fill
-                  className="object-cover"
-                  alt=""
-                />
-              </div>
+              <SingleResponsiveImg
+                src={additionalImages[2]}
+                desktopHeightClass="sm:h-[400px]"
+              />
             )}
 
             {additionalImages.length >= 5 && (
               <div className="flex flex-col sm:flex-row gap-4">
-                <div className="relative w-full sm:w-[60%] h-[250px] sm:h-[350px] md:h-[400px]">
-                  <Image
-                    src={additionalImages[3]}
-                    fill
-                    className="object-cover"
-                    alt=""
-                  />
-                </div>
-                <div className="relative w-full sm:w-[40%] h-[250px] sm:h-[350px] md:h-[400px]">
-                  <Image
-                    src={additionalImages[4]}
-                    fill
-                    className="object-cover"
-                    alt=""
-                  />
-                </div>
+                <ResponsiveImg
+                  src={additionalImages[3]}
+                  widthClass="w-full sm:w-[60%]"
+                  desktopHeightClass="sm:h-[400px]"
+                />
+                <ResponsiveImg
+                  src={additionalImages[4]}
+                  widthClass="w-full sm:w-[40%]"
+                  desktopHeightClass="sm:h-[400px]"
+                />
               </div>
             )}
 
             {additionalImages.length >= 6 && (
-              <div className="relative w-full h-[250px] sm:h-[350px] md:h-[400px]">
-                <Image
-                  src={additionalImages[5]}
-                  fill
-                  className="object-cover"
-                  alt=""
-                />
-              </div>
+              <SingleResponsiveImg
+                src={additionalImages[5]}
+                desktopHeightClass="sm:h-[400px]"
+              />
             )}
 
             {additionalImages.length >= 8 && (
               <div className="flex flex-col sm:flex-row gap-4">
-                <div
-                  className={
-                    projectName
-                      ? "relative w-full sm:w-[50%]  h-[250px] sm:h-[350px] md:h-[400px]"
-                      : "relative w-full  h-[250px] sm:h-[350px] md:h-[400px] sm:w-[60%]"
+                <ResponsiveImg
+                  src={additionalImages[6]}
+                  widthClass={
+                    projectName ? "w-full sm:w-[50%]" : "w-full sm:w-[60%]"
                   }
-                >
-                  <Image
-                    src={additionalImages[6]}
-                    fill
-                    className="object-cover"
-                    alt=""
-                  />
-                </div>
-                <div
-                  className={
-                    projectName
-                      ? "relative w-full sm:w-[50%] h-[250px] sm:h-[350px] md:h-[400px]"
-                      : "relative w-full sm:w-[40%] h-[250px] sm:h-[350px] md:h-[400px]"
+                  desktopHeightClass="sm:h-[400px]"
+                />
+                <ResponsiveImg
+                  src={additionalImages[7]}
+                  widthClass={
+                    projectName ? "w-full sm:w-[50%]" : "w-full sm:w-[40%]"
                   }
-                >
-                  <Image
-                    src={additionalImages[7]}
-                    fill
-                    className="object-cover"
-                    alt=""
-                  />
-                </div>
+                  desktopHeightClass="sm:h-[400px]"
+                />
               </div>
             )}
 
             {additionalImages.length >= 11 && (
               <div className="flex flex-col sm:flex-row gap-4">
-                <div className="relative w-full sm:w-[40%] h-[250px] sm:h-[350px] md:h-[400px]">
-                  <Image
-                    src={additionalImages[8]}
-                    fill
-                    className="object-cover"
-                    alt=""
-                  />
-                </div>
-                <div className="relative w-full sm:w-[60%] h-[250px] sm:h-[350px] md:h-[400px]">
-                  <Image
-                    src={additionalImages[9]}
-                    fill
-                    className="object-cover"
-                    alt=""
-                  />
-                </div>
+                <ResponsiveImg
+                  src={additionalImages[8]}
+                  widthClass="w-full sm:w-[40%]"
+                  desktopHeightClass="sm:h-[400px]"
+                />
+                <ResponsiveImg
+                  src={additionalImages[9]}
+                  widthClass="w-full sm:w-[60%]"
+                  desktopHeightClass="sm:h-[400px]"
+                />
               </div>
             )}
 
             {additionalImages.length >= 11 && (
               <div className="flex flex-col sm:flex-row gap-4">
-                <div
-                  className={
-                    projectName
-                      ? "relative w-full sm:w-full h-[250px] sm:h-[350px] md:h-[400px]"
-                      : "relative w-full sm:w-1/2 h-[250px] sm:h-[350px] md:h-[400px]"
-                  }
-                >
-                  <Image
-                    src={additionalImages[10]}
-                    fill
-                    className="object-cover"
-                    alt=""
-                  />
-                </div>
-                <div className={projectName ? "hidden" : "relative w-full sm:w-1/2 h-[250px] sm:h-[350px] md:h-[400px]"}>
-                  <Image
+                <ResponsiveImg
+                  src={additionalImages[10]}
+                  widthClass={projectName ? "w-full" : "w-full sm:w-1/2"}
+                  desktopHeightClass="sm:h-[400px]"
+                />
+                {!projectName && (
+                  <ResponsiveImg
                     src={additionalImages[11]}
-                    fill
-                    className="object-cover"
-                    alt=""
+                    widthClass="w-full sm:w-1/2"
+                    desktopHeightClass="sm:h-[400px]"
                   />
-                </div>
+                )}
               </div>
             )}
 
             {additionalImages.length >= 12 && (
-              <div className="relative w-full h-[250px] sm:h-[350px] md:h-[400px]">
-                <Image
-                  src={additionalImages[12]}
-                  fill
-                  className="object-cover"
-                  alt=""
-                />
-              </div>
+              <SingleResponsiveImg
+                src={additionalImages[12]}
+                desktopHeightClass="sm:h-[400px]"
+              />
             )}
-
-            {/* {additionalImages.length >= 12 && (
-              <div className="relative w-full h-[250px] sm:h-[350px] md:h-[400px]">
-                <Image
-                  src={additionalImages[11]}
-                  fill
-                  className="object-cover"
-                  alt=""
-                />
-              </div>
-            )} */}
           </div>
         )}
 
+        {/* ── Impact / Future / Conclusion ── */}
         <div className="w-full max-w-[584px] mx-auto px-4 flex flex-col">
           {impactList && (
             <div className="flex flex-col gap-4 mt-14">
@@ -487,8 +495,8 @@ export default function ProjectLayout({
               <span className="whitespace-pre-line text-white/60 font-outfit text-base sm:text-lg">
                 {impactList.intro}
                 <ul className="text-white/60 whitespace-pre-line font-outfit font-normal text-base sm:text-lg pl-7 list-disc">
-                  {impactList.list.map((problem, index) => (
-                    <li key={index}>{problem}</li>
+                  {impactList.list.map((item, index) => (
+                    <li key={index}>{item}</li>
                   ))}
                 </ul>
                 {impactList.outro}
